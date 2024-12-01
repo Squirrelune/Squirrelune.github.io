@@ -114,8 +114,8 @@ analytics:
 # Site Author
 author:
   name             : "RYOCY" #"Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "O ever weeping."
+  avatar           : "assets/images/avator.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Welcome!"
   location         : #
   email            :
   links:
