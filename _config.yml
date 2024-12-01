@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "zh-CN"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "RyoCY's Blog"
 title_separator          : "-"
@@ -26,7 +26,7 @@ url                      : "https://squirrelune.github.io/" # the base hostname 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Squirrelune/Squirrelune.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "assets/images/pic.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/favicon.ico" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "assets/images/favicon.ico" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
@@ -113,8 +113,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "RYOCY" #"Your Name"
-  avatar           : "assets/images/avator.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "RyoCY" #"Your Name"
+  avatar           : "assets/images/avator.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Welcome!"
   location         : #
   email            :
