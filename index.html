@@ -2,3 +2,16 @@
 layout: home
 author_profile: true
 ---
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div id="poem_sentence" style="border: 3px solid transparent; padding: 20px; font-size: 20px; font-family: 'Songti SC', 'SimSun', serif; line-height: 1.0; text-align: center; border-radius: 15px; background-clip: content-box; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);"></div>
+<div id="poem_info" style="font-size: 16px; text-align: right; margin-top: 10px; color: #555; font-family: 'Arial', sans-serif;"></div>
+
+<script type="text/javascript">
+    jinrishici.load(function (result) {
+        var sentence = document.querySelector("#poem_sentence")
+        var info = document.querySelector("#poem_info")
+        sentence.innerHTML = result.data.content
+        info.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+        // '【' + result.data.origin.dynasty + '】'
+    });
+</script>
