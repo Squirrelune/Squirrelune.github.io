@@ -115,8 +115,8 @@ analytics:
 author:
   name             : "RyoCY" #"Your Name"
   avatar           : "assets/images/avator.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Welcome!"
-  location         : "Somewhere, China"
+  bio              : "终不似，少年游。"
+  location         : 
   email            :
   links:
     - label: "Email"
@@ -190,6 +190,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - /backup
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
@@ -239,7 +240,7 @@ paginate_path: /page:num/
 #   for configuration details
 pagination:
   # Set enabled to true to use paginate v2
-  # enabled: true
+  enabled: false
   debug: false
   collection: 'posts'
   per_page: 10
@@ -285,23 +286,23 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
+  
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -325,6 +326,9 @@ defaults:
       comments: # true
       share: false
       related: true
+      toc: true
+
+
       
       
     

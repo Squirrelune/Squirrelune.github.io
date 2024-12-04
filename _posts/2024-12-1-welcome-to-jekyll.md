@@ -1,6 +1,6 @@
 ---
 title:  "Welcome to Jekyll!"
-layout: single
+layout: posts
 header:
   teaser: "/assets/images/pic.jpg"
 categories: 
