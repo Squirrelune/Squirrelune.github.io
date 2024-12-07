@@ -1,6 +1,7 @@
 ---
 layout: archive
 ---
+{% include toc.html html=content %} 
 
 {{ content }}
 
@@ -14,6 +15,12 @@ layout: archive
     </li>
   {% endfor %}
 </ul>
+{% if page.toc %}
+  <div class="toc">
+    {{ content | toc_only }}
+  </div>
+{% endif %}
+{{ content | inject_anchors }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
