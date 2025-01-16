@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/cn/START/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/排序算法/">
   <title>
     
-      START - O ever weeping
+      排序算法 - O ever weeping
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -347,19 +347,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/head_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+        /* background-image: url(''); */
       
     }
 
@@ -384,11 +384,11 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#start" title="start">start</a>
+              <a class="tag" href="/tags/#排序" title="排序">排序</a>
               
             </div>
-            <h1>START</h1>
-            <h2 class="subheading">story begins</h2>
+            <h1>排序算法</h1>
+            <h2 class="subheading"></h2>
             <span class="meta">
               Posted by RyoCY on
               2025-01-15
@@ -399,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">8</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">0</span> In Total
+              Words <span class="post-count">2k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,7 +465,91 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
+        <h1>排序算法</h1>
+<h3 id="冒泡排序（Bubble-Sort）">冒泡排序（Bubble  Sort）</h3>
+<ul>
+<li>平均时间复杂度  O(n^2)</li>
+<li>最坏时间复杂度  O(n^2)</li>
+<li>最优时间复杂度  O(n)</li>
+<li>空间复杂度  总共O(n)，需要辅助空间O(1)</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换它们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+<p><strong>稳定排序</strong>：由于在“冒泡”中遇到相等元素不交换。</p>
+<div style="text-align: center;">
+    <img src="排序算法/Bubble.png" width="50%" height="50%" />
+</div>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">int</span>[] bubbleSort(<span class="type">int</span>[] array) &#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; Flag &amp;&amp; i &lt; array.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">Flag</span> <span class="operator">=</span> <span class="literal">false</span>; <span class="comment">// 是否发生交换。没有交换，提前跳出外层循环</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; array.length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                temp = array[j];</span><br><span class="line">                array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">                array[j + <span class="number">1</span>] = temp;</span><br><span class="line">                Flag = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="选择排序（Selection-Sort）">选择排序（Selection  Sort）</h3>
+<ul>
+<li>平均时间复杂度  O(n^2)</li>
+<li>最坏时间复杂度  O(n^2)</li>
+<li>最优时间复杂度  O(n^2)</li>
+<li>空间复杂度  总共O(n)，需要辅助空间O(1)</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li>在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。</li>
+<li>再从剩余未排序元素中继续寻找最小（大）元素，放到已排序序列的末尾。</li>
+<li>以此类推，直到所有元素均排序完毕。</li>
+</ol>
+<p><strong>非稳定排序</strong>：元素有可能被交换至与其相等的元素的右边，导致两者的相对顺序发生改变。</p>
+<div style="text-align: center;">
+    <img src="排序算法/selection.png" width="50%" height="50%" />
+</div>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 选择排序 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">selectionSort</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">    <span class="comment">// 外循环：未排序区间为 [i, n-1]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">// 内循环：找到未排序区间内的最小元素</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[j] &lt; nums[k])</span><br><span class="line">                k = j; <span class="comment">// 记录最小元素的索引</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 将该最小元素与未排序区间的首个元素交换</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> nums[i];</span><br><span class="line">        nums[i] = nums[k];</span><br><span class="line">        nums[k] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入排序（Insertion-Sort）">插入排序（Insertion  Sort）</h3>
+<ul>
+<li>平均时间复杂度  O(n^2)</li>
+<li>最坏时间复杂度  O(n^2)</li>
+<li>最优时间复杂度  O(n)</li>
+<li>空间复杂度  总共O(n)，需要辅助空间O(1)</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可以认为已经被排序</li>
+<li>取出下一个元素，在已经排序的元素序列中从后向前扫描</li>
+<li>如果该元素（已排序）大于新元素，将该元素移到下一位置，直到找到已排序的元素小于或者等于新元素的位置。将新元素插入到该位置后。</li>
+<li>重复步骤2~5</li>
+</ol>
+<p><strong>稳定排序</strong>：在插入操作过程中，我们会将元素插入到相等元素的右侧，不会改变它们的顺序。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 插入排序 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">insertionSort</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    <span class="comment">// 外循环：已排序区间为 [0, i-1]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">base</span> <span class="operator">=</span> nums[i], j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 内循环：将 base 插入到已排序区间 [0, i-1] 中的正确位置</span></span><br><span class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; nums[j] &gt; base) &#123;</span><br><span class="line">            nums[j + <span class="number">1</span>] = nums[j]; <span class="comment">// 将 nums[j] 向右移动一位</span></span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        nums[j + <span class="number">1</span>] = base;        <span class="comment">// 将 base 赋值到正确位置</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序（quick-sort）">快速排序（quick sort）</h3>
+<p>时间复杂度为 O(nlog⁡n)</p>
+<p>空间复杂度为 O(n)</p>
+<p><strong>非稳定排序</strong>：在哨兵划分的最后一步，基准数可能会被交换至相等元素的右侧。</p>
+<ol>
+<li>首先，对原数组执行一次“哨兵划分”，得到未排序的左子数组和右子数组。</li>
+<li>然后，对左子数组和右子数组分别递归执行“哨兵划分”。</li>
+<li>持续递归，直至子数组长度为 1 时终止，从而完成整个数组的排序。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 元素交换 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> nums[i];</span><br><span class="line">    nums[i] = nums[j];</span><br><span class="line">    nums[j] = tmp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 哨兵划分 */</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">partition</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 以 nums[left] 为基准数</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left, j = right;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; nums[j] &gt;= nums[left])</span><br><span class="line">            j--;          <span class="comment">// 从右向左找首个小于基准数的元素</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; nums[i] &lt;= nums[left])</span><br><span class="line">            i++;          <span class="comment">// 从左向右找首个大于基准数的元素</span></span><br><span class="line">        swap(nums, i, j); <span class="comment">// 交换这两个元素</span></span><br><span class="line">    &#125;</span><br><span class="line">    swap(nums, i, left);  <span class="comment">// 将基准数交换至两子数组的分界线</span></span><br><span class="line">    <span class="keyword">return</span> i;             <span class="comment">// 返回基准数的索引</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 快速排序 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 子数组长度为 1 时终止递归</span></span><br><span class="line">    <span class="keyword">if</span> (left &gt;= right)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 哨兵划分</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> partition(nums, left, right);</span><br><span class="line">    <span class="comment">// 递归左子数组、右子数组</span></span><br><span class="line">    quickSort(nums, left, pivot - <span class="number">1</span>);</span><br><span class="line">    quickSort(nums, pivot + <span class="number">1</span>, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="归并排序（merge-sort）">归并排序（merge sort）</h3>
+<p>时间复杂度为 O(nlog⁡n)</p>
+<p>空间复杂度为 O(n)</p>
+<p><strong>稳定排序</strong>：在合并过程中，相等元素的次序保持不变。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 合并左子数组和右子数组 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> mid, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 左子数组区间为 [left, mid], 右子数组区间为 [mid+1, right]</span></span><br><span class="line">    <span class="comment">// 创建一个临时数组 tmp ，用于存放合并后的结果</span></span><br><span class="line">    <span class="type">int</span>[] tmp = <span class="keyword">new</span> <span class="title class_">int</span>[right - left + <span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 初始化左子数组和右子数组的起始索引</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left, j = mid + <span class="number">1</span>, k = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 当左右子数组都还有元素时，进行比较并将较小的元素复制到临时数组中</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &lt;= nums[j])</span><br><span class="line">            tmp[k++] = nums[i++];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            tmp[k++] = nums[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将左子数组和右子数组的剩余元素复制到临时数组中</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) &#123;</span><br><span class="line">        tmp[k++] = nums[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= right) &#123;</span><br><span class="line">        tmp[k++] = nums[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将临时数组 tmp 中的元素复制回原数组 nums 的对应区间</span></span><br><span class="line">    <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; tmp.length; k++) &#123;</span><br><span class="line">        nums[left + k] = tmp[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 归并排序 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (left &gt;= right)</span><br><span class="line">        <span class="keyword">return</span>; <span class="comment">// 当子数组长度为 1 时终止递归</span></span><br><span class="line">    <span class="comment">// 划分阶段</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>; <span class="comment">// 计算中点</span></span><br><span class="line">    mergeSort(nums, left, mid); <span class="comment">// 递归左子数组</span></span><br><span class="line">    mergeSort(nums, mid + <span class="number">1</span>, right); <span class="comment">// 递归右子数组</span></span><br><span class="line">    <span class="comment">// 合并阶段</span></span><br><span class="line">    merge(nums, left, mid, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="堆排序">堆排序</h3>
+<p>时间复杂度为 O(nlog⁡n)<br>
+空间复杂度为 O(1)</p>
+<p><strong>非稳定排序</strong>：在交换堆顶元素和堆底元素时，相等元素的相对位置可能发生变化。</p>
+<p>设数组的长度为n，步骤如下：</p>
+<ol>
+<li>输入数组并建立<strong>大顶堆</strong>。完成后，最大元素位于堆顶。</li>
+<li>将堆顶元素（第一个元素）与堆底元素（最后一个元素）交换。完成交换后，堆的长度减 1 ，已排序元素数量加 1 。</li>
+<li>从堆顶元素开始，从顶到底执行堆化操作（sift down）。完成堆化后，堆的性质得到修复。</li>
+<li>循环执行第 <code>2.</code> 步和第 <code>3.</code> 步。循环 n−1 轮后，即可完成数组排序。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 堆的长度为 n ，从节点 i 开始，从顶至底堆化 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">siftDown</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> n, <span class="type">int</span> i)</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="comment">// 判断节点 i, l, r 中值最大的节点，记为 ma</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> <span class="number">2</span> * i + <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> <span class="number">2</span> * i + <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ma</span> <span class="operator">=</span> i;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; n &amp;&amp; nums[l] &gt; nums[ma])</span><br><span class="line">            ma = l;</span><br><span class="line">        <span class="keyword">if</span> (r &lt; n &amp;&amp; nums[r] &gt; nums[ma])</span><br><span class="line">            ma = r;</span><br><span class="line">        <span class="comment">// 若节点 i 最大或索引 l, r 越界，则无须继续堆化，跳出</span></span><br><span class="line">        <span class="keyword">if</span> (ma == i)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="comment">// 交换两节点</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> nums[i];</span><br><span class="line">        nums[i] = nums[ma];</span><br><span class="line">        nums[ma] = temp;</span><br><span class="line">        <span class="comment">// 循环向下堆化</span></span><br><span class="line">        i = ma;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 堆排序 */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">heapSort</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    <span class="comment">// 建堆操作：堆化除叶节点以外的其他所有节点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> nums.length / <span class="number">2</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        siftDown(nums, nums.length, i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 从堆中提取最大元素，循环 n-1 轮</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> nums.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="comment">// 交换根节点与最右叶节点（交换首元素与尾元素）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> nums[<span class="number">0</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = nums[i];</span><br><span class="line">        nums[i] = tmp;</span><br><span class="line">        <span class="comment">// 以根节点为起点，从顶至底进行堆化</span></span><br><span class="line">        siftDown(nums, i, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         <hr>
         <!-- Pager -->
@@ -518,7 +602,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=START&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/START/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=排序算法&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/排序算法/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -556,7 +640,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">排序算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%EF%BC%88Bubble-Sort%EF%BC%89"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">冒泡排序（Bubble  Sort）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%EF%BC%88Selection-Sort%EF%BC%89"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">选择排序（Selection  Sort）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%EF%BC%88Insertion-Sort%EF%BC%89"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">插入排序（Insertion  Sort）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%88quick-sort%EF%BC%89"><span class="toc-nav-number">1.0.4.</span> <span class="toc-nav-text">快速排序（quick sort）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%EF%BC%88merge-sort%EF%BC%89"><span class="toc-nav-number">1.0.5.</span> <span class="toc-nav-text">归并排序（merge sort）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="toc-nav-number">1.0.6.</span> <span class="toc-nav-text">堆排序</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -579,7 +663,7 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#start" title="start">start</a>
+            <a class="tag" href="/tags/#排序" title="排序">排序</a>
             
           </div>
         </section>
