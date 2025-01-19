@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://squirrelune.github.io/cn/Web%E5%BC%80%E5%8F%9101/</loc>
+    <loc>https://squirrelune.github.io/cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9102/</loc>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://squirrelune.github.io/cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9101/</loc>
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://squirrelune.github.io/cn/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://squirrelune.github.io/cn/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-01-14</lastmod>
   </url>
 </urlset> 
