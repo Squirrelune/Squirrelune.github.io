@@ -400,11 +400,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">7</span> Minutes
+              Estimated Reading Time <span class="post-count">9</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.9k</span> In Total
+              Words <span class="post-count">2.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -504,6 +504,16 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: hotpink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><p><code>E:first-child</code> 查找第一个E元素<br><code>E:last-child</code> 查找最后一个E元素<br><code>E:nth-child(N)</code> 查找第n个E元素，N &#x3D; 2n 偶数， N &#x3D; 2n + 1 奇数， N &#x3D; n + 3 第三个以后的标签</p>
+<p><img src="image3.png" alt="结构伪类选择器"></p>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>创建伪元素，用来摆放装饰性内容。</p>
+<p><code>E::before</code> 在E元素<strong>里面</strong>最<strong>前</strong>面添加一个伪元素<br><code>E::after</code> 在E元素<strong>里面</strong>最<strong>后</strong>面添加一个伪元素 </p>
+<ul>
+<li>必须设置<code>content</code>属性，用来设置伪元素内容，若无内容引号留空</li>
+<li>伪元素默认行内显示模式</li>
+<li>权重和标签选择器相同</li>
+</ul>
+<p><img src="image4.png" alt="伪元素选择器"></p>
 <h3 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h3><ol>
 <li>继承性：<br>一些设置在父元素上的 CSS 属性是可以被子元素继承的，有些则不能。如果标签自己有样式，也不会继承父元素的样式。</li>
 <li>层叠性：<br>相同的属性会覆盖（后面覆盖前面），不同的属性会叠加。</li>
@@ -554,12 +564,28 @@
 <li>对于一些带有特定的属性值的CSS样式，只需输入CSS标签与属性值的首字母</li>
 <li>参数别名：p → %, e → em, x → ex<br>例如：w100p → width: 100%</li>
 </ul>
-<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><p>CSS 中一个区块盒子由以下组成：</p>
+<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><h3 id="组成及分类"><a href="#组成及分类" class="headerlink" title="组成及分类"></a>组成及分类</h3><p>CSS 中一个区块盒子由以下组成：</p>
 <ul>
 <li>内容盒子：显示内容的区域；使用 <code>inline-size</code> 和 <code>block-size</code> 或 <code>width</code> 和 <code>height</code> 等属性确定其大小。</li>
 <li>内边距盒子：填充位于内容周围的空白处；使用 <code>padding</code> 和相关属性确定其大小。</li>
 <li>边框盒子：边框盒子包住内容和任何填充；使用 <code>border</code> 和相关属性确定其大小。</li>
 <li>外边距盒子：外边距是最外层，其包裹内容、内边距和边框，作为该盒子与其他元素之间的空白；使用 <code>margin</code> 和相关属性确定其大小。</li>
+</ul>
+<p>外边距：是盒子周围一圈看不到的空间。它会把其他元素退推离盒子。外边距属性值可以为正也可以为负。在盒子一侧设置负值会导致盒子和页面上的其他内容重叠。</p>
+<p>使用 <code>margin</code> 属性一次性控制所有外边距，或者每边单独使用等价的普通属性控制</p>
+<ul>
+<li><code>margin-top</code></li>
+<li><code>margin-right</code></li>
+<li><code>margin-bottom</code></li>
+<li><code>margin-left</code></li>
+</ul>
+<p>内边距：位于边框和内容区域之间，用于将内容推离边框。与外边距不同，内边距<strong>不能为负数</strong>。</p>
+<p>使用 <code>padding</code> 简写属性一次性控制元素所有边，或者每边单独使用等价的普通属性</p>
+<ul>
+<li><code>padding-top</code></li>
+<li><code>padding-right</code></li>
+<li><code>padding-bottom</code></li>
+<li><code>padding-left</code></li>
 </ul>
 <p><img src="image1.png" alt="区块盒子"></p>
 <p>一个拥有 <code>block</code> （<strong>区块盒子</strong>）外部显示类型的盒子会表现出以下行为：</p>
@@ -578,6 +604,20 @@
 </ol>
 <p>某些 HTML 元素如 <code>&lt;a&gt;</code>、 <code>&lt;span&gt;</code>、 <code>&lt;em&gt;</code> 以及 <code>&lt;strong&gt;</code>，默认使用 <code>inline</code> 作为外部显示类型。</p>
 <p>盒子还有内部显示类型，它决定了盒子内元素的布局方式。</p>
+<h3 id="内容溢出"><a href="#内容溢出" class="headerlink" title="内容溢出"></a>内容溢出</h3><p>盒子无法容纳下太多的内容时会发生溢出。</p>
+<p><code>overflow</code> 属性设置了元素溢出时所需的行为：</p>
+<ul>
+<li><code>hidden</code>：内容将被裁减以适应边距盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。</li>
+<li><code>scroll</code>：溢出滚动，无论是否溢出都显示滚动条。</li>
+<li><code>auto</code>：溢出滚动，只有溢出时才显示滚动条。</li>
+</ul>
+<h3 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h3><p><code>border-radius</code> ：属性值为 数字+px&#x2F;百分比，表示圆角半径。从左上角开始顺时针赋值。</p>
+<p>常见应用：</p>
+<ul>
+<li>正圆形状：给<strong>正方形</strong>盒子设置圆角属性值为<strong>宽高的一半</strong>或<strong>50%</strong>。</li>
+<li>胶囊形状：给<strong>长方形</strong>盒子设置圆角属性值为<strong>盒子高度的一半</strong>。</li>
+</ul>
+<h3 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h3><p><code>box-shadow</code>：属性值为x轴偏移量（必写）、y轴偏移量（必写）、模糊半径、扩散半径、颜色、内外阴影（默认外阴影，内阴影添加 <code>inset</code>）。</p>
 <h2 id="网页美化"><a href="#网页美化" class="headerlink" title="网页美化"></a>网页美化</h2><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><table>
 <thead>
 <tr>
@@ -725,7 +765,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#CSS"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">导入方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">标签选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#id-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">id 选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">后代选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E4%BB%A3%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">子代关系选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">CSS特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Emmet-%E5%BF%AB%E9%80%9F%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Emmet 快速语法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">盒模型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">网页美化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">字体</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">文字样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">背景</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#CSS"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">导入方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">标签选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#id-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">id 选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">后代选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E4%BB%A3%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">子代关系选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">结构伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.8.</span> <span class="toc-nav-text">伪元素选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.2.9.</span> <span class="toc-nav-text">CSS特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Emmet-%E5%BF%AB%E9%80%9F%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Emmet 快速语法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">盒模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%84%E6%88%90%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">组成及分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%85%E5%AE%B9%E6%BA%A2%E5%87%BA"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">内容溢出</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%86%E8%A7%92"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">圆角</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%98%B4%E5%BD%B1"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">阴影</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">网页美化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">字体</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">文字样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">背景</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
