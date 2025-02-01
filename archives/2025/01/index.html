@@ -240,19 +240,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -264,10 +251,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -484,6 +484,32 @@
         <ul>
           
           <li>
+            02-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/折腾日志/Hexo内嵌网页/" style="color: #0085a1">
+              <span>
+                Hexo内嵌网页
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Web开发/50-Projects-Notebook/" style="color: #0085a1">
+              <span>
+                50-Projects-Notebook
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
             01-31
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/cn/Web开发/Web开发05/" style="color: #0085a1">
@@ -592,7 +618,11 @@
   <div class="tags">
     
     
-    <a href="/tags/#Web" title="Web" rel="5">Web</a>
+    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
+    
+    
+    
+    <a href="/tags/#Web" title="Web" rel="6">Web</a>
     
     
   </div>
@@ -655,6 +685,14 @@
 <div class="widget">
   <ul>
     
+    <a href="../../../cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Hexo%E5%86%85%E5%B5%8C%E7%BD%91%E9%A1%B5/">
+      <li>Hexo内嵌网页</li>
+    </a>
+    
+    <a href="../../../cn/Web%E5%BC%80%E5%8F%91/50-Projects-Notebook/">
+      <li>50-Projects-Notebook</li>
+    </a>
+    
     <a href="../../../cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9105/">
       <li>Web开发05</li>
     </a>
@@ -665,14 +703,6 @@
     
     <a href="../../../cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9103/">
       <li>Web开发03</li>
-    </a>
-    
-    <a href="../../../cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9102/">
-      <li>Web开发02</li>
-    </a>
-    
-    <a href="../../../cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9101/">
-      <li>Web开发01</li>
     </a>
     
   </ul>
@@ -695,7 +725,7 @@
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="">January 2025</a><span class="archive-list-count">5</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="">January 2025</a><span class="archive-list-count">5</span></li></ul>
 </div>
 
 
@@ -706,6 +736,10 @@
 <h5><a href="/categories/">categories</a></h5>
 <div class="widget">
   <ul>
+    
+    <a href="/categories/#折腾日志">
+      <li>折腾日志</li>
+    </a>
     
     <a href="/categories/#Web开发">
       <li>Web开发</li>
@@ -1226,5 +1260,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

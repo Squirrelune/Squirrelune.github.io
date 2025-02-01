@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/tags/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/折腾日志/Hexo内嵌网页/">
   <title>
     
-      Tags - RyoCY的后花园
+      Hexo内嵌网页 - RyoCY的后花园
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
@@ -296,25 +296,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="tags/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -366,19 +348,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: url('headbg.png');
+      --intro-header-background-image-url-page: url('/headbg.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.png');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/head_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('headbg.png'); */
       
     }
 
@@ -400,18 +382,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+              
+            </div>
+            <h1>Hexo内嵌网页</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by RyoCY on
+              2025-02-01
+            </span>
+
 
             
-              <h1>Tags</h1>
-              
-                <!-- 更改首页图片上文字 -->
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">1</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">333</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
             
             
-            <!-- <h1>Tags</h1> -->
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
             
-            <!--<hr class="small">-->
-            <span class="subheading">I don’t know where I am going, but I am on my way......</span>
+
+
           </div>
           
         </div>
@@ -452,132 +458,153 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <!-- 标签列表 -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-      <!-- 标签云 -->
-      <div id='tag_cloud' class="tags">
+        <p>最近学习了Web开发的一些基础知识，正用 <a target="_blank" rel="noopener" href="https://github.com/bradtraversy/50projects50days">50projects50days</a> 的项目练手，也想要给自己的博客嵌入一些网页demo。</p>
+<p>我决定使用 <code>iframe</code> 来内嵌网页。将编好的文件放入<code>post_asset_folder</code>自动生成的同名文件夹中：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src<span class="operator">=</span><span class="string">&quot;xxx.html&quot;</span> height<span class="operator">=</span><span class="string">&quot;500px&quot;</span> width<span class="operator">=</span><span class="string">&quot;100%&quot;</span> scrolling<span class="operator">=</span><span class="string">&quot;auto&quot;</span> frameborder<span class="operator">=</span><span class="string">&quot;0&quot;</span> <span class="string">&quot;&gt;&lt;/iframe&gt;</span></span><br></pre></td></tr></table></figure>
+<p>打开网页，确实成功嵌入 demo，但好像有什么不太对……<br>回到首页，发现 HTML、CSS、JS 全部被解析为博客了🤣 。</p>
+<p>还好 Hexo 提供了一个功能允许用户自定义哪些文件不进行渲染，这样就可以保留<code>post_asset_folder</code> 的功能（毕竟真的方便管理博客）。我在同名文件夹下新建了demo文件夹，将写好的网页放入。然后打开 Hexo 的 <code>_config.yml</code>，找到  <code>skip_render</code> 选项添加想要屏蔽的文件夹。</p>
+<p>通配符示例：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*.html&#x27;</span> <span class="comment"># 单个文件夹下指定类型文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/**&#x27;</span> <span class="comment"># 单个文件夹下全部文件以及子目录</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*&#x27;</span> <span class="comment"># 单个文件夹下全部文件</span></span><br></pre></td></tr></table></figure>
+<p><strong>容易踩坑的点</strong>：<br><code>skip_render</code> 中的路径需要写成相对于 <code>source/</code> 目录的路径。<br>在 <code>_config.yml</code>文件修改后，记得要执行一下 <code>hexo clean</code>，不然<code>skip_render</code>可能不会生效。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/Web开发/50-Projects-Notebook/" data-toggle="tooltip" data-placement="top" title="50-Projects-Notebook">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
         
-        <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
+
         
-        <a href="#Web" title="Web" rel="6">Web</a>
-        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
 
-      <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Hexo">
-          <span class="tag-text">Hexo</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/折腾日志/Hexo内嵌网页/">
-            <h2 class="post-title">
-              Hexo内嵌网页
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Web">
-          <span class="tag-text">Web</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/50-Projects-Notebook/">
-            <h2 class="post-title">
-              50-Projects-Notebook
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/Web开发01/">
-            <h2 class="post-title">
-              Web开发01
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/Web开发02/">
-            <h2 class="post-title">
-              Web开发02
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/Web开发03/">
-            <h2 class="post-title">
-              Web开发03
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/Web开发04/">
-            <h2 class="post-title">
-              Web开发04
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Web开发/Web开发05/">
-            <h2 class="post-title">
-              Web开发05
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+        </ul>
+        
+      </div>
     </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
