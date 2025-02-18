@@ -400,11 +400,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">11</span> Minutes
+              Estimated Reading Time <span class="post-count">14</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">2.5k</span> In Total
+              Words <span class="post-count">3.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -479,6 +479,20 @@
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;your-<span class="keyword">project</span>-name&gt;</span><br><span class="line">npm <span class="keyword">install</span>  *注：安装依赖</span><br><span class="line">npm run dev  *注：启动开发服务器</span><br></pre></td></tr></table></figure>
 <p>删掉一些文件和代码恢复到初始空白页面，目录大致如下：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">your-project:</span><br><span class="line">│  index<span class="selector-class">.html</span> 首页入口</span><br><span class="line">│  jsconfig<span class="selector-class">.json</span></span><br><span class="line">│  package-lock<span class="selector-class">.json</span></span><br><span class="line">│  package<span class="selector-class">.json</span> 项目包文件</span><br><span class="line">│  vite<span class="selector-class">.config</span><span class="selector-class">.js</span> 基于vite的配置</span><br><span class="line">│       </span><br><span class="line">├─node_modules</span><br><span class="line">├─public</span><br><span class="line">│      </span><br><span class="line">└─<span class="attribute">src</span></span><br><span class="line">    │  App<span class="selector-class">.vue</span> 根组件APP</span><br><span class="line">    │  <span class="selector-tag">main</span><span class="selector-class">.js</span> 入口文件</span><br><span class="line">    ├─assets（空）放置一些图片和logo     </span><br><span class="line">    └─components（空）组件</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;src是项目的主要源代码目录，包含了所有的Vue组件、配置文件、静态资源等。<br><code>/src/components</code><br>组件目录，存放可复用的Vue组件文件。<br><code>/src/views</code><br>视图目录，存放页面级别的组件，对应应用的不同路由，会在其中包含页面的布局和导航逻辑。<br><code>/src/router</code><br>路由目录，存放路由配置文件，定义了应用的路由规则和导航守卫。<br><code>/src/api</code><br>API请求目录，包含处理与后端服务器通信的API请求逻辑。我们项目中采用了Axios客户端库。<br>axios函数可以接收三个参数：<code>url</code>、<code>data</code> 和 <code>config</code>。</p>
+<ol>
+<li><code>url</code> (必需): 这是一个字符串，表示你想要请求的服务器地址。例如：’<a target="_blank" rel="noopener" href="https://api.example.com/data'%E3%80%82">https://api.example.com/data&#39;。</a></li>
+<li><code>data</code> (可选): 这是一个对象，包含了你想要发送到服务器的数据。这个参数通常用于 POST、PUT 或 PATCH 请求。例如：{ key1: ‘value1’, key2: ‘value2’ }。当使用 POST 方法时，这些数据会被添加到请求体中。</li>
+<li><code>config</code> (可选): 这是一个对象，包含了请求的配置选项。这个对象可以包含多个属性，用于定制请求的行为。以下是一些常用的配置选项：<br>（1）<code>headers</code>: 一个对象，包含了你想要设置的HTTP请求头部。<br>（2）<code>params</code>: 一个对象，包含了你想要添加到URL查询字符串中的参数。<br>（3）<code>responseType</code>: 一个字符串，指定服务器响应的数据类型。可以是 ‘arraybuffer’, ‘blob’, ‘document’, ‘json’, ‘text’ 或 ‘stream’。</li>
+</ol>
+<p>对于前面介绍的三种传递参数的方法：</p>
+<ol>
+<li>@PathVariable注解<br>视为url参数中的变量，使用axios.post(url&#x2F;${xxx}, data, config)，其中data、config都可以省略     </li>
+<li>@RequestParam注解<br>视为config参数中的params，使用axios.post(url, data, {params: xxx}) ，其中data不可省略，如果是空就用null填补，不然会把config当成data</li>
+<li>@RequestBody注解<br>视为data参数，使用axios.post(url, data, config)，其中config可以省略</li>
+</ol>
+<p><code>/src/assets</code><br>静态资源目录，存放图片、CSS样式表、字体文件等静态资源。<br><code>/src/utils</code><br>工具函数目录，包含项目中使用的各种辅助函数和工具类，如日期处理、字符串操作、请求封装（request.ts）等。<br><code>/src/App.vue</code><br>根组件，所有界面都是从这个界面发展来的，包含了应用的全局布局和导航。通过<router-view />来表示：展示当前router路由对应的界面。<br><code>/src/main.ts</code><br>入口文件，用于创建Vue实例，引入全局样式、插件、路由、状态管理等。<br><code>index.html</code><br>入口HTML文件，Vue实例将挂载到这个元素上。<br><code>package.json</code><br>依赖和脚本配置文件，列出了项目的所有依赖项，并提供了用于开发和构建项目的脚本。<br><code>vue.config.ts</code><br>Vue CLI配置文件，用于配置Vue CLI，包括开发服务器、构建选项等。<br><code>.gitignore</code><br> Git忽略文件，指定git操作时应忽略的文件和目录。<br><code>/public</code><br>公共资源目录，存放不会被Webpack处理的公共静态资源。</p>
 <h2 id="选项API与组合API"><a href="#选项API与组合API" class="headerlink" title="选项API与组合API"></a>选项API与组合API</h2><ul>
 <li>选项API，<code>data</code> 选项写数据，<code>methods</code> 选项写逻辑，代码分散。</li>
 <li>组合API，数据、逻辑和其他都在 <code>setup</code> 内写，代码集中，利于维护。<br><img src="image1.png" alt="两种API"><br>*本学习笔记选择组合API</li>
