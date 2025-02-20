@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/cn/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/Web开发/Web开发07/">
   <title>
     
-      RyoCY的后花园
+      Web开发07 - RyoCY的后花园
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
@@ -296,25 +296,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="cn/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -366,19 +348,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: url('web07_headbg.png');
+      --intro-header-background-image-url-page: url('/web07_headbg.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('web07_headbg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/web07_headbg.png');
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/head_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('web07_headbg.png'); */
       
     }
 
@@ -400,18 +382,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-
+          <div class="post-heading">
+            <div class="tags">
               
-                <h1>Hello World</h1> 
-                
-                <!-- 更改首页图片上文字 -->
+              <a class="tag" href="/tags/#Web" title="Web">Web</a>
+              
+            </div>
+            <h1>Web开发07</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by RyoCY on
+              2025-02-20
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">2</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">535</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
             
             
-            <!-- <h1>RyoCY的后花园</h1> -->
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
             
-            <!--<hr class="small">-->
-            <span class="subheading"></span>
+
+
           </div>
           
         </div>
@@ -452,623 +458,163 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h2><ol>
+<li>路由组件通常存放在 pages 或 views 文件夹，一般组件通常存放在 components 文件夹。</li>
+<li>通过点击导航，视觉效果上“消失” 了的路由组件，默认是被卸载掉的，需要的时候再去挂载。</li>
+</ol>
+<p>路由配置文件代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123;createRouter,createWebHistory&#125; <span class="keyword">from</span><span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Home</span> <span class="keyword">from</span><span class="string">&#x27;@/pages/Home.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">About</span> <span class="keyword">from</span><span class="string">&#x27;@/pages/About.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">	<span class="attr">history</span>:<span class="title function_">createWebHistory</span>(),</span><br><span class="line">	<span class="attr">routes</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">path</span>:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">			<span class="attr">component</span>:<span class="title class_">Home</span></span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">path</span>:<span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">			<span class="attr">component</span>:<span class="title class_">About</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+<p>上面代码使用<code>history</code>模式，URL更加美观，不带有#，更接近传统的网站URL。但缺点是后期项目上线，需要服务端配合处理路径问题，否则刷新会有404错误。<br>另外一种为<code>hash</code>模式，兼容性更好，不需要服务器端处理路径。但是URL带有#不太美观，且在SEO优化方面相对较差。使用<code>createWebHashHistory()</code>而不是<code>createWebHistory()</code>。</p>
+<p><strong>to的两种写法</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//APP.vue</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 第一种：to的字符串写法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">active-class</span>=<span class="string">&quot;active&quot;</span> <span class="attr">to</span>=<span class="string">&quot;/home&quot;</span>&gt;</span>主页<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 第二种：to的对象写法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">active-class</span>=<span class="string">&quot;active&quot;</span> <span class="attr">:to</span>=<span class="string">&quot;&#123;path:&#x27;/home&#x27;&#125;&quot;</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="命名路由"><a href="#命名路由" class="headerlink" title="命名路由"></a>命名路由</h2><p>若给路由命名，可以简化路由跳转和传参</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">routes</span>:[</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;zhuye&#x27;</span>,</span><br><span class="line">		<span class="attr">path</span>:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">		<span class="attr">component</span>:<span class="title class_">Home</span></span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">path</span>:<span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">		<span class="attr">component</span>:<span class="title class_">About</span></span><br><span class="line">	&#125;</span><br><span class="line">]</span><br><span class="line"><span class="comment">// 使用时简化传参</span></span><br><span class="line">&lt;router-link :to=<span class="string">&quot;&#123;name:&#x27;zhuye&#x27;&#125;&quot;</span>&gt;跳转&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">routes</span>:[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">path</span>: <span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">        <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/Home.vue&#x27;</span>),</span><br><span class="line">        <span class="attr">children</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">path</span>: <span class="string">&#x27;/dashboard&#x27;</span>,</span><br><span class="line">                <span class="attr">name</span>: <span class="string">&#x27;Dashboard&#x27;</span>,</span><br><span class="line">                <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/user/Dashboard.vue&#x27;</span>),</span><br><span class="line">            &#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">] </span><br><span class="line"><span class="comment">// 跳转路由时写完整路径</span></span><br></pre></td></tr></table></figure>
+<p><code>router-view</code> 是用于显示与当前路由匹配的组件，支持嵌套路由，可以在一个组件中嵌套多个 <code>router-view</code>。<br><code>&lt;router-view&gt;&lt;/router-view&gt;</code> 和 <code>&lt;router-view /&gt;</code> 两种写法在Vue3中均可。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>将特定的路径，重新定向到已有路由。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">path</span>:<span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    <span class="attr">redirect</span>:<span class="string">&#x27;/about&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/Web开发/Web开发06/" data-toggle="tooltip" data-placement="top" title="Web开发06">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Vue"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Vue</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Router"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Router</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">命名路由</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">嵌套路由</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">重定向</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发07/">
-    <h2 class="post-title">
-      Web开发07
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    VueRouter
-路由组件通常存放在 pages 或 views 文件夹，一般组件通常存放在 components 文件夹。
-通过点击导航，视觉效果上“消失” 了的路由组件，默认是被卸载掉的，需要的时候再去挂载。
-
-路由配置文件代码如下：
-12345678910111213141516171819// router/index.tsimport &#123;createRouter,cre......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-02-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发06/">
-    <h2 class="post-title">
-      Web开发06
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    VueVue是一个用于构建用户界面的渐进式框架
-通过 CDN 使用 Vue*CDN（Content Delivery Network）是一个分布式服务器网络，能够快速向用户交付静态资源（如 JavaScript、CSS、图片等）。这种方法比较简便，适合快速原型开发或小型项目。
-全局构建：
-123456789101112131415161718192021222324252627&lt;!DO......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-02-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/折腾日志/Hexo内嵌网页/">
-    <h2 class="post-title">
-      Hexo内嵌网页
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    最近学习了Web开发的一些基础知识，正用 50projects50days 的项目练手，也想要给自己的博客嵌入一些网页demo。
-我决定使用 iframe 来内嵌网页。将编好的文件放入post_asset_folder自动生成的同名文件夹中：
-1&lt;iframe src=&quot;xxx.html&quot; height=&quot;500px&quot; width=&quot;1......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-02-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Hexo" title="Hexo">Hexo</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/50-Projects-Notebook/">
-    <h2 class="post-title">
-      50-Projects-Notebook
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    <p>该文章被加密了, 请输入密码查看。</p>
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-02-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发05/">
-    <h2 class="post-title">
-      Web开发05
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    JavaScript –Web APIDOMDOM，Document Object Model——文档对象模型是用来呈现以及与任意 HTML 或 XML文档交互的 API。DOM对象：浏览器根据 html 标签生成的 JS对象。
-获取DOM对象：
-
-根据CSS选择器来获取DOM元素
-选择匹配的第一个元素语法：document.querySelector(&#39;css选择器&#39;)参数......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-01-31
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发04/">
-    <h2 class="post-title">
-      Web开发04
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    JavaScript 基础一种运行在客户端（浏览器）的编程语言，实现人机交互效果。
-写入方法
-内部 JavaScript直接写在 html 文件里，写在 &lt;/body&gt; 里，用 script 标签包住。12345&lt;body&gt;&lt;script&gt;    // 内容&lt;/script&gt;&lt;/body&gt;
-外部 JavaScript代码写在以.js......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-01-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发03/">
-    <h2 class="post-title">
-      Web开发03
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    网页美化字体
-
-
-属性
-描述
-说明
-
-
-
-font-family
-字体类型
-\
-
-
-font-size
-字体大小
-像素值（10px 等）和关键字（small、medium 和 large 等）
-
-
-font-weight
-字体粗细
-常见取值：数值（400，700）和关键字（normal，bold）
-
-
-font-style
-字体风格
-normal 正常（默认值），italic 或 obliq......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-01-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发02/">
-    <h2 class="post-title">
-      Web开发02
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    CSS导入方式
-外部样式（最理想）：把CSS代码和HTML代码单独放在不同文件中，使用&lt;link&gt;标签来引入
-内部样式表:将css代码嵌入在html文件中，放在&lt;head&gt;标签内部的&lt;style&gt;标签里。
-行内样式表（可读性和可维护性非常差）
-
-1234567891011121314151617181920212223&lt;!DOCTYPE html&g......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-01-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Web开发/Web开发01/">
-    <h2 class="post-title">
-      Web开发01
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-
-
-    <div class="post-content-preview">
-  
-    HTML标签标题&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;、&lt;h6&gt;呈现了六个不同的级别的标题，&lt;h1&gt; 级别最高，而 &lt;h6&gt; 级别最低。&lt;h1&gt; 一般只使用一次，存放logo等重要信息。
-
-    
-
-
-字符实体常见字符实体：代码中敲出的空格，网页只识别一个。用字符实体实现多......
-  
-</div>
-
-
-
-  </a>
-
-
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by RyoCY on
-    2025-01-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Web" title="Web">Web</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Web" title="Web">Web</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Web" title="Web" rel="8">Web</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/avatorhi.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Life was like a box of chocolate ...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-      <li>
-        <a href="/feed.xml">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9107/">
-      <li>Web开发07</li>
-    </a>
-    
-    <a href="Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9106/">
-      <li>Web开发06</li>
-    </a>
-    
-    <a href="%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Hexo%E5%86%85%E5%B5%8C%E7%BD%91%E9%A1%B5/">
-      <li>Hexo内嵌网页</li>
-    </a>
-    
-    <a href="Web%E5%BC%80%E5%8F%91/50-Projects-Notebook/">
-      <li>50-Projects-Notebook</li>
-    </a>
-    
-    <a href="Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9105/">
-      <li>Web开发05</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/02/">February 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/01/">January 2025</a><span class="archive-list-count">5</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Web开发">
-      <li>Web开发</li>
-    </a>
-    
-    <a href="/categories/#折腾日志">
-      <li>折腾日志</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
