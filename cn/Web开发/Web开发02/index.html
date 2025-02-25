@@ -243,9 +243,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -265,9 +265,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -276,9 +276,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
+              标签
               
               
             </a>
@@ -466,58 +466,107 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="导入方式"><a href="#导入方式" class="headerlink" title="导入方式"></a>导入方式</h2><ul>
-<li>外部样式（最理想）：把CSS代码和HTML代码单独放在不同文件中，使用<code>&lt;link&gt;</code>标签来引入</li>
-<li>内部样式表:将css代码嵌入在html文件中，放在<code>&lt;head&gt;</code>标签内部的<code>&lt;style&gt;</code>标签里。</li>
-<li>行内样式表（可读性和可维护性非常差）</li>
+        <h1>CSS</h1>
+<h2 id="导入方式">导入方式</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>外部样式（最理想）：把CSS代码和HTML代码单独放在不同文件中，使用<code>&lt;link&gt;</code>标签来引入</p>
+</li>
+<li class="lvl-2">
+<p>内部样式表:将css代码嵌入在html文件中，放在<code>&lt;head&gt;</code>标签内部的<code>&lt;style&gt;</code>标签里。</p>
+</li>
+<li class="lvl-2">
+<p>行内样式表（可读性和可维护性非常差）</p>
+</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--内部样式--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--外部样式  rel:关系，样式表--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--优先级：就近原则--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--行内样式：在标签元素中，编写一个style属性，编写样式即可--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>这是标签<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><p>使用标签名作为选择器，同名标签具有相同样式。<strong>用逗号将不同选择器隔开，即可一次使用多个选择器。</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>选择所有 class 一致的标签，跨标签。</p>
+<h2 id="选择器">选择器</h2>
+<h3 id="标签选择器">标签选择器</h3>
+<p>使用标签名作为选择器，同名标签具有相同样式。<strong>用逗号将不同选择器隔开，即可一次使用多个选择器。</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类选择器">类选择器</h3>
+<p>选择所有 class 一致的标签，跨标签。</p>
 <ol>
-<li>定义类选择器：.类名{ }</li>
-<li>使用类选择器：标签添加 class=”类名”。一个标签可以使用多个类名，class属性值里不同类名用空格隔开。类名为多单词时可以用 ‘-’ 连接。</li>
+<li class="lvl-3">
+<p>定义类选择器：.类名{ }</p>
+</li>
+<li class="lvl-3">
+<p>使用类选择器：标签添加 class=“类名”。一个标签可以使用多个类名，class属性值里不同类名用空格隔开。类名为多单词时可以用 ‘-’ 连接。</p>
+</li>
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.red</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;red&quot;</span>&gt;</span>红色<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h3><p>查找标签，差异化设置标签显示效果。一般配合JavaScript使用，很少用来设置CSS样式。</p>
+<h3 id="id-选择器">id 选择器</h3>
+<p>查找标签，差异化设置标签显示效果。一般配合JavaScript使用，很少用来设置CSS样式。</p>
 <ol>
-<li>定义类选择器：#id名{ }</li>
-<li>使用类选择器：标签添加 id=”id名”。</li>
+<li class="lvl-3">
+<p>定义类选择器：#id名{ }</p>
+</li>
+<li class="lvl-3">
+<p>使用类选择器：标签添加 id=“id名”。</p>
+</li>
 </ol>
-<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>选中某元素的<strong>所有</strong>后代元素，后代选择器之间用空格隔开。</p>
+<h3 id="后代选择器">后代选择器</h3>
+<p>选中某元素的<strong>所有</strong>后代元素，后代选择器之间用空格隔开。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>Text in .box<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Text not in .box<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>若只想选中某元素的子代元素，则使用子代关系选择器。</p>
-<h3 id="子代关系选择器"><a href="#子代关系选择器" class="headerlink" title="子代关系选择器"></a>子代关系选择器</h3><p>子代关系选择器是个大于号（&gt;），只会在选择器选中直接子元素的时候匹配。</p>
+<h3 id="子代关系选择器">子代关系选择器</h3>
+<p>子代关系选择器是个大于号（&gt;），只会在选择器选中直接子元素的时候匹配。</p>
 <p>如下图，Item1 和 Item2 均未被选中。</p>
 <p><img src="image2.png" alt="子代关系选择器"></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-top</span>: <span class="number">5px</span> solid black;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Unordered item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Unordered item</span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>用于选择处于特定状态的元素，比如当鼠标悬浮在元素上面的时候。</p>
-<ul>
-<li><code>:hover</code> 将鼠标悬停在元素上时激活</li>
-<li><code>:link</code> 访问前</li>
-<li><code>:visited</code> 访问后</li>
-<li><code>:active</code> 点击元素时激活</li>
+<h3 id="伪类选择器">伪类选择器</h3>
+<p>用于选择处于特定状态的元素，比如当鼠标悬浮在元素上面的时候。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>:hover</code> 将鼠标悬停在元素上时激活</p>
+</li>
+<li class="lvl-2">
+<p><code>:link</code> 访问前</p>
+</li>
+<li class="lvl-2">
+<p><code>:visited</code> 访问后</p>
+</li>
+<li class="lvl-2">
+<p><code>:active</code> 点击元素时激活</p>
+</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: hotpink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><p><code>E:first-child</code> 查找第一个E元素<br><code>E:last-child</code> 查找最后一个E元素<br><code>E:nth-child(N)</code> 查找第n个E元素，N = 2n 偶数， N = 2n + 1 奇数， N = n + 3 第三个以后的标签</p>
+<h3 id="结构伪类选择器">结构伪类选择器</h3>
+<p><code>E:first-child</code> 查找第一个E元素<br>
+<code>E:last-child</code> 查找最后一个E元素<br>
+<code>E:nth-child(N)</code> 查找第n个E元素，N = 2n 偶数， N = 2n + 1 奇数， N = n + 3 第三个以后的标签</p>
 <p><img src="image3.png" alt="结构伪类选择器"></p>
-<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>创建伪元素，用来摆放装饰性内容。</p>
-<p><code>E::before</code> 在E元素<strong>里面</strong>最<strong>前</strong>面添加一个伪元素<br><code>E::after</code> 在E元素<strong>里面</strong>最<strong>后</strong>面添加一个伪元素 </p>
-<ul>
-<li>必须设置<code>content</code>属性，用来设置伪元素内容，若无内容引号留空</li>
-<li>伪元素默认行内显示模式</li>
-<li>权重和标签选择器相同</li>
+<h3 id="伪元素选择器">伪元素选择器</h3>
+<p>创建伪元素，用来摆放装饰性内容。</p>
+<p><code>E::before</code> 在E元素<strong>里面</strong>最<strong>前</strong>面添加一个伪元素<br>
+<code>E::after</code> 在E元素<strong>里面</strong>最<strong>后</strong>面添加一个伪元素</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>必须设置<code>content</code>属性，用来设置伪元素内容，若无内容引号留空</p>
+</li>
+<li class="lvl-2">
+<p>伪元素默认行内显示模式</p>
+</li>
+<li class="lvl-2">
+<p>权重和标签选择器相同</p>
+</li>
 </ul>
 <p><img src="image4.png" alt="伪元素选择器"></p>
-<h3 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h3><ol>
-<li>继承性：<br>一些设置在父元素上的 CSS 属性是可以被子元素继承的，有些则不能。如果标签自己有样式，也不会继承父元素的样式。</li>
-<li>层叠性：<br>相同的属性会覆盖（后面覆盖前面），不同的属性会叠加。</li>
-<li>优先级：<br>一个标签使用多种选择器时，通常选择器范围越大的优先级越低。<font color="#FF0033">**!important > 行内样式 > id > 类名class > 标签 > 通配符选择器**</font>
-
+<h3 id="CSS特性">CSS特性</h3>
+<ol>
+<li class="lvl-3">
+<p>继承性：一些设置在父元素上的 CSS 属性是可以被子元素继承的，有些则不能。如果标签自己有样式，也不会继承父元素的样式。</p>
+</li>
+<li class="lvl-3">
+<p>层叠性：相同的属性会覆盖（后面覆盖前面），不同的属性会叠加。</p>
+</li>
+<li class="lvl-3">
+<p>优先级：一个标签使用多种选择器时，通常选择器范围越大的优先级越低。<br>
+<font color="#FF0033"><strong>!important &gt; 行内样式 &gt; id &gt; 类名class &gt; 标签 &gt; 通配符选择器</strong></font></p>
 </li>
 </ol>
-<h2 id="Emmet-快速语法"><a href="#Emmet-快速语法" class="headerlink" title="Emmet 快速语法"></a>Emmet 快速语法</h2><p>HTML常用Emmet语法：</p>
-<div class="table-container">
+<h2 id="Emmet-快速语法">Emmet 快速语法</h2>
+<p>HTML常用Emmet语法：</p>
 <table>
 <thead>
 <tr>
@@ -559,66 +608,123 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>CSS常用Emmet语法：</p>
-<ul>
-<li>对于一些带有特定的属性值的CSS样式，只需输入CSS标签与属性值的首字母</li>
-<li>参数别名：p → %, e → em, x → ex<br>例如：w100p → width: 100%<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>对于一些带有特定的属性值的CSS样式，只需输入CSS标签与属性值的首字母</p>
+</li>
+<li class="lvl-2">
+<p>参数别名：p → %, e → em, x → ex<br>
+例如：w100p → width: 100%</p>
+</li>
 </ul>
-<h3 id="组成及分类"><a href="#组成及分类" class="headerlink" title="组成及分类"></a>组成及分类</h3><p>CSS 中一个区块盒子由以下组成：</p>
-<ul>
-<li>内容盒子：显示内容的区域；使用 <code>inline-size</code> 和 <code>block-size</code> 或 <code>width</code> 和 <code>height</code> 等属性确定其大小。</li>
-<li>内边距盒子：填充位于内容周围的空白处；使用 <code>padding</code> 和相关属性确定其大小。</li>
-<li>边框盒子：边框盒子包住内容和任何填充；使用 <code>border</code> 和相关属性确定其大小。</li>
-<li>外边距盒子：外边距是最外层，其包裹内容、内边距和边框，作为该盒子与其他元素之间的空白；使用 <code>margin</code> 和相关属性确定其大小。</li>
+<h2 id="盒模型">盒模型</h2>
+<h3 id="组成及分类">组成及分类</h3>
+<p>CSS 中一个区块盒子由以下组成：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>内容盒子：显示内容的区域；使用 <code>inline-size</code> 和 <code>block-size</code> 或 <code>width</code> 和 <code>height</code> 等属性确定其大小。</p>
+</li>
+<li class="lvl-2">
+<p>内边距盒子：填充位于内容周围的空白处；使用 <code>padding</code> 和相关属性确定其大小。</p>
+</li>
+<li class="lvl-2">
+<p>边框盒子：边框盒子包住内容和任何填充；使用 <code>border</code> 和相关属性确定其大小。</p>
+</li>
+<li class="lvl-2">
+<p>外边距盒子：外边距是最外层，其包裹内容、内边距和边框，作为该盒子与其他元素之间的空白；使用 <code>margin</code> 和相关属性确定其大小。</p>
+</li>
 </ul>
 <p>外边距：是盒子周围一圈看不到的空间。它会把其他元素退推离盒子。外边距属性值可以为正也可以为负。在盒子一侧设置负值会导致盒子和页面上的其他内容重叠。</p>
 <p>使用 <code>margin</code> 属性一次性控制所有外边距，或者每边单独使用等价的普通属性控制</p>
-<ul>
-<li><code>margin-top</code></li>
-<li><code>margin-right</code></li>
-<li><code>margin-bottom</code></li>
-<li><code>margin-left</code></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>margin-top</code></p>
+</li>
+<li class="lvl-2">
+<p><code>margin-right</code></p>
+</li>
+<li class="lvl-2">
+<p><code>margin-bottom</code></p>
+</li>
+<li class="lvl-2">
+<p><code>margin-left</code></p>
+</li>
 </ul>
 <p>内边距：位于边框和内容区域之间，用于将内容推离边框。与外边距不同，内边距<strong>不能为负数</strong>。</p>
 <p>使用 <code>padding</code> 简写属性一次性控制元素所有边，或者每边单独使用等价的普通属性</p>
-<ul>
-<li><code>padding-top</code></li>
-<li><code>padding-right</code></li>
-<li><code>padding-bottom</code></li>
-<li><code>padding-left</code></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>padding-top</code></p>
+</li>
+<li class="lvl-2">
+<p><code>padding-right</code></p>
+</li>
+<li class="lvl-2">
+<p><code>padding-bottom</code></p>
+</li>
+<li class="lvl-2">
+<p><code>padding-left</code></p>
+</li>
 </ul>
 <p><img src="image1.png" alt="区块盒子"></p>
 <p>一个拥有 <code>block</code> （<strong>区块盒子</strong>）外部显示类型的盒子会表现出以下行为：</p>
 <ol>
-<li>盒子会产生换行。</li>
-<li><code>width</code> 和 <code>height</code> 属性可以发挥作用。</li>
-<li>内边距、外边距和边框会将其他元素从当前盒子周围“推开”。</li>
-<li>如果未指定 <code>width</code>，方框将沿行向扩展，以填充其容器中的可用空间。在大多数情况下，盒子会变得与其容器一样宽，占据可用空间的 100%。</li>
+<li class="lvl-3">
+<p>盒子会产生换行。</p>
+</li>
+<li class="lvl-3">
+<p><code>width</code> 和 <code>height</code> 属性可以发挥作用。</p>
+</li>
+<li class="lvl-3">
+<p>内边距、外边距和边框会将其他元素从当前盒子周围“推开”。</p>
+</li>
+<li class="lvl-3">
+<p>如果未指定 <code>width</code>，方框将沿行向扩展，以填充其容器中的可用空间。在大多数情况下，盒子会变得与其容器一样宽，占据可用空间的 100%。</p>
+</li>
 </ol>
 <p>某些 HTML 元素，如 <code>&lt;h1&gt;</code> 和 <code>&lt;p&gt;</code>，默认使用 <code>block</code> 作为外部显示类型。</p>
 <p>一个拥有 <code>inline</code> （<strong>行内盒子</strong>）外部显示类型的盒子会表现出以下行为：</p>
 <ol>
-<li>盒子不会产生换行。</li>
-<li><code>width</code> 和 <code>height</code> 属性将不起作用。</li>
-<li>垂直、水平方向的内边距、外边距以及边框会被应用但是不会把其他处于 <code>inline</code> 状态的盒子推开。</li>
+<li class="lvl-3">
+<p>盒子不会产生换行。</p>
+</li>
+<li class="lvl-3">
+<p><code>width</code> 和 <code>height</code> 属性将不起作用。</p>
+</li>
+<li class="lvl-3">
+<p>垂直、水平方向的内边距、外边距以及边框会被应用但是不会把其他处于 <code>inline</code> 状态的盒子推开。</p>
+</li>
 </ol>
 <p>某些 HTML 元素如 <code>&lt;a&gt;</code>、 <code>&lt;span&gt;</code>、 <code>&lt;em&gt;</code> 以及 <code>&lt;strong&gt;</code>，默认使用 <code>inline</code> 作为外部显示类型。</p>
 <p>盒子还有内部显示类型，它决定了盒子内元素的布局方式。</p>
-<h3 id="内容溢出"><a href="#内容溢出" class="headerlink" title="内容溢出"></a>内容溢出</h3><p>盒子无法容纳下太多的内容时会发生溢出。</p>
+<h3 id="内容溢出">内容溢出</h3>
+<p>盒子无法容纳下太多的内容时会发生溢出。</p>
 <p><code>overflow</code> 属性设置了元素溢出时所需的行为：</p>
-<ul>
-<li><code>hidden</code>：内容将被裁减以适应边距盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。</li>
-<li><code>scroll</code>：溢出滚动，无论是否溢出都显示滚动条。</li>
-<li><code>auto</code>：溢出滚动，只有溢出时才显示滚动条。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>hidden</code>：内容将被裁减以适应边距盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。</p>
+</li>
+<li class="lvl-2">
+<p><code>scroll</code>：溢出滚动，无论是否溢出都显示滚动条。</p>
+</li>
+<li class="lvl-2">
+<p><code>auto</code>：溢出滚动，只有溢出时才显示滚动条。</p>
+</li>
 </ul>
-<h3 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h3><p><code>border-radius</code> ：属性值为 数字+px/百分比，表示圆角半径。从左上角开始顺时针赋值。</p>
+<h3 id="圆角">圆角</h3>
+<p><code>border-radius</code> ：属性值为 数字+px/百分比，表示圆角半径。从左上角开始顺时针赋值。</p>
 <p>常见应用：</p>
-<ul>
-<li>正圆形状：给<strong>正方形</strong>盒子设置圆角属性值为<strong>宽高的一半</strong>或<strong>50%</strong>。</li>
-<li>胶囊形状：给<strong>长方形</strong>盒子设置圆角属性值为<strong>盒子高度的一半</strong>。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>正圆形状：给<strong>正方形</strong>盒子设置圆角属性值为<strong>宽高的一半</strong>或<strong>50%</strong>。</p>
+</li>
+<li class="lvl-2">
+<p>胶囊形状：给<strong>长方形</strong>盒子设置圆角属性值为<strong>盒子高度的一半</strong>。</p>
+</li>
 </ul>
-<h3 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h3><p><code>box-shadow</code>：属性值为x轴偏移量（必写）、y轴偏移量（必写）、模糊半径、扩散半径、颜色、内外阴影（默认外阴影，内阴影添加 <code>inset</code>）。</p>
+<h3 id="阴影">阴影</h3>
+<p><code>box-shadow</code>：属性值为x轴偏移量（必写）、y轴偏移量（必写）、模糊半径、扩散半径、颜色、内外阴影（默认外阴影，内阴影添加 <code>inset</code>）。</p>
 
 
         <hr>
@@ -664,7 +770,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#CSS"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">导入方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">标签选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#id-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">id 选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">后代选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E4%BB%A3%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">子代关系选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">结构伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.8.</span> <span class="toc-nav-text">伪元素选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.2.9.</span> <span class="toc-nav-text">CSS特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Emmet-%E5%BF%AB%E9%80%9F%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Emmet 快速语法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">盒模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%84%E6%88%90%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">组成及分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%85%E5%AE%B9%E6%BA%A2%E5%87%BA"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">内容溢出</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%86%E8%A7%92"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">圆角</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%98%B4%E5%BD%B1"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">阴影</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">导入方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">标签选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#id-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">id 选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">后代选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E4%BB%A3%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">子代关系选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">结构伪类选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-nav-number">1.2.8.</span> <span class="toc-nav-text">伪元素选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.2.9.</span> <span class="toc-nav-text">CSS特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Emmet-%E5%BF%AB%E9%80%9F%E8%AF%AD%E6%B3%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Emmet 快速语法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">盒模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%84%E6%88%90%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">组成及分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%85%E5%AE%B9%E6%BA%A2%E5%87%BA"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">内容溢出</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%86%E8%A7%92"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">圆角</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%98%B4%E5%BD%B1"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">阴影</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

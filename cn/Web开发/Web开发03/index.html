@@ -243,9 +243,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -265,9 +265,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -276,9 +276,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
+              标签
               
               
             </a>
@@ -466,7 +466,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="网页美化"><a href="#网页美化" class="headerlink" title="网页美化"></a>网页美化</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><div class="table-container">
+        <h1>网页美化</h1>
+<h2 id="字体">字体</h2>
 <table>
 <thead>
 <tr>
@@ -503,10 +504,42 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p><code>font</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：是否倾斜style，是否加粗weight，<strong>字号size</strong>（必写），<strong>字体类型family</strong>（必写）（需要按顺序）。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font</span>: oblique blod <span class="number">12px</span> <span class="string">&quot;楷体&quot;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>*行高 <code>line-height</code> 和盒子高度 <code>height</code> 相同时，文字会垂直居中。<br>| 属性      | 描述 | 说明 |<br>| :——:      | :——:      |  :——:    |<br>| <code>text-indent</code>     | 首行缩进       |  数字+em（1em为当前字号）  |<br>| <code>text-align</code>   | 水平对齐        |  left 左对齐（默认值），center 居中对齐，right 右对齐  |<br>| <code>text-decoration</code>   | 文本修饰       |  none（默认值），underline 下划线，line-through 中划线等|<br>| <code>line-height</code>   | 行高       | 值为像素或数字（是当前标签字体大小的倍数）  |</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><div class="table-container">
+<p><code>font</code>复合属性：属性简写方式，各值之间用空格隔开。<br>顺序：是否倾斜style，是否加粗weight，<strong>字号size</strong>（必写），<strong>字体类型family</strong>（必写）（需要按顺序）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font</span>: oblique blod <span class="number">12px</span> <span class="string">&quot;楷体&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="文字样式">文字样式</h2>
+<p>*行高 <code>line-height</code> 和盒子高度 <code>height</code> 相同时，文字会垂直居中。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>text-indent</code></td>
+<td style="text-align:center">首行缩进</td>
+<td style="text-align:center">数字+em（1em为当前字号）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>text-align</code></td>
+<td style="text-align:center">水平对齐</td>
+<td style="text-align:center">left 左对齐（默认值），center 居中对齐，right 右对齐</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>text-decoration</code></td>
+<td style="text-align:center">文本修饰</td>
+<td style="text-align:center">none（默认值），underline 下划线，line-through 中划线等</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>line-height	</code></td>
+<td style="text-align:center">行高</td>
+<td style="text-align:center">值为像素或数字（是当前标签字体大小的倍数）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="背景">背景</h2>
 <table>
 <thead>
 <tr>
@@ -548,10 +581,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p><code>background</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：背景色，背景图，平铺方式，位置/缩放（用/连接），背景图固定（不需要按顺序）。</p>
-<h2 id="平面转换-transform"><a href="#平面转换-transform" class="headerlink" title="平面转换 transform"></a>平面转换 transform</h2><p>平面转换（<code>transform</code> 属性）改变盒子在平面内的形态，包括旋转、倾斜、缩放以及位移。</p>
-<div class="table-container">
+<p><code>background</code>复合属性：属性简写方式，各值之间用空格隔开。<br>顺序：背景色，背景图，平铺方式，位置/缩放（用/连接），背景图固定（不需要按顺序）。</p>
+<h2 id="平面转换-transform">平面转换 transform</h2>
+<p>平面转换（<code>transform</code> 属性）改变盒子在平面内的形态，包括旋转、倾斜、缩放以及位移。</p>
 <table>
 <thead>
 <tr>
@@ -588,71 +620,137 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>补充：</p>
-<ul>
-<li><code>translate</code>只写一个数表示x轴移动，单独设置x或y轴移动可用 <code>translateX()</code> 或 <code>translateY()</code>。</li>
-<li><code>rotate</code>改变旋转原点：默认情况下旋转原点是盒子中心点，使用<code>transform-origin: 水平原点位置 垂直原点位置</code>修改。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>translate</code>只写一个数表示x轴移动，单独设置x或y轴移动可用 <code>translateX()</code> 或 <code>translateY()</code>。</p>
+</li>
+<li class="lvl-2">
+<p><code>rotate</code>改变旋转原点：默认情况下旋转原点是盒子中心点，使用<code>transform-origin: 水平原点位置 垂直原点位置</code>修改。</p>
+</li>
 </ul>
-<h2 id="空间转换-transform"><a href="#空间转换-transform" class="headerlink" title="空间转换 transform"></a>空间转换 transform</h2><p>较平面转换多一条z轴，其他类似。旋转时左手握住旋转轴，拇指指向正值方向，四指弯曲方向为旋转正值方向。</p>
-<h2 id="透视效果"><a href="#透视效果" class="headerlink" title="透视效果"></a>透视效果</h2><p>使用 <code>perspective: 数值+px</code> 实现透视效果（加给直接父级元素），实现近大远小、近实远虚的视觉效果。</p>
-<h2 id="立体呈现"><a href="#立体呈现" class="headerlink" title="立体呈现"></a>立体呈现</h2><p><code>transform-style: flat|preserve-3d;</code> 加给父级元素，设置元素的子元素是位于 3D 空间中还是平面中。</p>
-<ul>
-<li><code>flat</code>：设置元素的子元素位于该元素的平面中（子元素不设置3D空间）</li>
-<li><code>preserve-3d</code>：设置元素的子元素应用于3D空间中</li>
+<h2 id="空间转换-transform">空间转换 transform</h2>
+<p>较平面转换多一条z轴，其他类似。旋转时左手握住旋转轴，拇指指向正值方向，四指弯曲方向为旋转正值方向。</p>
+<h2 id="透视效果">透视效果</h2>
+<p>使用 <code>perspective: 数值+px</code> 实现透视效果（加给直接父级元素），实现近大远小、近实远虚的视觉效果。</p>
+<h2 id="立体呈现">立体呈现</h2>
+<p><code>transform-style: flat|preserve-3d;</code> 加给父级元素，设置元素的子元素是位于 3D 空间中还是平面中。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>flat</code>：设置元素的子元素位于该元素的平面中（子元素不设置3D空间）</p>
+</li>
+<li class="lvl-2">
+<p><code>preserve-3d</code>：设置元素的子元素应用于3D空间中</p>
+</li>
 </ul>
-<h2 id="动画-animation"><a href="#动画-animation" class="headerlink" title="动画 animation"></a>动画 animation</h2><ol>
-<li>定义方法<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;&#125;</span><br><span class="line">  <span class="number">10%</span> &#123;&#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="number">100%</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">   <span class="selector-tag">from</span> &#123;&#125;</span><br><span class="line">   <span class="selector-tag">to</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>使用动画<br><code>animation</code>：动画名称（必写），动画时长（必写），速度曲线，延迟时间，重复次数，动画方向 执行结束状态（取值不分先后）</li>
+<h2 id="动画-animation">动画 animation</h2>
+<ol>
+<li class="lvl-3">
+<p>定义方法</p>
+</li>
 </ol>
-<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><p>两种渐变类型：</p>
-<ul>
-<li>线性渐变（向下/向上/向左/向右/对角线）：<code>to+方位名词</code> 或角度</li>
-<li>径向渐变（由其中心定义）</li>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;&#125;</span><br><span class="line">  <span class="number">10%</span> &#123;&#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="number">100%</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">   <span class="selector-tag">from</span> &#123;&#125;</span><br><span class="line">   <span class="selector-tag">to</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li class="lvl-3">
+<p>使用动画<code>animation</code>：动画名称（必写），动画时长（必写），速度曲线，延迟时间，重复次数，动画方向 执行结束状态（取值不分先后）</p>
+</li>
+</ol>
+<h2 id="渐变">渐变</h2>
+<p>两种渐变类型：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>线性渐变（向下/向上/向左/向右/对角线）：<code>to+方位名词</code> 或角度</p>
+</li>
+<li class="lvl-2">
+<p>径向渐变（由其中心定义）</p>
+</li>
 </ul>
 <ol>
-<li>线性渐变</li>
+<li class="lvl-3">
+<p>线性渐变</p>
+</li>
 </ol>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">   direction, </span><br><span class="line">   color-stop1 终点位置(%),</span><br><span class="line">   color-stop2, ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<ol>
-<li>径向渐变</li>
+<ol start="2">
+<li class="lvl-3">
+<p>径向渐变</p>
+</li>
 </ol>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">radial-gradient</span>(</span><br><span class="line">   半径 at 圆心位置, </span><br><span class="line">   color1 终点位置, </span><br><span class="line">   color2 终点位置, </span><br><span class="line">   ..., </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p>*半径写两条则为椭圆渐变</p>
-<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><p>当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处盒子的边界，或者碰到另外一个浮动的元素。浮动可以让块元素水平排列。父元素需确保足以容纳其中的浮动子元素。</p>
+<h2 id="浮动">浮动</h2>
+<p>当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处盒子的边界，或者碰到另外一个浮动的元素。浮动可以让块元素水平排列。父元素需确保足以容纳其中的浮动子元素。</p>
 <p>属性名 <code>float</code>：左对齐 <code>left</code>，右对齐 <code>right</code>。</p>
-<h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>如果不想让其他元素受到浮动元素的影响，需要清除浮动。</p>
+<h3 id="清除浮动">清除浮动</h3>
+<p>如果不想让其他元素受到浮动元素的影响，需要清除浮动。</p>
 <p>属性名 <code>clear</code>：</p>
-<ul>
-<li><code>left</code> 元素被向下移动以清除左浮动。</li>
-<li><code>right</code> 元素被向下移动以清除右浮动。</li>
-<li><code>both</code> 元素被向下移动以清除左右浮动（最常用）。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>left</code> 元素被向下移动以清除左浮动。</p>
+</li>
+<li class="lvl-2">
+<p><code>right</code> 元素被向下移动以清除右浮动。</p>
+</li>
+<li class="lvl-2">
+<p><code>both</code> 元素被向下移动以清除左右浮动（最常用）。</p>
+</li>
 </ul>
 <p>清除浮动方法：</p>
 <ol>
-<li>额外标签法<br>在父元素内容的最后添加一个块级元素（一般把类名命名为 <code>clearfix</code>），设置CSS属性 <code>clear</code> 为 <code>both</code>。</li>
-<li>单伪元素法<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">     <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">clear</span>: both;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
-<li>双伪元素法（推荐）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>overflow法：父元素添加CSS属性 <code>overflow:hidden</code></li>
+<li class="lvl-3">
+<p>额外标签法在父元素内容的最后添加一个块级元素（一般把类名命名为 <code>clearfix</code>），设置CSS属性 <code>clear</code> 为 <code>both</code>。</p>
+</li>
+<li class="lvl-3">
+<p>单伪元素法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">     <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">clear</span>: both;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>双伪元素法（推荐）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>overflow法：父元素添加CSS属性 <code>overflow:hidden</code></p>
+</li>
 </ol>
-<h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><p>flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</p>
+<h2 id="Flex">Flex</h2>
+<p>flex 是 flexible Box 的缩写，意为&quot;弹性布局&quot;，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</p>
 <p>术语：</p>
-<ul>
-<li>弹性容器：包含弹性项目的父元素。</li>
-<li>弹性盒子，即flex项（flex item）。</li>
-<li>主轴 (main axis)：弹性项目排列的主要轴，默认水平方向，通过 <code>flex-direction</code> 更改。</li>
-<li>主轴起点（main-start） | 主轴终点（main-end）：弹性项目从主轴起点开始排列，直到主轴终点。</li>
-<li>主轴尺寸（main size）：弹性项目的宽度或高度，取决于主轴的方向。弹性项目的主尺寸属性是主维度上的 <code>width</code> 或 <code>height</code> 属性。</li>
-<li>侧轴/交叉轴 (cross axis)：与主轴垂直的轴。其方向取决于主轴的方向。默认垂直方向。</li>
-<li>交叉轴起点（cross-start） | 交叉轴终点（cross-end）：弹性行（flex line）填充项目并放置在容器中，从交叉轴起点开始，向终点方向排列。</li>
-<li>交叉轴尺寸（cross size）：弹性项目的宽度或高度，取决于交叉轴的方向，是项目的横尺寸。横尺寸属性是横向维度上的 <code>width</code> 或 <code>height</code> 属性。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>弹性容器：包含弹性项目的父元素。</p>
+</li>
+<li class="lvl-2">
+<p>弹性盒子，即flex项（flex item）。</p>
+</li>
+<li class="lvl-2">
+<p>主轴 (main axis)：弹性项目排列的主要轴，默认水平方向，通过 <code>flex-direction</code> 更改。</p>
+</li>
+<li class="lvl-2">
+<p>主轴起点（main-start） | 主轴终点（main-end）：弹性项目从主轴起点开始排列，直到主轴终点。</p>
+</li>
+<li class="lvl-2">
+<p>主轴尺寸（main size）：弹性项目的宽度或高度，取决于主轴的方向。弹性项目的主尺寸属性是主维度上的 <code>width</code> 或 <code>height</code> 属性。</p>
+</li>
+<li class="lvl-2">
+<p>侧轴/交叉轴 (cross axis)：与主轴垂直的轴。其方向取决于主轴的方向。默认垂直方向。</p>
+</li>
+<li class="lvl-2">
+<p>交叉轴起点（cross-start） | 交叉轴终点（cross-end）：弹性行（flex line）填充项目并放置在容器中，从交叉轴起点开始，向终点方向排列。</p>
+</li>
+<li class="lvl-2">
+<p>交叉轴尺寸（cross size）：弹性项目的宽度或高度，取决于交叉轴的方向，是项目的横尺寸。横尺寸属性是横向维度上的 <code>width</code> 或 <code>height</code> 属性。</p>
+</li>
 </ul>
 <p><img src="image1.png" alt="Flex"></p>
-<h3 id="父元素属性"><a href="#父元素属性" class="headerlink" title="父元素属性"></a>父元素属性</h3><ol>
-<li>给父元素设置 <code>display:flex</code> ，子元素可以自动挤压或拉伸。</li>
-<li>主轴对齐方式：<code>justify-content</code></li>
+<h3 id="父元素属性">父元素属性</h3>
+<ol>
+<li class="lvl-3">
+<p>给父元素设置 <code>display:flex</code> ，子元素可以自动挤压或拉伸。</p>
+</li>
+<li class="lvl-3">
+<p>主轴对齐方式：<code>justify-content</code></p>
+</li>
 </ol>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -687,15 +785,14 @@
 </tr>
 </tbody>
 </table>
-</div>
 <div style="text-align: center;">
     <img src="image2.png" width="70%" height="70%" />
 </div>
-
-<ol>
-<li>行对齐方式 <code>align-content</code> （对单行不生效）</li>
+<ol start="3">
+<li class="lvl-3">
+<p>行对齐方式 <code>align-content</code> （对单行不生效）</p>
+</li>
 </ol>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -730,11 +827,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-<ol>
-<li>侧轴对齐方式：<code>align-items</code> </li>
+<ol start="4">
+<li class="lvl-3">
+<p>侧轴对齐方式：<code>align-items</code></p>
+</li>
 </ol>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -761,11 +858,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-<ol>
-<li>主轴方向：<code>flex-direction</code></li>
+<ol start="5">
+<li class="lvl-3">
+<p>主轴方向：<code>flex-direction</code></p>
+</li>
 </ol>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -792,30 +889,54 @@
 </tr>
 </tbody>
 </table>
-</div>
-<ol>
-<li>弹性盒子换行 <code>flex-wrap</code>：<code>nowrap</code>（默认）：所有弹性项目都在一行上。<code>wrap</code>：弹性项目将换行到多行，从上到下。 </li>
+<ol start="6">
+<li class="lvl-3">
+<p>弹性盒子换行 <code>flex-wrap</code>：<code>nowrap</code>（默认）：所有弹性项目都在一行上。<code>wrap</code>：弹性项目将换行到多行，从上到下。</p>
+</li>
 </ol>
 <p>*默认情况下，子元素主轴方向尺寸靠内容撑开（可以用<code>flex</code>给子元素单独设置），侧轴为拉伸</p>
-<h3 id="子元素属性"><a href="#子元素属性" class="headerlink" title="子元素属性"></a>子元素属性</h3><ol>
-<li><code>align-self</code> 单独控制某个弹性盒子侧轴对齐方式</li>
-<li><code>flex</code>：弹性伸缩比（控制在主轴方向的尺寸）的属性，数值表示占剩余空间的几份。</li>
+<h3 id="子元素属性">子元素属性</h3>
+<ol>
+<li class="lvl-3">
+<p><code>align-self</code> 单独控制某个弹性盒子侧轴对齐方式</p>
+</li>
+<li class="lvl-3">
+<p><code>flex</code>：弹性伸缩比（控制在主轴方向的尺寸）的属性，数值表示占剩余空间的几份。</p>
+</li>
 </ol>
-<h1 id="网页开发示例"><a href="#网页开发示例" class="headerlink" title="网页开发示例"></a>网页开发示例</h1><h2 id="logo"><a href="#logo" class="headerlink" title="logo"></a>logo</h2><p>功能：点击跳转首页，提升搜索排名</p>
+<h1>网页开发示例</h1>
+<h2 id="logo">logo</h2>
+<p>功能：点击跳转首页，提升搜索排名</p>
 <p>实现方法：</p>
 <ol>
-<li>标签结构：h1 &gt; a &gt; 网页名</li>
-<li>CSS样式示例：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="导航（nav）"><a href="#导航（nav）" class="headerlink" title="导航（nav）"></a>导航（nav）</h2>功能：点击跳转页面</li>
+<li class="lvl-3">
+<p>标签结构：h1 &gt; a &gt; 网页名</p>
+</li>
+<li class="lvl-3">
+<p>CSS样式示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h2 id="导航（nav）">导航（nav）</h2>
+<p>功能：点击跳转页面</p>
 <p>实现方法：</p>
 <ol>
-<li>标签结构：ul &gt; 多个li  &gt; a</li>
-<li>CSS样式示例：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>布局思路示例：li 设置右侧 margin，a 设置左右 padding</li>
+<li class="lvl-3">
+<p>标签结构：ul &gt; 多个li  &gt; a</p>
+</li>
+<li class="lvl-3">
+<p>CSS样式示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>布局思路示例：li 设置右侧 margin，a 设置左右 padding</p>
+</li>
 </ol>
-<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ol>
-<li>标签结构：.search &gt; input+a/bottom</li>
+<h2 id="搜索">搜索</h2>
+<ol>
+<li class="lvl-3">
+<p>标签结构：.search &gt; input+a/bottom</p>
+</li>
 </ol>
 
 
@@ -862,7 +983,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">网页美化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">字体</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">文字样式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B9%B3%E9%9D%A2%E8%BD%AC%E6%8D%A2-transform"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">平面转换 transform</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%A9%BA%E9%97%B4%E8%BD%AC%E6%8D%A2-transform"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">空间转换 transform</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%8F%E8%A7%86%E6%95%88%E6%9E%9C"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">透视效果</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AB%8B%E4%BD%93%E5%91%88%E7%8E%B0"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">立体呈现</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%A8%E7%94%BB-animation"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">动画 animation</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%90%E5%8F%98"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">渐变</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%AE%E5%8A%A8"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">浮动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">清除浮动</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flex"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">Flex</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%88%B6%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">父元素属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.11.2.</span> <span class="toc-nav-text">子元素属性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">网页开发示例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#logo"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">logo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E8%88%AA%EF%BC%88nav%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">导航（nav）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">搜索</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">网页美化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">字体</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">文字样式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B9%B3%E9%9D%A2%E8%BD%AC%E6%8D%A2-transform"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">平面转换 transform</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%A9%BA%E9%97%B4%E8%BD%AC%E6%8D%A2-transform"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">空间转换 transform</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%8F%E8%A7%86%E6%95%88%E6%9E%9C"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">透视效果</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AB%8B%E4%BD%93%E5%91%88%E7%8E%B0"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">立体呈现</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%A8%E7%94%BB-animation"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">动画 animation</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%90%E5%8F%98"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">渐变</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%AE%E5%8A%A8"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">浮动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">清除浮动</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flex"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">Flex</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%88%B6%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">父元素属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%90%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.11.2.</span> <span class="toc-nav-text">子元素属性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">网页开发示例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#logo"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">logo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%BC%E8%88%AA%EF%BC%88nav%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">导航（nav）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">搜索</span></a></li></ol></li></ol>
         
         </div>
       </aside>
