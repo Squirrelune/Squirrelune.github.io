@@ -243,9 +243,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -254,9 +254,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -466,147 +466,129 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="网页美化"><a href="#网页美化" class="headerlink" title="网页美化"></a>网页美化</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><table>
-<thead>
-<tr>
-<th align="center">属性</th>
-<th align="center">描述</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>font-family</code></td>
-<td align="center">字体类型</td>
-<td align="center">\</td>
-</tr>
-<tr>
-<td align="center"><code>font-size</code></td>
-<td align="center">字体大小</td>
-<td align="center">像素值（10px 等）和关键字（small、medium 和 large 等）</td>
-</tr>
-<tr>
-<td align="center"><code>font-weight</code></td>
-<td align="center">字体粗细</td>
-<td align="center">常见取值：数值（400，700）和关键字（normal，bold）</td>
-</tr>
-<tr>
-<td align="center"><code>font-style</code></td>
-<td align="center">字体风格</td>
-<td align="center">normal 正常（默认值），italic 或 oblique 斜体</td>
-</tr>
-<tr>
-<td align="center"><code>color</code></td>
-<td align="center">字体颜色</td>
-<td align="center">\</td>
-</tr>
-</tbody></table>
-<p><code>font</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：是否倾斜style，是否加粗weight，<strong>字号size</strong>（必写），<strong>字体类型family</strong>（必写）（需要按顺序）。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font</span>: oblique blod <span class="number">12px</span> <span class="string">&quot;楷体&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>*行高 <code>line-height</code> 和盒子高度 <code>height</code> 相同时，文字会垂直居中。</p>
+        <h1 id="网页美化"><a href="#网页美化" class="headerlink" title="网页美化"></a>网页美化</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性</th>
-<th align="center">描述</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>text-indent</code></td>
-<td align="center">首行缩进</td>
-<td align="center">数字+em（1em为当前字号）</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>font-family</code></td>
+<td style="text-align:center">字体类型</td>
+<td style="text-align:center">\</td>
 </tr>
 <tr>
-<td align="center"><code>text-align</code></td>
-<td align="center">水平对齐</td>
-<td align="center">left 左对齐（默认值），center 居中对齐，right 右对齐</td>
+<td style="text-align:center"><code>font-size</code></td>
+<td style="text-align:center">字体大小</td>
+<td style="text-align:center">像素值（10px 等）和关键字（small、medium 和 large 等）</td>
 </tr>
 <tr>
-<td align="center"><code>text-decoration</code></td>
-<td align="center">文本修饰</td>
-<td align="center">none（默认值），underline 下划线，line-through 中划线等</td>
+<td style="text-align:center"><code>font-weight</code></td>
+<td style="text-align:center">字体粗细</td>
+<td style="text-align:center">常见取值：数值（400，700）和关键字（normal，bold）</td>
 </tr>
 <tr>
-<td align="center"><code>line-height	</code></td>
-<td align="center">行高</td>
-<td align="center">值为像素或数字（是当前标签字体大小的倍数）</td>
+<td style="text-align:center"><code>font-style</code></td>
+<td style="text-align:center">字体风格</td>
+<td style="text-align:center">normal 正常（默认值），italic 或 oblique 斜体</td>
 </tr>
-</tbody></table>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><table>
+<tr>
+<td style="text-align:center"><code>color</code></td>
+<td style="text-align:center">字体颜色</td>
+<td style="text-align:center">\</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code>font</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：是否倾斜style，是否加粗weight，<strong>字号size</strong>（必写），<strong>字体类型family</strong>（必写）（需要按顺序）。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font</span>: oblique blod <span class="number">12px</span> <span class="string">&quot;楷体&quot;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>*行高 <code>line-height</code> 和盒子高度 <code>height</code> 相同时，文字会垂直居中。<br>| 属性      | 描述 | 说明 |<br>| :——:      | :——:      |  :——:    |<br>| <code>text-indent</code>     | 首行缩进       |  数字+em（1em为当前字号）  |<br>| <code>text-align</code>   | 水平对齐        |  left 左对齐（默认值），center 居中对齐，right 右对齐  |<br>| <code>text-decoration</code>   | 文本修饰       |  none（默认值），underline 下划线，line-through 中划线等|<br>| <code>line-height</code>   | 行高       | 值为像素或数字（是当前标签字体大小的倍数）  |</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">属性</th>
-<th align="center">描述</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>background-attachment</code></td>
-<td align="center">背景图像是否固定或者随着页面的其余部分滚动</td>
-<td align="center">fixed 固定</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>background-attachment</code></td>
+<td style="text-align:center">背景图像是否固定或者随着页面的其余部分滚动</td>
+<td style="text-align:center">fixed 固定</td>
 </tr>
 <tr>
-<td align="center"><code>background-color</code></td>
-<td align="center">背景颜色</td>
-<td align="center">\</td>
+<td style="text-align:center"><code>background-color</code></td>
+<td style="text-align:center">背景颜色</td>
+<td style="text-align:center">\</td>
 </tr>
 <tr>
-<td align="center"><code>background-image</code></td>
-<td align="center">背景图片</td>
-<td align="center">url(背景图url)</td>
+<td style="text-align:center"><code>background-image</code></td>
+<td style="text-align:center">背景图片</td>
+<td style="text-align:center">url(背景图url)</td>
 </tr>
 <tr>
-<td align="center"><code>background-position</code></td>
-<td align="center">设置背景图像的起始位置</td>
-<td align="center">关键字或坐标（数字＋px，正负均可），先水平后垂直，空格隔开</td>
+<td style="text-align:center"><code>background-position</code></td>
+<td style="text-align:center">设置背景图像的起始位置</td>
+<td style="text-align:center">关键字或坐标（数字＋px，正负均可），先水平后垂直，空格隔开</td>
 </tr>
 <tr>
-<td align="center"><code>background-repeat</code></td>
-<td align="center">设置背景图像是否及如何重复</td>
-<td align="center">no-repeat 不平铺，repeat-x 水平平铺，repeat-y 垂直平铺，repeat 平铺（默认）</td>
+<td style="text-align:center"><code>background-repeat</code></td>
+<td style="text-align:center">设置背景图像是否及如何重复</td>
+<td style="text-align:center">no-repeat 不平铺，repeat-x 水平平铺，repeat-y 垂直平铺，repeat 平铺（默认）</td>
 </tr>
 <tr>
-<td align="center"><code>background-size</code></td>
-<td align="center">背景缩放</td>
-<td align="center">关键字，百分比或数字+px</td>
+<td style="text-align:center"><code>background-size</code></td>
+<td style="text-align:center">背景缩放</td>
+<td style="text-align:center">关键字，百分比或数字+px</td>
 </tr>
-</tbody></table>
-<p><code>background</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：背景色，背景图，平铺方式，位置&#x2F;缩放（用&#x2F;连接），背景图固定（不需要按顺序）。</p>
+</tbody>
+</table>
+</div>
+<p><code>background</code>复合属性：属性简写方式，各值之间用空格隔开。<br><br>顺序：背景色，背景图，平铺方式，位置/缩放（用/连接），背景图固定（不需要按顺序）。</p>
 <h2 id="平面转换-transform"><a href="#平面转换-transform" class="headerlink" title="平面转换 transform"></a>平面转换 transform</h2><p>平面转换（<code>transform</code> 属性）改变盒子在平面内的形态，包括旋转、倾斜、缩放以及位移。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">说明</th>
-<th align="center">属性</th>
-<th align="center">值</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">平移</td>
-<td align="center"><code>transform: translate(x轴移动距离,y轴移动距离)</code></td>
-<td align="center">像素或百分比，正负均可</td>
+<tbody>
+<tr>
+<td style="text-align:center">平移</td>
+<td style="text-align:center"><code>transform: translate(x轴移动距离,y轴移动距离)</code></td>
+<td style="text-align:center">像素或百分比，正负均可</td>
 </tr>
 <tr>
-<td align="center">旋转</td>
-<td align="center"><code>transform: rotate(旋转角度)</code></td>
-<td align="center">角度+deg</td>
+<td style="text-align:center">旋转</td>
+<td style="text-align:center"><code>transform: rotate(旋转角度)</code></td>
+<td style="text-align:center">角度+deg</td>
 </tr>
 <tr>
-<td align="center">多重转换</td>
-<td align="center"><code>transform: translate() rotate()</code></td>
-<td align="center">以第一种转换的坐标轴为准，一般先平移后旋转</td>
+<td style="text-align:center">多重转换</td>
+<td style="text-align:center"><code>transform: translate() rotate()</code></td>
+<td style="text-align:center">以第一种转换的坐标轴为准，一般先平移后旋转</td>
 </tr>
 <tr>
-<td align="center">缩放</td>
-<td align="center"><code>transform: scale()</code></td>
-<td align="center">缩放倍数或 (x轴缩放倍数,y轴缩放倍数)</td>
+<td style="text-align:center">缩放</td>
+<td style="text-align:center"><code>transform: scale()</code></td>
+<td style="text-align:center">缩放倍数或 (x轴缩放倍数,y轴缩放倍数)</td>
 </tr>
 <tr>
-<td align="center">倾斜</td>
-<td align="center"><code>transform: skew()</code></td>
-<td align="center">角度+deg</td>
+<td style="text-align:center">倾斜</td>
+<td style="text-align:center"><code>transform: skew()</code></td>
+<td style="text-align:center">角度+deg</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>补充：</p>
 <ul>
 <li><code>translate</code>只写一个数表示x轴移动，单独设置x或y轴移动可用 <code>translateX()</code> 或 <code>translateY()</code>。</li>
@@ -620,22 +602,19 @@
 <li><code>preserve-3d</code>：设置元素的子元素应用于3D空间中</li>
 </ul>
 <h2 id="动画-animation"><a href="#动画-animation" class="headerlink" title="动画 animation"></a>动画 animation</h2><ol>
-<li>定义方法</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;&#125;</span><br><span class="line">  <span class="number">10%</span> &#123;&#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="number">100%</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">   <span class="selector-tag">from</span> &#123;&#125;</span><br><span class="line">   <span class="selector-tag">to</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<li>定义方法<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;&#125;</span><br><span class="line">  <span class="number">10%</span> &#123;&#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="number">100%</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">   <span class="selector-tag">from</span> &#123;&#125;</span><br><span class="line">   <span class="selector-tag">to</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>使用动画<br><code>animation</code>：动画名称（必写），动画时长（必写），速度曲线，延迟时间，重复次数，动画方向 执行结束状态（取值不分先后）</li>
 </ol>
 <h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><p>两种渐变类型：</p>
 <ul>
-<li>线性渐变（向下&#x2F;向上&#x2F;向左&#x2F;向右&#x2F;对角线）：<code>to+方位名词</code> 或角度</li>
+<li>线性渐变（向下/向上/向左/向右/对角线）：<code>to+方位名词</code> 或角度</li>
 <li>径向渐变（由其中心定义）</li>
 </ul>
 <ol>
 <li>线性渐变</li>
 </ol>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">   direction, </span><br><span class="line">   color-stop1 终点位置(%),</span><br><span class="line">   color-stop2, ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<ol>
 <li>径向渐变</li>
 </ol>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">radial-gradient</span>(</span><br><span class="line">   半径 at 圆心位置, </span><br><span class="line">   color1 终点位置, </span><br><span class="line">   color2 终点位置, </span><br><span class="line">   ..., </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -664,7 +643,7 @@
 <li>主轴 (main axis)：弹性项目排列的主要轴，默认水平方向，通过 <code>flex-direction</code> 更改。</li>
 <li>主轴起点（main-start） | 主轴终点（main-end）：弹性项目从主轴起点开始排列，直到主轴终点。</li>
 <li>主轴尺寸（main size）：弹性项目的宽度或高度，取决于主轴的方向。弹性项目的主尺寸属性是主维度上的 <code>width</code> 或 <code>height</code> 属性。</li>
-<li>侧轴&#x2F;交叉轴 (cross axis)：与主轴垂直的轴。其方向取决于主轴的方向。默认垂直方向。</li>
+<li>侧轴/交叉轴 (cross axis)：与主轴垂直的轴。其方向取决于主轴的方向。默认垂直方向。</li>
 <li>交叉轴起点（cross-start） | 交叉轴终点（cross-end）：弹性行（flex line）填充项目并放置在容器中，从交叉轴起点开始，向终点方向排列。</li>
 <li>交叉轴尺寸（cross size）：弹性项目的宽度或高度，取决于交叉轴的方向，是项目的横尺寸。横尺寸属性是横向维度上的 <code>width</code> 或 <code>height</code> 属性。</li>
 </ul>
@@ -673,133 +652,149 @@
 <li>给父元素设置 <code>display:flex</code> ，子元素可以自动挤压或拉伸。</li>
 <li>主轴对齐方式：<code>justify-content</code></li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性值</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性值</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>flex-start</code></td>
-<td align="center">默认值，在主轴起点开始排列</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>flex-start</code></td>
+<td style="text-align:center">默认值，在主轴起点开始排列</td>
 </tr>
 <tr>
-<td align="center"><code>flex-end</code></td>
-<td align="center">在主轴的尾部开始排列</td>
+<td style="text-align:center"><code>flex-end</code></td>
+<td style="text-align:center">在主轴的尾部开始排列</td>
 </tr>
 <tr>
-<td align="center"><code>center</code></td>
-<td align="center">在主轴居中显示</td>
+<td style="text-align:center"><code>center</code></td>
+<td style="text-align:center">在主轴居中显示</td>
 </tr>
 <tr>
-<td align="center"><code>space-between</code></td>
-<td align="center">沿主轴均匀排列，空白间距均分在中间</td>
+<td style="text-align:center"><code>space-between</code></td>
+<td style="text-align:center">沿主轴均匀排列，空白间距均分在中间</td>
 </tr>
 <tr>
-<td align="center"><code>space-around</code></td>
-<td align="center">沿主轴均匀排列，空白间距均分在两侧</td>
+<td style="text-align:center"><code>space-around</code></td>
+<td style="text-align:center">沿主轴均匀排列，空白间距均分在两侧</td>
 </tr>
 <tr>
-<td align="center"><code>space-evenly</code></td>
-<td align="center">沿主轴均匀排列，弹性盒子与容器间距相同</td>
+<td style="text-align:center"><code>space-evenly</code></td>
+<td style="text-align:center">沿主轴均匀排列，弹性盒子与容器间距相同</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <div style="text-align: center;">
     <img src="image2.png" width="70%" height="70%" />
 </div>
 
-<ol start="3">
+<ol>
 <li>行对齐方式 <code>align-content</code> （对单行不生效）</li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性值</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性值</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>flex-start</code></td>
-<td align="center">默认值，从容器的起点开始排列</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>flex-start</code></td>
+<td style="text-align:center">默认值，从容器的起点开始排列</td>
 </tr>
 <tr>
-<td align="center"><code>flex-end</code></td>
-<td align="center">从容器的终点开始排列</td>
+<td style="text-align:center"><code>flex-end</code></td>
+<td style="text-align:center">从容器的终点开始排列</td>
 </tr>
 <tr>
-<td align="center"><code>center</code></td>
-<td align="center">容器里居中显示</td>
+<td style="text-align:center"><code>center</code></td>
+<td style="text-align:center">容器里居中显示</td>
 </tr>
 <tr>
-<td align="center"><code>space-between</code></td>
-<td align="center">第一行在容器的起点，最后一行在终点，空白间距均分在中间</td>
+<td style="text-align:center"><code>space-between</code></td>
+<td style="text-align:center">第一行在容器的起点，最后一行在终点，空白间距均分在中间</td>
 </tr>
 <tr>
-<td align="center"><code>space-around</code></td>
-<td align="center">每行周围有相等的空间</td>
+<td style="text-align:center"><code>space-around</code></td>
+<td style="text-align:center">每行周围有相等的空间</td>
 </tr>
 <tr>
-<td align="center"><code>space-evenly</code></td>
-<td align="center">弹性盒子与容器间距相同，周围有相等的空间</td>
+<td style="text-align:center"><code>space-evenly</code></td>
+<td style="text-align:center">弹性盒子与容器间距相同，周围有相等的空间</td>
 </tr>
-</tbody></table>
-<ol start="4">
-<li>侧轴对齐方式：<code>align-items</code></li>
+</tbody>
+</table>
+</div>
+<ol>
+<li>侧轴对齐方式：<code>align-items</code> </li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性值</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性值</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>stretch</code></td>
-<td align="center"><strong>默认值</strong>，拉伸以填充容器（仍然遵守最小宽度&#x2F;最大宽度）</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>stretch</code></td>
+<td style="text-align:center"><strong>默认值</strong>，拉伸以填充容器（仍然遵守最小宽度/最大宽度）</td>
 </tr>
 <tr>
-<td align="center"><code>center</code></td>
-<td align="center">在侧轴居中显示</td>
+<td style="text-align:center"><code>center</code></td>
+<td style="text-align:center">在侧轴居中显示</td>
 </tr>
 <tr>
-<td align="center"><code>flex-start</code></td>
-<td align="center">在起点开始排列</td>
+<td style="text-align:center"><code>flex-start</code></td>
+<td style="text-align:center">在起点开始排列</td>
 </tr>
 <tr>
-<td align="center"><code>flex-end</code></td>
-<td align="center">在尾部开始排列</td>
+<td style="text-align:center"><code>flex-end</code></td>
+<td style="text-align:center">在尾部开始排列</td>
 </tr>
-</tbody></table>
-<ol start="5">
+</tbody>
+</table>
+</div>
+<ol>
 <li>主轴方向：<code>flex-direction</code></li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性值</th>
-<th align="center">说明</th>
+<th style="text-align:center">属性值</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>row</code></td>
-<td align="center">（默认）水平方向从左到右</td>
+<tbody>
+<tr>
+<td style="text-align:center"><code>row</code></td>
+<td style="text-align:center">（默认）水平方向从左到右</td>
 </tr>
 <tr>
-<td align="center"><code>row-reverse</code></td>
-<td align="center">水平方向从右到左</td>
+<td style="text-align:center"><code>row-reverse</code></td>
+<td style="text-align:center">水平方向从右到左</td>
 </tr>
 <tr>
-<td align="center"><code>column</code></td>
-<td align="center">垂直方向从上到下</td>
+<td style="text-align:center"><code>column</code></td>
+<td style="text-align:center">垂直方向从上到下</td>
 </tr>
 <tr>
-<td align="center"><code>column-reverse</code></td>
-<td align="center">垂直方向从下到上</td>
+<td style="text-align:center"><code>column-reverse</code></td>
+<td style="text-align:center">垂直方向从下到上</td>
 </tr>
-</tbody></table>
-<ol start="6">
-<li>弹性盒子换行 <code>flex-wrap</code>：<code>nowrap</code>（默认）：所有弹性项目都在一行上。<code>wrap</code>：弹性项目将换行到多行，从上到下。</li>
+</tbody>
+</table>
+</div>
+<ol>
+<li>弹性盒子换行 <code>flex-wrap</code>：<code>nowrap</code>（默认）：所有弹性项目都在一行上。<code>wrap</code>：弹性项目将换行到多行，从上到下。 </li>
 </ol>
 <p>*默认情况下，子元素主轴方向尺寸靠内容撑开（可以用<code>flex</code>给子元素单独设置），侧轴为拉伸</p>
 <h3 id="子元素属性"><a href="#子元素属性" class="headerlink" title="子元素属性"></a>子元素属性</h3><ol>
@@ -810,9 +805,9 @@
 <p>实现方法：</p>
 <ol>
 <li>标签结构：h1 &gt; a &gt; 网页名</li>
-<li>CSS样式示例：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>CSS样式示例：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: block;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">     <span class="attribute">background-image</span>: url;</span><br><span class="line">     <span class="comment">/* 隐藏文字 */</span></span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="导航（nav）"><a href="#导航（nav）" class="headerlink" title="导航（nav）"></a>导航（nav）</h2>功能：点击跳转页面</li>
 </ol>
-<h2 id="导航（nav）"><a href="#导航（nav）" class="headerlink" title="导航（nav）"></a>导航（nav）</h2><p>功能：点击跳转页面</p>
 <p>实现方法：</p>
 <ol>
 <li>标签结构：ul &gt; 多个li  &gt; a</li>
@@ -820,7 +815,7 @@
 <li>布局思路示例：li 设置右侧 margin，a 设置左右 padding</li>
 </ol>
 <h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ol>
-<li>标签结构：.search &gt; input+a&#x2F;bottom</li>
+<li>标签结构：.search &gt; input+a/bottom</li>
 </ol>
 
 
@@ -1460,20 +1455,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

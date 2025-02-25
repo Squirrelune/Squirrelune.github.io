@@ -243,9 +243,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -254,9 +254,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -467,13 +467,9 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>最近学习了Web开发的一些基础知识，正用 <a target="_blank" rel="noopener" href="https://github.com/bradtraversy/50projects50days">50projects50days</a> 的项目练手，也想要给自己的博客嵌入一些网页demo。</p>
-<p>我决定使用 <code>iframe</code> 来内嵌网页。将编好的文件放入<code>post_asset_folder</code>自动生成的同名文件夹中：</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src<span class="operator">=</span><span class="string">&quot;xxx.html&quot;</span> height<span class="operator">=</span><span class="string">&quot;500px&quot;</span> width<span class="operator">=</span><span class="string">&quot;100%&quot;</span> scrolling<span class="operator">=</span><span class="string">&quot;auto&quot;</span> frameborder<span class="operator">=</span><span class="string">&quot;0&quot;</span> <span class="string">&quot;&gt;&lt;/iframe&gt;</span></span><br></pre></td></tr></table></figure>
-<p>打开网页，确实成功嵌入 demo，但好像有什么不太对……<br>回到首页，发现 HTML、CSS、JS 全部被解析为博客了🤣 。</p>
+<p>我决定使用 <code>iframe</code> 来内嵌网页。将编好的文件放入<code>post_asset_folder</code>自动生成的同名文件夹中：<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src<span class="operator">=</span><span class="string">&quot;xxx.html&quot;</span> height<span class="operator">=</span><span class="string">&quot;500px&quot;</span> width<span class="operator">=</span><span class="string">&quot;100%&quot;</span> scrolling<span class="operator">=</span><span class="string">&quot;auto&quot;</span> frameborder<span class="operator">=</span><span class="string">&quot;0&quot;</span> <span class="string">&quot;&gt;&lt;/iframe&gt;</span></span><br></pre></td></tr></table></figure><br>打开网页，确实成功嵌入 demo，但好像有什么不太对……<br>回到首页，发现 HTML、CSS、JS 全部被解析为博客了🤣 。</p>
 <p>还好 Hexo 提供了一个功能允许用户自定义哪些文件不进行渲染，这样就可以保留<code>post_asset_folder</code> 的功能（毕竟真的方便管理博客）。我在同名文件夹下新建了demo文件夹，将写好的网页放入。然后打开 Hexo 的 <code>_config.yml</code>，找到  <code>skip_render</code> 选项添加想要屏蔽的文件夹。</p>
-<p>通配符示例：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*.html&#x27;</span> <span class="comment"># 单个文件夹下指定类型文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/**&#x27;</span> <span class="comment"># 单个文件夹下全部文件以及子目录</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*&#x27;</span> <span class="comment"># 单个文件夹下全部文件</span></span><br></pre></td></tr></table></figure>
-<p><strong>容易踩坑的点</strong>：<br><code>skip_render</code> 中的路径需要写成相对于 <code>source/</code> 目录的路径。<br>在 <code>_config.yml</code>文件修改后，记得要执行一下 <code>hexo clean</code>，不然<code>skip_render</code>可能不会生效。</p>
+<p>通配符示例：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*.html&#x27;</span> <span class="comment"># 单个文件夹下指定类型文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/**&#x27;</span> <span class="comment"># 单个文件夹下全部文件以及子目录</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;demo/*&#x27;</span> <span class="comment"># 单个文件夹下全部文件</span></span><br></pre></td></tr></table></figure><br><strong>容易踩坑的点</strong>：<br><code>skip_render</code> 中的路径需要写成相对于 <code>source/</code> 目录的路径。<br>在 <code>_config.yml</code>文件修改后，记得要执行一下 <code>hexo clean</code>，不然<code>skip_render</code>可能不会生效。</p>
 
 
         <hr>
@@ -1112,20 +1108,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

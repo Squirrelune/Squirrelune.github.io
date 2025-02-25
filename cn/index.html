@@ -140,7 +140,119 @@
       RyoCY的后花园
     
   </title>
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
 </head>
 
 
@@ -243,9 +355,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -254,9 +366,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -490,8 +602,8 @@
     <div class="post-content-preview">
   
     数学基础
-字母表和字符串语言（language） 是一个 字符串（string） 的集合，例如：{ cat, dog, … }，字符串是由 字母表（alphabet） 中的字母组成的序列。一个语言是字母表中所有字符串的子集。字母表示例：𝚺 &#x3D; { a, b, c, d, …, z }字符串示例：cat, dog, …
-字符串操作连接：例如，𝑤1 &#x3D; 𝑎𝑎𝑏𝑏，......
+字母表和字符串语言（language） 是一个 字符串（string） 的集合，例如：{ cat, dog, … }，字符串是由 字母表（alphabet） 中的字母组成的序列。一个语言是字母表中所有字符串的子集。字母表示例：𝚺 = { a, b, c, d, …, z }字符串示例：cat, dog, …
+字符串操作连接：例如，𝑤1 = 𝑎𝑎𝑏𝑏， 𝑤2 = 𝑏�......
   
 </div>
 
@@ -533,11 +645,8 @@
 
     <div class="post-content-preview">
   
-    Maven
-Maven 是一个基于项目对象模型（POM）的概念的纯java开发的开源的项目管理工具。它主要用于管理Java项目，进行依赖管理（jar包依赖管理）和项目构建（项目编译、打包、测试、部署）。此外，Maven还能分模块开发，提高开发效率。
-核心特性
-Maven 的一个核心特性是依赖管理。
-传统的 Web 项目中，我们必须将工程所依赖的 jar 包复制到工程中，导致工程变得很大。Ma......
+    MavenMaven 是一个基于项目对象模型（POM）的概念的纯java开发的开源的项目管理工具。它主要用于管理Java项目，进行依赖管理（jar包依赖管理）和项目构建（项目编译、打包、测试、部署）。此外，Maven还能分模块开发，提高开发效率。
+核心特性Maven 的一个核心特性是依赖管理。传统的 Web 项目中，我们必须将工程所依赖的 jar 包复制到工程中，导致工程变得很大。Maven......
   
 </div>
 
@@ -581,14 +690,12 @@ Maven 的一个核心特性是依赖管理。
 
     <div class="post-content-preview">
   
-    Vue Router
-详细文档查看 Vue Router
+    Vue Router详细文档查看 Vue Router
 
 路由组件通常存放在 pages 或 views 文件夹，一般组件通常存放在 components 文件夹。
 通过点击导航，视觉效果上“消失” 了的路由组件，默认是被卸载掉的，需要的时候再去挂载。
 
-路由配置文件代码如下：
-12345678910111213141516171819// router/index.tsimport &#......
+路由配置文件代码如下：12345678910111213141516171819// router/index.tsimport &#12......
   
 </div>
 
@@ -632,8 +739,7 @@ Maven 的一个核心特性是依赖管理。
   
     VueVue是一个用于构建用户界面的渐进式框架
 通过 CDN 使用 Vue*CDN（Content Delivery Network）是一个分布式服务器网络，能够快速向用户交付静态资源（如 JavaScript、CSS、图片等）。这种方法比较简便，适合快速原型开发或小型项目。
-全局构建：
-123456789101112131415161718192021222324252627&lt;!DO......
+全局构建：123456789101112131415161718192021222324252627&lt;!DOC......
   
 </div>
 
@@ -676,8 +782,7 @@ Maven 的一个核心特性是依赖管理。
     <div class="post-content-preview">
   
     最近学习了Web开发的一些基础知识，正用 50projects50days 的项目练手，也想要给自己的博客嵌入一些网页demo。
-我决定使用 iframe 来内嵌网页。将编好的文件放入post_asset_folder自动生成的同名文件夹中：
-1&lt;iframe src=&quot;xxx.html&quot; height=&quot;500px&quot; width=&quot;1......
+我决定使用 iframe 来内嵌网页。将编好的文件放入post_asset_folder自动生成的同名文件夹中：1&lt;iframe src=&quot;xxx.html&quot; height=&quot;500px&quot; width=&quot;10......
   
 </div>
 
@@ -761,7 +866,7 @@ Maven 的一个核心特性是依赖管理。
 
     <div class="post-content-preview">
   
-    JavaScript –Web APIDOMDOM，Document Object Model——文档对象模型是用来呈现以及与任意 HTML 或 XML文档交互的 API。DOM对象：浏览器根据 html 标签生成的 JS对象。
+    JavaScript —Web APIDOMDOM，Document Object Model——文档对象模型是用来呈现以及与任意 HTML 或 XML文档交互的 API。DOM对象：浏览器根据 html 标签生成的 JS对象。
 获取DOM对象：
 
 根据CSS选择器来获取DOM元素
@@ -855,9 +960,11 @@ Maven 的一个核心特性是依赖管理。
     网页美化字体
 
 
+
 属性
 描述
 说明
+
 
 
 
@@ -878,7 +985,7 @@ font-weight
 
 font-style
 字体风格
-normal 正常（默认值），italic 或 obliq......
+normal 正常（默认值），italic 或 obl......
   
 </div>
 
@@ -981,11 +1088,7 @@ normal 正常（默认值），italic 或 obliq......
   <div class="tags">
     
     
-    <a href="/tags/#Web" title="Web" rel="8">Web</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
+    <a href="/tags/#编译原理" title="编译原理" rel="1">编译原理</a>
     
     
     
@@ -997,7 +1100,11 @@ normal 正常（默认值），italic 或 obliq......
     
     
     
-    <a href="/tags/#编译原理" title="编译原理" rel="1">编译原理</a>
+    <a href="/tags/#Web" title="Web" rel="8">Web</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
     
     
   </div>
@@ -1112,20 +1219,20 @@ normal 正常（默认值），italic 或 obliq......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Web开发">
-      <li>Web开发</li>
-    </a>
-    
-    <a href="/categories/#折腾日志">
-      <li>折腾日志</li>
+    <a href="/categories/#2025Spring-编译原理">
+      <li>2025Spring-编译原理</li>
     </a>
     
     <a href="/categories/#后端学习笔记">
       <li>后端学习笔记</li>
     </a>
     
-    <a href="/categories/#2025Spring-编译原理">
-      <li>2025Spring-编译原理</li>
+    <a href="/categories/#Web开发">
+      <li>Web开发</li>
+    </a>
+    
+    <a href="/categories/#折腾日志">
+      <li>折腾日志</li>
     </a>
     
   </ul>
@@ -1643,20 +1750,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
