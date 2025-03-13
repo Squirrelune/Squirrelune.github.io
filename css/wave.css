@@ -21,6 +21,9 @@
     margin-bottom: -8px;
     min-height: 100px;
     max-height: 150px;
+    position: relative;
+    bottom: -8px;
+    /* my codes */
 }
 
 @media (max-width: 768px) {
