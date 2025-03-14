@@ -354,19 +354,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('headbg.jpg');
-      --intro-header-background-image-url-page: url('/headbg.jpg');
+      --intro-header-background-image-url-post: url('headbg.png');
+      --intro-header-background-image-url-page: url('/headbg.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('headbg.jpg'); */
+        /* background-image: url('headbg.png'); */
       
     }
 
@@ -473,8 +473,21 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>记录博主在Ubuntu安装IntelliJ IDEA Community的过程。</p>
-<h1 id="创建桌面快捷方式"><a href="#创建桌面快捷方式" class="headerlink" title="创建桌面快捷方式"></a>创建桌面快捷方式</h1><p>在官网下载好压缩包后返回 <code>home</code> 目录，在目录下创建IDEA文件夹用于解压缩。注意下面命令的路径要根据情况换成自己的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> IDEA</span><br><span class="line"><span class="built_in">sudo</span> tar -zxvf ~/Downloads/ideaIC-2024.3.4.tar.gz -C IDEA/</span><br></pre></td></tr></table></figure><br>之后回到 <code>Desktop</code>目录，创建桌面快捷方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> IDEA.desktop</span><br><span class="line"><span class="built_in">sudo</span> vi IDEA.desktop</span><br></pre></td></tr></table></figure><br>在 <code>IDEA.desktop</code> 中输入（用到 vim ）：<br>注意下述路径同样要换成自己的。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Encoding</span>=UTF-<span class="number">8</span></span><br><span class="line"><span class="attr">Name</span>=IntelliJ IDEA</span><br><span class="line"><span class="attr">Comment</span>=IntelliJ IDEA</span><br><span class="line"><span class="attr">Exec</span>=/home/ryo/IDEA/idea-IC-<span class="number">243.25659</span>.<span class="number">39</span>/bin/idea</span><br><span class="line"><span class="attr">Icon</span>=/home/ryo/IDEA/idea-IC-<span class="number">243.25659</span>.<span class="number">39</span>/bin/idea.svg</span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">Categories</span>=Application<span class="comment">;Development;</span></span><br></pre></td></tr></table></figure><br>保存退出后，在终端输入以下命令，使得文件可执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> +x IDEA.desktop</span><br></pre></td></tr></table></figure><br>最后还需要在桌面右击 IDEA.desktop 图标并选择“允许启动”（Allow Launching）。</p>
-<h1 id="添加到侧边栏"><a href="#添加到侧边栏" class="headerlink" title="添加到侧边栏"></a>添加到侧边栏</h1><p><img src="computer.png" alt="computer目录位置"><br>在文件夹中找到 <code>computer</code> ，进入下图中的路径。将桌面的 IDEA.desktop 复制粘贴到该路径下。<br><img src="applications.png" alt="applications"><br>这个时候应用已经添加到应用列表里了。只需要右键点击图标，将应用添加到 Favorites，就会在侧边栏上显示。<br><img src="应用列表.png" alt="应用列表"></p>
+<h1>创建桌面快捷方式</h1>
+<p>在官网下载好压缩包后返回 <code>home</code> 目录，在目录下创建IDEA文件夹用于解压缩。注意下面命令的路径要根据情况换成自己的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> IDEA</span><br><span class="line"><span class="built_in">sudo</span> tar -zxvf ~/Downloads/ideaIC-2024.3.4.tar.gz -C IDEA/</span><br></pre></td></tr></table></figure>
+<p>之后回到 <code>Desktop</code>目录，创建桌面快捷方式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> IDEA.desktop</span><br><span class="line"><span class="built_in">sudo</span> vi IDEA.desktop</span><br></pre></td></tr></table></figure>
+<p>在 <code>IDEA.desktop</code> 中输入（用到 vim ）：注意下述路径同样要换成自己的。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Encoding</span>=UTF-<span class="number">8</span></span><br><span class="line"><span class="attr">Name</span>=IntelliJ IDEA</span><br><span class="line"><span class="attr">Comment</span>=IntelliJ IDEA</span><br><span class="line"><span class="attr">Exec</span>=/home/ryo/IDEA/idea-IC-<span class="number">243.25659</span>.<span class="number">39</span>/bin/idea</span><br><span class="line"><span class="attr">Icon</span>=/home/ryo/IDEA/idea-IC-<span class="number">243.25659</span>.<span class="number">39</span>/bin/idea.svg</span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">Categories</span>=Application<span class="comment">;Development;</span></span><br></pre></td></tr></table></figure>
+<p>保存退出后，在终端输入以下命令，使得文件可执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> +x IDEA.desktop</span><br></pre></td></tr></table></figure>
+<p>最后还需要在桌面右击 IDEA.desktop 图标并选择“允许启动”（Allow Launching）。</p>
+<h1>添加到侧边栏</h1>
+<p><img src="computer.png" alt="computer目录位置"><br>
+在文件夹中找到 <code>computer</code> ，进入下图中的路径。将桌面的 IDEA.desktop 复制粘贴到该路径下。<img src="applications.png" alt="applications"><br>
+这个时候应用已经添加到应用列表里了。只需要右键点击图标，将应用添加到 Favorites，就会在侧边栏上显示。<br>
+<img src="%E5%BA%94%E7%94%A8%E5%88%97%E8%A1%A8.png" alt="应用列表"></p>
 
 
         <hr>
@@ -520,7 +533,7 @@
       <div id="toc" class="toc-article">
       <strong class="toc-title">目录</strong>
       
-        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">创建桌面快捷方式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%B0%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">添加到侧边栏</span></a></li></ol>
+        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">创建桌面快捷方式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">添加到侧边栏</span></a></li></ol>
       
       </div>
     </aside>
