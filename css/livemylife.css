@@ -28,8 +28,44 @@ i.mdui-icon.material-icons.bright-mode {
 .tip {
   color: rgba(51, 51, 51, 0.9);
   text-align: left;
-  font-style: italic;
+  margin: 1em auto 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #1d1f21;
 }
+
+.post-copyright {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.post-copyright li {
+  margin-bottom: 10px; 
+}
+
+.post-copyright-author,
+.post-copyright-link,
+.post-copyright-license {
+  font-size: 14px; 
+}
+
+.post-copyright a {
+  color: #0085a1; 
+  text-decoration: none; 
+}
+
+.post-copyright a:hover {
+  text-decoration: underline; 
+}
+
+strong {
+  font-weight: bold; 
+}
+/* .tip {
+  color: rgba(51, 51, 51, 0.9);
+  text-align: left;
+  font-style: italic;
+} */
 
 /* archives */
 li.archive-list-item:hover {
