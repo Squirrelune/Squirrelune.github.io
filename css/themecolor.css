@@ -64,7 +64,7 @@
 
 .body--dark {
   /* Common color */
-  --common-color: #e91e63;
+  --common-color: #896392;
   /* body */
   --background-color: rgb(34, 38, 49);
   /* header */
@@ -75,21 +75,21 @@
   --navbar-color: rgba(179, 180, 186, 0.9);
   --border-bottom-color: rgba(179, 180, 186, 0.9);
   --navbar-brand-color_1170: #404040;
-  --navbar-brand-color-hover_1170: #e91e63;
+  --navbar-brand-color-hover_1170: #896392;
   --navbar-brand-color_768: rgba(255, 255, 255, 0.8);
   --navbar-brand-color-hover_768: white;
   /* post-title、post-subtitle、post-content */
   --post-title-subtitle-color: rgba(255, 255, 255, .8);
-  --post-content-color-hover: #e91e63;
+  --post-content-color-hover: #896392;
   /* tags */
   --tags-color: #bfbfbf;
   --tags-border-color: #bfbfbf;
-  --tags-color-hovor: #e91e63;
-  --tags-border-color-hovor: #e91e63;
+  --tags-color-hovor: #896392;
+  --tags-border-color-hovor: #896392;
   --tags-a-background-color: rgb(34, 38, 49);
   --sidebar-tags-color: gray;
   --sidebar-tags-border-color: gray;
-  --sidebar-tags-color-hovor: #e91e63;
+  --sidebar-tags-color-hovor: #896392;
   /* waveoverlay */
   --gentle-wave1: rgba(34, 38, 49, 0.7);
   --gentle-wave2: rgba(34, 38, 49, 0.5);
@@ -99,17 +99,17 @@
   --pager-color: rgba(255, 255, 255, .8);
   --pager-color-hover: white;
   --pager-background: rgb(34, 38, 49);
-  --pager-background-color-hover: #e01258;
+  --pager-background-color-hover: #896392;
   /* visitor */
-  --visitor-color: #e91e63;
+  --visitor-color: #896392;
   /* fa */
   --fa-color: rgba(255, 255, 255, 0.8);
   /* copyright */
-  --copyright-color: #b5154b;
-  --copyright-color-hovor: #e91e63;
+  --copyright-color: #896392;
+  --copyright-color-hovor: #896392;
   --copyright-text-muted-color: rgba(255, 255, 255, 0.8);
   /* top */
-  --top-color: #8f77fb;
+  --top-color: #896392;
   /* scroll */
   --scoll-background-color: #0085a1;
   /* hr */
@@ -125,7 +125,7 @@
   /* viewer */
   --viewer-background-color: rgba(158, 158, 158, 0.3);
   /* toggle-button */
-  --toggle-border-color: #e01258;
+  --toggle-border-color: #896392;
   --toggle-color: #fff;
   --toggle-hover: rgba(255, 255, 255, .1);
   --webkit-scrollbar-track-color: white;
@@ -481,8 +481,8 @@ hr {
 .body--dark {
   --color-default: rgba(255, 255, 255, 0.8);
   --blockquote-color: #a3a3a3;
-  --post-container-a-color: #b5154b;
-  --post-container-a-color-hover: #e91e63;
+  --post-container-a-color: #896392;
+  --post-container-a-color-hover: #896392;
   --table-border-color: rgba(255, 255, 255, 0.8);
   /* tip */
   --tip-color: #f6f9fc;
@@ -493,11 +493,11 @@ hr {
   /* gitalk comment */
   --gt-avatar-github: #f6f9fc;
   --gt-color-default: #f6f9fc;
-  --gt-basic-color: #b5154b;
+  --gt-basic-color: #816089;
   --gt-btn-preview-color: #f6f9fe;
   --gt-btn-preview-color-hovor: #f6f9fc;
-  --gt-container-a-hovor: #e91e63;
-  --gt-comments-null-color: #ff3860;
+  --gt-container-a-hovor: #896392;
+  --gt-comments-null-color: #896392;
   --gt-container-border-color: #f6f9fc;
   --gt-container-background-color: rgb(34, 38, 49);
   --gt-container-background-color-hover: rgb(44, 49, 62);
@@ -505,7 +505,7 @@ hr {
   --gt-textarea-placeholder: #f6f9fc;
   --gt-box-shadow-border: #ffffff;
   --gt-box-shadow: rgb(191, 191, 191);
-  --gt-comment-body-folded: #b5154b;
+  --gt-comment-body-folded: #896392;
   --gt-popup: #ffffff;
   --gt-comment-body: #f6f9fc;
   --gt-comment-text-date: #f6f9fc;
@@ -520,12 +520,12 @@ hr {
   --search-result-background-color-hovor: #323848;
   --search-btn-close-color-1080: #323848;
   --search-result-p-color: #bfbfbf;
-  --search-keyword-color: #e91e63;
+  --search-keyword-color: #896392;
   --search-btn-close-color: rgba(255, 255, 255, 0.8);
   --post-container-highlight-color: #4d4d4c;
   --post-container-highlight-background: #f6f9fc;
   --post-container-highlight-pre-comment: #8e908c;
-  --post-container-highlight-pre: #c82829;
+  --post-container-highlight-pre: #896392;
   --post-container-highlight-pre-number: #f5871f;
   --post-container-highlight-pre-ruby: #718c00;
   --post-container-highlight-pre-title: #3e999f;
