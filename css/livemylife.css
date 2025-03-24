@@ -61,6 +61,11 @@ i.mdui-icon.material-icons.bright-mode {
 strong {
   font-weight: bold; 
 }
+a {
+  word-break: break-all; /*避免 URL 过长导致样式问题*/
+  overflow-wrap: break-word; /* 适配不同浏览器 */
+}
+
 /* .tip {
   color: rgba(51, 51, 51, 0.9);
   text-align: left;
