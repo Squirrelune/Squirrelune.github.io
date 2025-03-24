@@ -137,13 +137,125 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/tags/Ubuntu/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/2025Spring-编译原理/编译原理04/">
   <title>
     
-      RyoCY的后花园
+      编译原理04 - RyoCY的后花园
     
   </title>
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
 </head>
 
 
@@ -302,25 +414,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="tags/Ubuntu/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -373,19 +467,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: url('../编译原理02/head02.jpg');
+      --intro-header-background-image-url-page: url('/../编译原理02/head02.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../编译原理02/head02.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/../编译原理02/head02.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/head_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('../编译原理02/head02.jpg'); */
       
     }
 
@@ -407,18 +501,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-
+          <div class="post-heading">
+            <div class="tags">
               
-                <h1>Hello World</h1> 
-                
-                <!-- 更改首页图片上文字 -->
+              <a class="tag" href="/tags/#编译原理" title="编译原理">编译原理</a>
+              
+            </div>
+            <h1>编译原理04</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by RyoCY on
+              2025-03-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">1</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">6</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
             
             
-            <!-- <h1>RyoCY的后花园</h1> -->
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
             
-            <!--<hr class="small">-->
-            <span class="subheading">O ever youthful, O ever weeping</span>
+
+
           </div>
           
         </div>
@@ -459,430 +577,236 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5d991d689b786aad7d7dc075bbaa9764214f8aa519a1f4263989cdc935d24ccd">d53b3c02ae37592b5842673a1b65ed9664d3875bad04bebfff6f6431d2c38621a9f80f0d7ad4dc9f451011a141872550f84cd6941743c597213abdbf909ca9cf06741d47e9bef5fd362aa2f47eb85a8b1b69f9ab7de9a20bdcc8742c7e0375a7f244ed069017e29db3bfa461ab53cea7c4f03ac57bd24d87478bbfbc659e506b98e62a9471c08109c2503c351fcfc40442efcb4febae94e74251396c581a149125dda6d85adae2ae9587b72dcb5efb308beb71e600e436200e1461951985034397a3687fc310114be3f4dc1d87c84b6ea808995d2a52dd258b0dfb056f8a1071afc6b66bce8341ce37e1a2f2e223587df16d7886203bc877c5da310fa7dafaa72590b86b437868adbedc2f14a12d6e2c0bf2d3c6cdf58bcfb5d05cfd2a8f47380d72cb97660583557cf1d2af147f77f354f1a9c94818d87fc2288b7e9589d7cd40deb499e72ee6a785cd7eb458f291db5674f00130f5cd3991bd9881a06d7939945b40a20fe1c36ed94f4c8b2f1f99c6a0732d2370025b61c4454de7fe44dd721f0e9ec859d4a245065bcc8bfd351344d3c85d07861614b743c2e0df8b0401f3c90bd945685a37b000eba8c8dbe17c063eda02192b3df0214dcf3ef0b2d449f505aabb6a66fa885dcc064dc9a449bae38cf6ae5b7a3d9fc004e6148cb20b0c1a162c3635fefdd608643ac8b9e5df372c8574d001cbff13167fd67901d146f8a0b3af10aa52f0e3da2dd962a5ae5faa325283e4fee9e095e2616abe1d20ce9f1b4d861a8ec2b4e8b86163491c01c6c715b60e92dcef161661dc1f3ad4bb39fb7ed9eca7695bb79bdafad7f9b1a0a8c76c60f994b51e4d1efe1bba0529ba80f2e82d234f065fb97eb5f3f4d85b680205de2242bb57d2e22b2b943a9d40a4f4c69eb2111a79c4d9d85e59576091eaa6e354ef336128752d76aeae00b542f117df2db6cc35603b4482ea98084fc46ba2e8c53bc54df0d61b4fad86eaab839434fd97a0dbac52cc2951440cf7a7e11eb18fd547739ab801ee6f9ac572dfe35b90a713c6dd3279852940a3614111910046eeff28b2048c2d25a286caab45f706e0db83406461d5742ac8dbe58e2ec0d44aff19ef98de49150dad2f681f742cedd790af39eaa973bb73bdc067d0fc93b3839a5a0adfc13543ac5d308653c118813ab7907477fd267ba8f610c415ec1c63c5e425062adc0f86e56f2540f3bf422a049f2a2e15df37399b86242a35e9a674a09375c35ec12d8c58816992d2ee33816082a6071f5cc23127a69f42151efb551e989b082b92c520c64fa84d5c019b2706d73b01c2c648ec615aebc1867d989d2d2852dce7e775ca574cad4c4956e7bfc8d4184c4e28506eea8ccea45a2270b67386670a4c72fb1134673c5a3d65e1b7ca5d1c469cc5c42536c36d4f038fbc009d652e1a8aa49709cf30014af0a4ceaeff6219357e7a183a8cf8a42f741eca3f81c870572aa5f2cadca5a6841877d7c2680ced52f1d5908e9663bb51a357dcc6e70534ee7ec69f5ed6c7c2aeeb84f35dbe1d67d386551ef7b69bbe373e283c09680329efeb8ae66e730cf5a48d4cb1b9e4016fa2a1e328f9f43e2dafa426773fb9d12b5752dcc731c7e6f98bd0177eaca6d3bf11fbd9dd1553aabc7585f2a42d5acfc0f1bd7e284d2bd0b17c4462101dd67e183580a3e0309ca48e3f792c25eaba0f67ed3310dccbf9715c8771a98b2175b26f5bb2db5c87dd367079de4345e2bce14c76717040a3183445927199e7a90c5d880ae6458ee2ba1bf9e07be30428dd5fe7ca58536346fbf59e869c3c38a79037ffb47f37a00f812b8b69b800aa7af2d9ce9aaaf59cbeabd6d153d3422d46f7e76d135cf88370bf5c6a1816ac91ee0834eac76533019a31496239046ff7cb3744a8c5c426f0193093fbd419ebcd8717833ed57106f487b63cc8783b1a1fde8bafe9d25186d16be69bb77c9651c54514b7c7b55a91dd2e2b56eaef73669704a30dd88904e5fee71dada63c59a6a1b04db690f9c0610ba8ecc75d1caf1c6f44cba6a8fd99657b0ccac9ad9eec3d0a83b847ff966b949b6ae10060c3ccfed73f30d89d5fab688649adc177a87e6ae03a39f6f5e945a1a6bf2513ce2fe7faadb42d33fdc5abba53d83b4e0f8ba1e6a4bdf96f407bc722b003296987f4c183aee0db08ba197963500eee1d5c096c49c1457ee842a34bb9c9e9222cb68c51ebc3f50b06f9977534fa78e0bf5f52f494e33e4e2be8a043e7392adc7dd4c580979bd7b29a33ebda1abd3378f8026bc46d60941f8cd80bde92defdd7e3c9c7c8ce63818e822c189d89767514911b5e0abf13a1b179e8933d8336597a9c52baae01f23aa7f3bf2b1303a7a435023bd533c8d4fda5a76679924dd3a3689f3c77c1d3511e491c816a3e6b4327f3233f84e40c508468451dfd6d5e726cee7ce15c0c6caeb884a2cb228d1cba8cdf9ffbb144e1c2d9c62f0775198a543e4ff1cfaac5dbd22eea803ee561aaf9eee42c55f61168403b90dcc12367cb6f9fb1d12f41d893ae439748b5d5d109b81bf5eb31eefd47e92e9d1b06ab66dc24296751fc257427aa29c8c47acd593629750f8f4d53ad06bbe4b1de67731581a0538a26cab0f354376aaa22531687c1c851fab6e9c0234a55d767db6361fc9fb1b7e71b1d3aa38312347b94bf59f69e35ad8297479b769451835b6aba7abbbb543fb72800f943877778d1783b2c8fb0c07d0295f77ac805f139fcb771e6351e11d7dbaafeb4d8bb7859e107467ec19057368522e3fc1a9175db7189051d8d973aeee60bab6b5bfe3900820bc21c735859bfb831df2fccff7ef4c98954c9467f80d816fa11e62531ce8e1ba15055efb46d6b721439ad13e4179a4a87bc7341ba9fd99362144495cc210b9d7f40cbd9deab12bac2adaf0a5f1063f7e07a9dc2767b39f001f0f1e490f1de95f5e06fa828c7c4f1dd68406245961ad165d9e9f2480debf90c9ca821282232e61483a7a3b795dd4617bb1f6c7fa0dea7fe430b221d8fbe5391d5862a62db51dcea48a9e2ef3d9e04e3478374e2424739626c2fb05092c6af0c7e5ce70d70ba1cd86c4a195d30a91060241aa62813bf7b187b59096ddb950a9c2307dfbdb65ef39072729921a81476ad80f84360f1aa2abc1cd9f0d0aba7d017604e8f538a5c9e5707400d30bab7fd358b16102900085bb89259949bafa04e696ab55abd8ed931f0face24d515b56af77c16113d7985942dd01946ffc720ba1d44cd7b4726fd8365b15324a81a5d1649285473f1dd67d6d69c04fc52588ac220b6d2d506217db4637878570a9cc1d21176d05cf99948c5893a082eee393e02a51b72fae9fc159c71a2bec29ae4af0a8d6f3fa484c18b5170b3742f5b6616270bef4935c47b976f4e8a912979d6e44278d6f0a2e236ea0c183e32b73abd2c15a8147540098192d4743c92bf0619fb9bdf956cfcfead69d3626242c4b6b87171a3175029fb651c4d7860f9fed0499f5d2269cf37a4b189283e232460db3c7d0bee20d2cad175c20ad08100bfe3409e3e9c9f5f0092d0b4252327e8485d4b8ad14b9271bf341cd262c13a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-flip">
+      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="请输入密码">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2025">
-          <span class="tag-text">2025</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <li>
-            03-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理04/" style="color: #0085a1">
-              <span>
-                编译原理04
-                
-              </span>
-            </a>
-          </li>
           
-          <li>
-            03-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理03/" style="color: #0085a1">
-              <span>
-                编译原理03
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/南北散记/南北散记-无锡篇/" style="color: #0085a1">
-              <span>
-                南北散记-无锡篇
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理02/" style="color: #0085a1">
-              <span>
-                编译原理02
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-05
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发08/" style="color: #0085a1">
-              <span>
-                Web开发08
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/折腾日志/Ubuntu下创建桌面快捷方式并添加到侧边栏/" style="color: #0085a1">
-              <span>
-                Ubuntu下创建桌面快捷方式并添加到侧边栏
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理01/" style="color: #0085a1">
-              <span>
-                编译原理01
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/后端学习笔记/后端笔记01/" style="color: #0085a1">
-              <span>
-                后端笔记01
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发07/" style="color: #0085a1">
-              <span>
-                Web开发07
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发06/" style="color: #0085a1">
-              <span>
-                Web开发06
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/折腾日志/Hexo内嵌网页/" style="color: #0085a1">
-              <span>
-                Hexo内嵌网页
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/50-Projects-Notebook/" style="color: #0085a1">
-              <span>
-                50-Projects-Notebook
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发05/" style="color: #0085a1">
-              <span>
-                Web开发05
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发04/" style="color: #0085a1">
-              <span>
-                Web开发04
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发03/" style="color: #0085a1">
-              <span>
-                Web开发03
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发02/" style="color: #0085a1">
-              <span>
-                Web开发02
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发01/" style="color: #0085a1">
-              <span>
-                Web开发01
-                
-              </span>
-            </a>
+          <li class="next">
+            <a href="/cn/2025Spring-编译原理/编译原理03/" data-toggle="tooltip" data-placement="top" title="编译原理03">Next Post &rarr;</a>
           </li>
           
         </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
 
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<!-- <div class="tip">
+  <p>
+    
+      [object Object]
+    
+  </p>
+</div> -->
+<!-- tip end -->
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
+<div class="tip">
+  <ul class="post-copyright">
     
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#编译原理" title="编译原理" rel="4">编译原理</a>
-    
-    
-    
-    <a href="/tags/#游记" title="游记" rel="1">游记</a>
-    
-    
-    
-    <a href="/tags/#Web" title="Web" rel="9">Web</a>
-    
-    
-    
-    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
-    
-    
-    
-    <a href="/tags/#Spring Boot" title="Spring Boot" rel="1">Spring Boot</a>
-    
-    
-    
-    <a href="/tags/#Ubuntu" title="Ubuntu" rel="1">Ubuntu</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/avatorhi.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Life was like a box of chocolate ...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-      <li>
-        <a href="/feed.xml">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
+      <li class="post-copyright-author">
+        <strong>本文作者：</strong>RyoCY
       </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8604/">
-      <li>编译原理04</li>
-    </a>
-    
-    <a href="../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8603/">
-      <li>编译原理03</li>
-    </a>
-    
-    <a href="../../cn/%E5%8D%97%E5%8C%97%E6%95%A3%E8%AE%B0/%E5%8D%97%E5%8C%97%E6%95%A3%E8%AE%B0-%E6%97%A0%E9%94%A1%E7%AF%87/">
-      <li>南北散记-无锡篇</li>
-    </a>
-    
-    <a href="../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8602/">
-      <li>编译原理02</li>
-    </a>
-    
-    <a href="../../cn/Web%E5%BC%80%E5%8F%91/Web%E5%BC%80%E5%8F%9108/">
-      <li>Web开发08</li>
-    </a>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong><a href="/cn/2025Spring-编译原理/编译原理04/" target="_blank" title="编译原理04">cn/2025Spring-编译原理/编译原理04/</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>许可协议： </strong>
+        除特殊声明外，本站博文均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，转载请注明出处！
+      </li>
     
   </ul>
 </div>
 
+<!-- tip end -->
 
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=编译原理04&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/2025Spring-编译原理/编译原理04/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
         <hr>
-    
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <!-- <hr> -->
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+  
+    <aside id="sidebar">
+      <div id="toc" class="toc-article">
+      <strong class="toc-title">目录</strong>
+      
+        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">ch6.1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E5%9C%B0%E5%9D%80%E7%A0%81-Three-Address-Code%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">三地址码 Three-Address Code（重要）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95%E5%88%B6%E5%AF%BC%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">语法制导（重要）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SDD"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">SDD</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SDT-%E8%AF%AD%E6%B3%95%E5%88%B6%E5%AF%BC%E7%BF%BB%E8%AF%91"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">SDT 语法制导翻译</span></a></li></ol></li></ol></li></ol>
+      
+      </div>
+    </aside>
+  
+
+
+
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#编译原理" title="编译原理">编译原理</a>
+            
+          </div>
+        </section>
+        
+
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://www.erinwithbmq.xin/" target="_blank">寻梦之旅-ErinwithBMQ</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/02/">February 2025</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/01/">January 2025</a><span class="archive-list-count">5</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#2025Spring-编译原理">
-      <li>2025Spring-编译原理</li>
-    </a>
-    
-    <a href="/categories/#南北散记">
-      <li>南北散记</li>
-    </a>
-    
-    <a href="/categories/#Web开发">
-      <li>Web开发</li>
-    </a>
-    
-    <a href="/categories/#后端学习笔记">
-      <li>后端学习笔记</li>
-    </a>
-    
-    <a href="/categories/#折腾日志">
-      <li>折腾日志</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- created by Ryo -->
-
-    
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://www.erinwithbmq.xin/" target="_blank">寻梦之旅-ErinwithBMQ</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
