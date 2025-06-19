@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s a blog :)"/>
+  <meta name="keyword" content="livemylife,IT  blog,Blog,Ryo"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.ico"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://squirrelune.github.io/cn/2025Spring-编译原理/编译原理07/">
+  <title>
+    
+      编译原理07 - RyoCY的后花园
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+		<!-- loading -->
+		
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">RyoCY的后花园</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: url('../编译原理02/head02.jpg');
+      --intro-header-background-image-url-page: url('/../编译原理02/head02.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../编译原理02/head02.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/../编译原理02/head02.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('../编译原理02/head02.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/sign.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#编译原理" title="编译原理">编译原理</a>
+              
+            </div>
+            <h1>编译原理07</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by RyoCY on
+              2025-06-19
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">14</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.8k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>ch9.2-12</h1>
+<p>期末周完全按照重点整理的笔记，比较草率</p>
+<h2 id="符号执行">符号执行</h2>
+<p>符号执行是一种经典的路径敏感分析技术，它通过枚举并分析程序的每一条路径来实现程序分析。</p>
+<p>符号执行作为一种重要的形式化方法和软件分析技术，采用抽象符号代替程序变量，程序计算的输出被表示为输入符号值的函数，根据程序的语义，遍历程序的执行空间。其在软件测试和程序验证中发挥着重要作用，并可以应用于程序漏洞和脆弱性的检测中。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>𝝈: 符号存储，把每个程序变量映射到一个<strong>符号表达式</strong></p>
+</li>
+<li class="lvl-2">
+<p>𝝅:路径约束，记录当前执行路径上所有条件的组合，初始为 <code>true</code>（表示还没有任何限制）</p>
+<ul class="lvl-2">
+<li class="lvl-6">例如：执行到 <code>if (x &gt; 0)</code> 的“真分支”时，会加上约束 <code>x &gt; 0</code>，更新为 <code>𝝅 = 𝝅 ∧ (x &gt; 0)</code></li>
+<li class="lvl-6">遇到断言 assert(…)，就构造其<strong>取反条件</strong></li>
+<li class="lvl-6">是否存在解（<strong>satisfiable</strong>）</li>
+</ul>
+</li>
+</ul>
+<img src="image 1.png" alt="1" style="box-shadow: none !important;">
+<img src="image 2.png" alt="2" style="box-shadow: none !important;">
+<p>考虑两种到达assert的情况，分别计算check内容（𝝅带入式子），第二种情况a=2, b=0时，x = 4, y = 4 ⇒ x - y = 0，断言x - y != 0不成立，触发断言失败 ⇒ 程序出错（bug）</p>
+<p><strong>约束求解（Constraint Solving）</strong> 是一种在<strong>给定条件（约束）下寻找变量的解</strong>的技术</p>
+<p>限制:</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>路径爆炸（Path Explosion）</strong>：</p>
+<p>符号执行会尝试遍历程序的每个条件分支，路径数量随着分支数量指数增长，导致计算量迅速变得不可控。</p>
+</li>
+<li class="lvl-2">
+<p><strong>外部调用（External Calls）</strong>：</p>
+<p>程序中调用外部库函数或系统API时，符号执行难以模拟其内部逻辑，影响准确性。</p>
+</li>
+<li class="lvl-2">
+<p><strong>约束求解（Constraint Solving）</strong>：</p>
+<p>符号执行需要用约束求解器来判断路径条件的可行性，但复杂的约束可能导致求解困难，影响执行效率。</p>
+</li>
+</ul>
+<p>优化:</p>
+<p>为了克服这些限制，研究人员提出了多种优化技术，目的是让符号执行更实用：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>路径/状态合并（Path/State Merging）</strong>：</p>
+<p>把多个相似的执行路径合并成一个状态，减少需要跟踪的路径数量，缓解路径爆炸。</p>
+</li>
+<li class="lvl-2">
+<p><strong>循环归纳（Induction for Loops）</strong>：</p>
+<p>用数学归纳方法分析循环，不必每次迭代都展开符号执行，减少执行次数。</p>
+</li>
+<li class="lvl-2">
+<p><strong>混合符号执行（Concolic Execution）</strong>：</p>
+<p>结合具体执行（concrete execution）和符号执行，利用具体输入来限制符号路径数量，提高效率。</p>
+</li>
+<li class="lvl-2">
+<p><strong>推测执行（Speculative Execution）</strong>：</p>
+<p>先猜测可能的执行路径，减少无谓计算。</p>
+</li>
+</ul>
+<p><strong>路径合并</strong><br>
+使用 <code>ite</code> 函数（if-then-else）表达式，把两个路径的结果合并成一个表达式：</p>
+<img src="image 35.png" alt="35" style="box-shadow: none !important;">
+<img src="image 7.png" alt="7" style="box-shadow: none !important;">
+<p><strong>减少循环</strong><br>
+<img src="image 8.png" alt="8" style="box-shadow: none !important;"></p>
+<img src="image 9.png" alt="9" style="box-shadow: none !important;">
+<h3 id="求解路径约束">求解路径约束</h3>
+<ol>
+<li class="lvl-3">
+<p><strong>命题逻辑（Propositional Logic）</strong></p>
+<ul class="lvl-2">
+<li class="lvl-6">基础逻辑系统，使用布尔变量和逻辑运算符（如与、或、非）表示问题。</li>
+<li class="lvl-6"><strong>可满足性问题（SAT）</strong>：判断命题逻辑公式是否存在一组变量赋值使其为真。
+<ul class="lvl-4">
+<li class="lvl-10"><strong>DPLL算法</strong>：经典的SAT求解算法，通过回溯和剪枝搜索解。</li>
+<li class="lvl-10"><strong>CDCL算法</strong>（冲突驱动子句学习）：现代SAT求解器的核心，通过学习和冲突分析优化搜索效率。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>一阶逻辑（First Order Logic）</strong></p>
+<ul class="lvl-2">
+<li class="lvl-6">扩展命题逻辑，引入量词（∀、∃）、谓词和函数，表达能力更强。</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>可满足性模理论（SMT, Satisfiability Modulo Theories）</strong></p>
+<ul class="lvl-2">
+<li class="lvl-6">结合SAT求解器和特定理论（如算术、数组、位向量等），解决一阶逻辑公式的可满足性问题。</li>
+<li class="lvl-6">例如，判断“<strong><code>x + y = 5 ∧ x &gt; 3</code></strong>”是否有解。</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>位向量理论（The Bit Vector Theory）</strong></p>
+<ul class="lvl-2">
+<li class="lvl-6">SMT中的一种理论，用于处理固定长度的二进制位运算（如硬件验证、加密算法）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="命题逻辑（Propositional-Logic-PL）"><strong>命题逻辑（Propositional Logic, PL）</strong></h3>
+<p>命题逻辑是最简单的逻辑系统，仅处理<strong>原子命题</strong>（不可再分的陈述）及其组合。其语法规则如下：</p>
+<p><strong>(1) 真值符号（Truth Symbols）</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong><code>⊤</code></strong>（表示“真”，True）</p>
+</li>
+<li class="lvl-2">
+<p><strong><code>⊥</code></strong>（表示“假”，False）</p>
+</li>
+</ul>
+<p><strong>(2) 命题变量（Propositional Variables）</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>用符号表示原子命题，例如：<strong><code>p, q, r, …</code></strong></p>
+</li>
+<li class="lvl-2">
+<p>例如：<strong><code>p = "今天下雨"</code></strong>，<strong><code>q = "地面是湿的"</code></strong></p>
+</li>
+</ul>
+<p><strong>(3) 文字（Literals）</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一个命题变量或其否定，例如：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>p</code></strong>（正文字）</li>
+<li class="lvl-6"><strong><code>¬p</code></strong>（负文字，表示“非p”）</li>
+</ul>
+</li>
+</ul>
+<p><strong>(4) 公式（Formulas）</strong></p>
+<p>通过逻辑运算符组合文字或子公式，递归定义如下：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>原子公式</strong>：单个文字（如 <strong><code>p</code></strong> 或 <strong><code>¬q</code></strong>）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>复合公式</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>¬F</code></strong>：否定（非），例如 <strong><code>¬p</code></strong>。</li>
+<li class="lvl-6"><strong><code>F ∨ F</code></strong>：析取（或），例如 <strong><code>p ∨ q</code></strong>。</li>
+<li class="lvl-6"><strong><code>F ∧ F</code></strong>：合取（与），例如 <strong><code>p ∧ q</code></strong>。</li>
+<li class="lvl-6"><strong><code>F ⇒ F</code></strong>：蕴含（如果…则…），例如 <strong><code>p ⇒ q</code></strong>（若p为真，则q为真）。</li>
+<li class="lvl-6"><strong><code>F ⟺ F</code></strong>：等价（当且仅当），例如 <strong><code>p ⟺ q</code></strong>（p和q同真同假）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>(5) 语义（Semantics）</strong></p>
+<p>语义定义了公式的“真假”如何被解释：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>每个命题变量通过<strong>赋值（Assignment）<strong>被赋予真值（</strong><code>⊤</code></strong> 或 <strong><code>⊥</code></strong>）。</p>
+</li>
+<li class="lvl-2">
+<p>复合公式的真值由运算符的语义规则决定：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>¬p</code></strong> 为真 ⇔ <strong><code>p</code></strong> 为假。</li>
+<li class="lvl-6"><strong><code>p ∨ q</code></strong> 为真 ⇔ <strong><code>p</code></strong> 或 <strong><code>q</code></strong> 至少一个为真。</li>
+<li class="lvl-6"><strong><code>p ∧ q</code></strong> 为真 ⇔ <strong><code>p</code></strong> 和 <strong><code>q</code></strong> 同时为真。</li>
+<li class="lvl-6"><strong><code>p ⇒ q</code></strong> 为假 ⇔ <strong><code>p</code></strong> 为真且 <strong><code>q</code></strong> 为假 <strong>（其他情况为真）</strong>。</li>
+<li class="lvl-6"><strong><code>p ⟺ q</code></strong> 为真 ⇔ <strong><code>p</code></strong> 和 <strong><code>q</code></strong> 真值相同。</li>
+</ul>
+</li>
+</ul>
+<p><strong>(6) 合法句子（Well-Formed Formulas, WFFs）</strong> 必须严格遵循语法规则。以下是合法的例子：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong><code>⊥</code></strong>（假）</p>
+</li>
+<li class="lvl-2">
+<p><strong><code>⊤ ∧ ⊥</code></strong>（真与假）</p>
+</li>
+<li class="lvl-2">
+<p><strong><code>p ∨ q</code></strong>（p 或 q）</p>
+</li>
+</ul>
+<p>而 <strong><code>p and q</code></strong> 是<strong>非法</strong>的，因为命题逻辑中必须使用标准逻辑符号（如 <strong><code>∧</code></strong> 代替 “and”）。</p>
+<p><strong>(7) 其他</strong><br>
+<img src="image 10.png" alt="10" style="box-shadow: none !important;"></p>
+<h3 id="范式（Normal-Forms）"><strong>范式（Normal Forms）</strong></h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>定义</strong>：范式是对逻辑公式<strong>语法形状的限制</strong>，通过统一结构来简化分析或计算（如可满足性判定）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>作用</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">结构化搜索空间（例如，限制运算符的嵌套方式）。</li>
+<li class="lvl-6">简化决策过程（如SAT求解器常要求输入为特定范式）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="否定范式（NNF）"><strong>否定范式（NNF）</strong></h3>
+<p>NNF是一种范式，其语法规则如下：</p>
+<ol>
+<li class="lvl-3">
+<p><strong>允许的符号</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">真值符号：<strong><code>⊤</code></strong>（真）、<strong><code>⊥</code></strong>（假）。</li>
+<li class="lvl-6">命题变量：<strong><code>p, q, r, …</code></strong>。</li>
+<li class="lvl-6"><strong>文字（Literals）</strong>：原子命题或其否定（如 <strong><code>p</code></strong> 或 <strong><code>¬p</code></strong>），但<strong>不允许对复合公式直接否定</strong>（如 <strong><code>¬(p ∧ q)</code></strong> 需转换）。</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>允许的运算符</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">仅限 <strong><code>∧</code></strong>（与）、<strong><code>∨</code></strong>（或）。</li>
+<li class="lvl-6"><strong>不允许</strong> <strong><code>⇒</code></strong>（蕴含）、<strong><code>⟺</code></strong>（等价）、以及对复合公式的 <strong><code>¬</code></strong>。</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>公式构造规则</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">原子公式：文字（如 <strong><code>p</code></strong> 或 <strong><code>¬q</code></strong>）。</li>
+<li class="lvl-6">复合公式：通过 <strong><code>∧</code></strong> 或 <strong><code>∨</code></strong> 组合子公式（如 <strong><code>p ∨ (¬q ∧ r)</code></strong>）。</li>
+</ul>
+</li>
+</ol>
+<p>通过以下步骤消除 <strong><code>⇒</code></strong>、<strong><code>⟺</code></strong> 和移动 <strong><code>¬</code></strong>：</p>
+<ol>
+<li class="lvl-3">
+<p><strong>消去蕴含和等价</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>A ⇒ B</code></strong> → <strong><code>¬A ∨ B</code></strong></li>
+<li class="lvl-6"><strong><code>A ⟺ B</code></strong> → <strong><code>(¬A ∨ B) ∧ (A ∨ ¬B)</code></strong></li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>德摩根律（De Morgan’s Laws）</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>¬(A ∧ B)</code></strong> → <strong><code>¬A ∨ ¬B</code></strong></li>
+<li class="lvl-6"><strong><code>¬(A ∨ B)</code></strong> → <strong><code>¬A ∧ ¬B</code></strong></li>
+</ul>
+</li>
+<li class="lvl-3">
+<p><strong>双重否定律</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong><code>¬¬A</code></strong> → <strong><code>A</code></strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>将 <strong><code>¬(p ⇒ (q ∧ ¬r))</code></strong> 转换为NNF：</p>
+<ol>
+<li class="lvl-3">
+<p>消去蕴含：<strong><code>¬(¬p ∨ (q ∧ ¬r))</code></strong></p>
+</li>
+<li class="lvl-3">
+<p>德摩根律：<strong><code>p ∧ ¬(q ∧ ¬r)</code></strong></p>
+</li>
+<li class="lvl-3">
+<p>德摩根律：<strong><code>p ∧ (¬q ∨ r)</code></strong>（最终NNF形式）</p>
+</li>
+</ol>
+<p><strong>NNF的充分性定理</strong></p>
+<blockquote>
+<p>对于命题逻辑中的任意公式 FF，存在一个等价的否定范式（NNF）公式。</p>
+</blockquote>
+<p><strong>析取范式（Disjunctive Normal Form, DNF）</strong></p>
+<img src="image 11.png" alt="11" style="box-shadow: none !important;">
+<img src="image 12.png" alt="12" style="box-shadow: none !important; width: 90%">
+<p><strong>DNF 的充分性定理</strong></p>
+<blockquote>
+<p>对于命题逻辑中的任意公式 FF，存在一个等价的 DNF 公式。</p>
+</blockquote>
+<p><strong>DNF 的局限性：</strong> DNF 转换可能导致公式体积指数级增长。</p>
+<h3 id="合取范式（Conjunctive-Normal-Form-CNF）"><strong>合取范式（Conjunctive Normal Form, CNF）</strong></h3>
+<img src="image 13.png" alt="13" style="box-shadow: none !important;">
+<img src="image 14.png" alt="14" style="box-shadow: none !important; width: 90%">
+<p><strong>CNF 的充分性定理</strong></p>
+<blockquote>
+<p>对于命题逻辑中的任意公式 FF，存在一个等价的 CNF 公式。</p>
+</blockquote>
+<h3 id="可满足性等价">可满足性等价</h3>
+<img src="image 15.png" alt="15" style="box-shadow: none !important;">
+<h3 id="Tseitin-Transformation">Tseitin Transformation</h3>
+<p>Tseitin变换是一种<strong>将任意命题逻辑公式高效转换为CNF（合取范式）<strong>的方法，通过引入</strong>辅助变量</strong>避免经典CNF转换中的指数级规模膨胀。其核心特点是：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>保持可满足性（Equisatisfiable）</strong>：新生成的CNF公式与原公式的可满足性一致（但未必逻辑等价）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>线性规模增长</strong>：转换后的CNF公式规模最多是原公式的常数倍。</p>
+</li>
+</ul>
+<img src="image 16.png" alt="16" style="box-shadow: none !important;">
+<img src="image 17.png" alt="17" style="box-shadow: none !important;">
+<img src="image 18.png" alt="18" style="box-shadow: none !important;">
+<img src="image 19.png" alt="19" style="box-shadow: none !important;">
+<h3 id="SAT问题"><strong>SAT问题</strong></h3>
+<img src="image 20.png" alt="20" style="box-shadow: none !important;">
+<p>流程：</p>
+<img src="image 21.png" alt="21" style="box-shadow: none !important;">
+<h3 id="DPLL算法"><strong>DPLL算法</strong></h3>
+<p>DPLL（Davis-Putnam-Logemann-Loveland）算法是一种经典的<strong>回溯搜索算法</strong>，用于解决命题逻辑公式的可满足性问题（SAT）。其核心思想是通过**决策（Decision）<strong>和</strong>传播（Propagation）**逐步缩小搜索空间，最终找到满足公式的赋值或证明其不可满足。</p>
+<img src="image 22.png" alt="22" style="box-shadow: none !important;">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bool <span class="title function_">DPLL</span><span class="params">(F, I)</span> {</span><br><span class="line">    <span class="keyword">if</span> (F == <span class="literal">false</span>) <span class="keyword">return</span> UNSAT;  <span class="comment">// 公式为假，无解</span></span><br><span class="line">    <span class="keyword">if</span> (F == <span class="literal">true</span>)  <span class="keyword">return</span> SAT;    <span class="comment">// 公式为真，当前解释有效</span></span><br><span class="line">    p = choose(F);                 <span class="comment">// 选择一个未赋值的变量 p</span></span><br><span class="line">    <span class="keyword">if</span> (DPLL(F[p→<span class="literal">true</span>], I[p→<span class="literal">true</span>]) == SAT) <span class="keyword">return</span> SAT;  <span class="comment">// 尝试 p=true</span></span><br><span class="line">    <span class="keyword">return</span> DPLL(F[p→<span class="literal">false</span>], I[p→<span class="literal">false</span>]);                <span class="comment">// 回溯尝试 p=false</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<img src="image 23.png" alt="23" style="box-shadow: none !important;">
+<p>例子：</p>
+<img src="image 24.png" alt="24" style="box-shadow: none !important; width: 80%">
+<h3 id="冲突驱动子句学习（CDCL）"><strong>冲突驱动子句学习（CDCL）</strong></h3>
+<p><strong>核心思想</strong></p>
+<p>CDCL是DPLL算法的增强版，通过<strong>动态学习冲突子句</strong>来避免重复搜索无效路径，显著提升SAT求解效率。其核心改进在于：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>冲突分析</strong>：当赋值导致矛盾时，分析冲突原因并生成新的子句（称为<strong>学习子句</strong>）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>非时序回溯</strong>：根据学习子句直接跳转到冲突的根源层级，而非简单回溯。</p>
+</li>
+</ul>
+<p><strong>关键步骤</strong></p>
+<ol>
+<li class="lvl-3">
+<p><strong>决策（Decision）</strong>：选择未赋值的变量并赋值（如 x1=1）。</p>
+</li>
+<li class="lvl-3">
+<p><strong>传播（Propagation）</strong>：通过单元传播推导其他变量的值。</p>
+</li>
+<li class="lvl-3">
+<p><strong>冲突检测</strong>：若发现某个子句无法满足（如 x∧¬x），触发冲突分析。</p>
+</li>
+<li class="lvl-3">
+<p><strong>学习子句生成</strong>：从冲突中提取新的子句加入CNF。</p>
+</li>
+<li class="lvl-3">
+<p><strong>回溯（Backjumping）</strong>：根据学习子句跳转到早期决策点，避免无效搜索。</p>
+</li>
+</ol>
+<img src="image 25.png" alt="25" style="box-shadow: none !important;">
+<img src="image 26.png" alt="26" style="box-shadow: none !important;">
+<p><strong>为什么学习子句有效？</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>剪枝搜索空间</strong>：新子句阻止未来出现相同的冲突组合（如 x0=0∧x1=1<em>x</em>0=0∧<em>x</em>1=1）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>指导回溯</strong>：避免逐层回溯，直接跳转到关键决策点。</p>
+</li>
+</ul>
+<p><strong>CDCL vs DPLL</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>DPLL</strong></th>
+<th><strong>CDCL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>回溯方式</strong></td>
+<td>时序回溯（逐层撤销）</td>
+<td>非时序回溯（跳转到冲突根源）</td>
+</tr>
+<tr>
+<td><strong>学习能力</strong></td>
+<td>无</td>
+<td>动态生成学习子句</td>
+</tr>
+<tr>
+<td><strong>效率</strong></td>
+<td>较低（可能重复搜索）</td>
+<td>高（通过学习避免冗余）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="比特向量理论（Theory-of-Bit-Vectors）"><strong>比特向量理论（Theory of Bit Vectors）</strong></h3>
+<p><strong>1. 理论定义</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>作用</strong>：为一阶逻辑提供<strong>固定长度二进制数</strong>的语义（如32位整数）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>核心操作</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong>逻辑运算</strong>：按位与（<strong><code>∧</code></strong>）、或（<strong><code>∨</code></strong>）、非（<strong><code>¬</code></strong>）。</li>
+<li class="lvl-6"><strong>比较运算</strong>：有符号小于（<strong><code>slt</code></strong>）、无符号小于（<strong><code>ult</code></strong>）。</li>
+<li class="lvl-6"><strong>算术运算</strong>：加减乘除、位移等。</li>
+</ul>
+</li>
+</ul>
+<h3 id="可满足性模理论（SMT）"><strong>可满足性模理论（SMT）</strong></h3>
+<p><strong>1. SMT求解流程</strong></p>
+<p>针对<strong>一阶逻辑公式+理论</strong>（如比特向量），SMT求解器分三步处理：</p>
+<p><strong>步骤1：词级预处理（Word-Level Preprocessing）</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>目标</strong>：简化公式，应用理论特定的推理规则。</p>
+</li>
+<li class="lvl-2">
+<p><strong>操作</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">常量传播、等式链合并。</li>
+<li class="lvl-6">示例：<strong><code>x + 1 = y ∧ y = 2</code></strong> → <strong><code>x = 1</code></strong>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>步骤2：比特爆破（Bit-Blasting）</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>目标</strong>：将高阶公式转换为等价的<strong>命题逻辑公式</strong>（PL）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>操作</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">将比特向量变量拆解为单个比特（如32位整数→32个布尔变量）。</li>
+<li class="lvl-6">将算术/逻辑操作转换为布尔电路。</li>
+<li class="lvl-6">示例：<strong><code>a[3:0] + b[3:0]</code></strong> → 生成4位加法器的布尔约束。</li>
+</ul>
+</li>
+</ul>
+<p><strong>步骤3：DPLL/CDCL求解</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>目标</strong>：调用SAT求解器（如DPLL或CDCL）处理生成的布尔公式。</p>
+</li>
+<li class="lvl-2">
+<p><strong>关键点</strong>：</p>
+<ul class="lvl-2">
+<li class="lvl-6">结合理论求解器（如比特向量理论）验证中间赋值的合法性。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 为什么需要SMT？</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>直接FOL求解困难</strong>：一阶逻辑本身不可判定（无通用算法）。</p>
+</li>
+<li class="lvl-2">
+<p><strong>理论加持</strong>：通过限制域（如整数、比特向量），使问题可判定。</p>
+</li>
+</ul>
+<h2 id="Andersen-Steensgaard-Algorithm">Andersen &amp; Steensgaard Algorithm</h2>
+<img src="image 27.png" alt="27" style="box-shadow: none !important;">
+<p>两种算法均可建模为<strong>有向图的传递闭包问题</strong>：</p>
+<h3 id="Andersen’s-Alg-as-Graph-Closure">Andersen’s Alg. as Graph Closure</h3>
+<img src="image 30.png" alt="30" style="box-shadow: none !important;">
+<img src="image 36.png" alt="36" style="box-shadow: none !important;">
+<h2 id="指令调度">指令调度</h2>
+<p>为什么编译器很重要？</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>硬件只能执行已经被取指（fetched）的指令</p>
+</li>
+<li class="lvl-2">
+<p>硬件用于缓存需要等待的操作的空间是有限的</p>
+</li>
+<li class="lvl-2">
+<p>编译器可以将相互独立的操作放得更近一些，以便更好地利用硬件资源</p>
+</li>
+</ul>
+<p><strong>指令调度（instruction scheduling）</strong> 是一种代码优化手段，常见于优化编译器，其主要功能在于通过加强指令层级的并行运行，使得程序在拥有指令流水线的中央处理器上能够高效运行。换句话说，此手段力求以不改变程序运算结果的方式，完成以下任务：通过重组指令的运行顺序，减少或阻止流水线停顿的发生;阻止非法操作（即未定义行为）的产生，例如涉及流水线时序、非互锁资源的等等操作。其中流水线停顿主要由结构型冒险（受处理器的资源所限）、数据型冒险以及控制流型冒险导致。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>数据型冒险：当前指令的执行依赖与上一条指令执行的结果。数据冒险可能产生数据流依赖。</p>
+</li>
+<li class="lvl-2">
+<p>结构型冒险：多条指令同时访问处理器的同一个硬件单元的时候，由于缺少相应的资源，导致结构型冒险</p>
+</li>
+<li class="lvl-2">
+<p>控制型冒险：存在分支跳转，不确定下一条要执行的指令，导致其产生的控制型冒险</p>
+</li>
+</ul>
+<p><strong>为什么要指令调度：</strong> 更好利用处理器并行性，指令重排将并行度高的指令排在一起（加上上面定义里的）</p>
+<p>目前数据流依赖关系主要有以下三种：</p>
+<p>假设第一条执行的指令为I1，下一条执行的指令为I2</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>True（flow）dependence</strong>：是真正的数据流依赖，也叫流依赖，即RAW（Read After Write），指令I2的输入，需要等到指令I1的输出</p>
+</li>
+<li class="lvl-2">
+<p><strong>Anti-dependence：反依赖</strong>，即WAR（Write After Read），指令I2需要用到I1指令的数据或者覆盖I1指令</p>
+</li>
+<li class="lvl-2">
+<p><strong>Output dependence：输出依赖</strong>，WAW（Write After Write），指令I1与指令I2同时写一块内存，指令I1和指令I2之间可能存在使用指令I1的其他指令</p>
+</li>
+</ul>
+<p>当前输出依赖和反依赖均可称为假依赖。真依赖是绝对不能改变指令之间的执行顺序，但是假依赖的话，一般可以通过寄存器重命名或者变量重命名的方式，来解决依赖关系，从而使其有机会改变指令之间的执行顺序：</p>
+<img src="image 37.jpg" alt="37" style="box-shadow: none !important;">
+<img src="image 38.jpg" alt="38" style="box-shadow: none !important;">
+<p><strong>依赖关系图：<strong>节点是指令，边是</strong>真依赖</strong></p>
+<h3 id="表调度（List-Scheduling）"><strong>表调度（List Scheduling）</strong></h3>
+<p>表调度是一种贪心+启发式方法，用以调度基本块中的各个指令操作，是基本块中指令调度的最常见方法。</p>
+<p><strong>表调度的基本思想：</strong></p>
+<p>维护一个用来存储已经准备执行的指令的ready列表和一个正在执行指令的active列表，ready列表的构建主要基于数据依赖约束和硬件资源信息；根据调度算法以周期为单位来执行具体的指令调度，包括从列表中选择及调度指令，更新列表信息。</p>
+<p>基本的表调度算法大致分为以下三步：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>根据指令间依赖，建立<strong>依赖关系图</strong>。</p>
+</li>
+<li class="lvl-2">
+<p>根据当前指令节点到根节点的长度以及指令的latency，计算每个指令的<strong>优先级</strong>。</p>
+</li>
+<li class="lvl-2">
+<p>不断选择一个指令，并调度它，a. 使用两个队列<strong>维护ready的指令和正在执行的active的指令</strong>；b. 在每个周期：选择一个满足条件的ready的指令并调度它，更新ready队列；检查active的指令是否执行完毕，更新active列表</p>
+</li>
+</ul>
+<p>假设LD/ST 3 cycles; MUL 2 cycles; ADD 1 cycle：</p>
+<img src="image 39.jpg" alt="39" style="box-shadow: none !important;">
+<img src="image 40.jpg" alt="40" style="box-shadow: none !important;">
+<img src="image 41.jpg" alt="41" style="box-shadow: none !important;">
+<img src="image 42.jpg" alt="42" style="box-shadow: none !important;">
+<img src="image 43.jpg" alt="43" style="box-shadow: none !important;">
+<img src="image 44.jpg" alt="44" style="box-shadow: none !important;">
+<img src="image 45.jpg" alt="45" style="box-shadow: none !important;">
+<img src="image 46.jpg" alt="46" style="box-shadow: none !important;">
+<img src="image 47.jpg" alt="47" style="box-shadow: none !important;">
+<p>如果一个指令节点上面的节点仍在active里（即图中颜色较淡的节点），且没有其他可选择的指令时nop。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/2025Spring-编译原理/编译原理06/" data-toggle="tooltip" data-placement="top" title="编译原理06">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<!-- <div class="tip">
+  <p>
+    
+      [object Object]
+    
+  </p>
+</div> -->
+<!-- tip end -->
+
+<div class="tip">
+  <ul class="post-copyright">
+    
+      <li class="post-copyright-author">
+        <strong>本文作者：</strong>RyoCY
+      </li>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong><a href="https://squirrelune.github.io/cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8607/" target="_blank" title="编译原理07">https://squirrelune.github.io/cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8607/</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>许可协议： </strong>
+        除特殊声明外，本站博文均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，转载请注明出处！
+      </li>
+    
+  </ul>
+</div>
+
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=编译原理07&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/2025Spring-编译原理/编译原理07/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <!-- <hr> -->
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+  
+    <aside id="sidebar">
+      <div id="toc" class="toc-article">
+      <strong class="toc-title">目录</strong>
+      
+        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">ch9.2-12</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AC%A6%E5%8F%B7%E6%89%A7%E8%A1%8C"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">符号执行</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B1%82%E8%A7%A3%E8%B7%AF%E5%BE%84%E7%BA%A6%E6%9D%9F"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">求解路径约束</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%EF%BC%88Propositional-Logic-PL%EF%BC%89"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">命题逻辑（Propositional Logic, PL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8C%83%E5%BC%8F%EF%BC%88Normal-Forms%EF%BC%89"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">范式（Normal Forms）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%A6%E5%AE%9A%E8%8C%83%E5%BC%8F%EF%BC%88NNF%EF%BC%89"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">否定范式（NNF）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%88%E5%8F%96%E8%8C%83%E5%BC%8F%EF%BC%88Conjunctive-Normal-Form-CNF%EF%BC%89"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">合取范式（Conjunctive Normal Form, CNF）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7%E7%AD%89%E4%BB%B7"><span class="toc-nav-number">1.1.6.</span> <span class="toc-nav-text">可满足性等价</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Tseitin-Transformation"><span class="toc-nav-number">1.1.7.</span> <span class="toc-nav-text">Tseitin Transformation</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SAT%E9%97%AE%E9%A2%98"><span class="toc-nav-number">1.1.8.</span> <span class="toc-nav-text">SAT问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DPLL%E7%AE%97%E6%B3%95"><span class="toc-nav-number">1.1.9.</span> <span class="toc-nav-text">DPLL算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%B2%E7%AA%81%E9%A9%B1%E5%8A%A8%E5%AD%90%E5%8F%A5%E5%AD%A6%E4%B9%A0%EF%BC%88CDCL%EF%BC%89"><span class="toc-nav-number">1.1.10.</span> <span class="toc-nav-text">冲突驱动子句学习（CDCL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AF%94%E7%89%B9%E5%90%91%E9%87%8F%E7%90%86%E8%AE%BA%EF%BC%88Theory-of-Bit-Vectors%EF%BC%89"><span class="toc-nav-number">1.1.11.</span> <span class="toc-nav-text">比特向量理论（Theory of Bit Vectors）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7%E6%A8%A1%E7%90%86%E8%AE%BA%EF%BC%88SMT%EF%BC%89"><span class="toc-nav-number">1.1.12.</span> <span class="toc-nav-text">可满足性模理论（SMT）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Andersen-Steensgaard-Algorithm"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Andersen &amp; Steensgaard Algorithm</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Andersen%E2%80%99s-Alg-as-Graph-Closure"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">Andersen’s Alg. as Graph Closure</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8C%87%E4%BB%A4%E8%B0%83%E5%BA%A6"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">指令调度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A1%A8%E8%B0%83%E5%BA%A6%EF%BC%88List-Scheduling%EF%BC%89"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">表调度（List Scheduling）</span></a></li></ol></li></ol></li></ol>
+      
+      </div>
+    </aside>
+  
+
+
+
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#编译原理" title="编译原理">编译原理</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.erinwithbmq.xin/" target="_blank">寻梦之旅-ErinwithBMQ</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <!-- <ul class="list-inline text-center">
+          
+            <li>
+              <a href="/feed.xml">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul> -->
+        <p class="copyright text-muted">
+          Copyright &copy;
+          RyoCY
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife">Live My Life</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://squirrelune.github.io/">Ryo</a>
+        
+          <span>| 本站已运行<span id="showDays"></span></span>
+          <script>
+            var seconds = 1000;
+            var minutes = seconds * 60;
+            var hours = minutes * 60;
+            var days = hours * 24;
+            var years = days * 365;
+            var birthDay = Date.UTC(2025,01,01,00,00,00); // 这里设置建站时间
+            setInterval(function() {
+              var today = new Date();
+              var todayYear = today.getFullYear();
+              var todayMonth = today.getMonth()+1;
+              var todayDate = today.getDate();
+              var todayHour = today.getHours();
+              var todayMinute = today.getMinutes();
+              var todaySecond = today.getSeconds();
+              var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+              var diff = now - birthDay;
+              var diffYears = Math.floor(diff/years);
+              var diffDays = Math.floor((diff/days)-diffYears*365);
+              var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+              var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+              var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                document.getElementById('showDays').innerHTML=""+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+            }, 1000);
+          </script>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='まだ遠くへ…,僕らはただの風になって…,まだ遠くへ…,雲も越えて…,まだ向こうへ…,風に乗って…,僕ら想像力という縛りを抜け出して…,まだ遠くへ…,海の方へ…' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://squirrelune.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
