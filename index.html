@@ -608,7 +608,36 @@ mjx-container[display="true"] + br {
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    
+
+根据中间表示(IR)生成代码
+代码生成器之前可能有一个优化组件
+代码生成器的三个任务
+
+指令选择: 选择适当的指令实现IR语句
+寄存器分配和指派: 把哪个值放在哪个寄存器中
+指令排序: 按照什么顺序安排指令执行
+
+
+
+ch8-8.2
+目标机模型
+常见指令：
+
+
+
+指令
+解释
+
+
+
+
+LD dst, addr
+把位置 addr 上的值加载到位置 dst
+
+
+LD r1, r2
+寄存器到寄存......
   
 </div>
 
@@ -650,7 +679,11 @@ mjx-container[display="true"] + br {
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    ch6.2
+静态单赋值
+静态单赋值（SSA）是一种中间代码表示形式，在该形式下，每个变量在程序的每个控制流路径上都仅被赋值一次。SSA 形式通过在适当的地方插入 φ 函数 来处理控制流合流点，使得代码既具有数据流分析的简洁性，又能够有效优化。
+如果某个变量需要被重新赋值，会创建一个新的变量名称，例如 x1, x2, x3。
+由于控制流可能发生分支和合流，因此在合流点需要一个 φ 函数来选择正......
   
 </div>
 
@@ -692,7 +725,16 @@ mjx-container[display="true"] + br {
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    ch6.1
+编译的主要阶段包括：
+
+词法分析（Lexical Analysis）
+语法分析（Syntax Analysis）
+中间代码生成（Intermediate Representation Generation）
+目标代码生成（Target Code Generation）
+
+中间表示（IR）是连接语法分析与目标代码生成的桥梁，主要作用是优化和分析。
+三地址码 Three-Addres......
   
 </div>
 
@@ -734,7 +776,11 @@ mjx-container[display="true"] + br {
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    ch4.2
+自顶向下分析 Top-Down Parsing
+自顶向下解析可以看作是以前序方式构建解析树的问题，即采用最左推导方式，总是选择每个句型的最左非终结符进行替换。
+左递归是指一个语法规则直接或间接地在最左边调用自己。左递归可能导致无限循环，例如 ：
+1234567891011bool A() {    temp = cursor;    cursor = temp;    if (A......
   
 </div>
 
@@ -822,7 +868,28 @@ mjx-container[display="true"] + br {
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    ch4.1
+CFL
+上下文无关语言（CFL）：
+CFL = PDA = NFA + Stack () = NPDA
+
+NPDA/PDA
+NPDA/PDA（非确定性/确定性下推自动机） 由七元组定义：
+
+
+：有限状态集合
+
+
+：有限输入字母表
+
+
+：有限栈字母表
+
+
+：状态转移函数，形式为 （即：从当前状态、输入符号（或空字符𝜖）及栈顶符号，转换到一组可能的新状态，并修改栈内容）
+
+
+：初始......
   
 </div>
 
@@ -956,7 +1023,14 @@ asy......
 
     <div class="post-content-preview">
   
-    <p>该文章被加密了, 请输入密码查看。</p>
+    ch3-4.
+数学基础
+
+字母表和字符串
+语言（language） 是一个 字符串（string） 的集合，例如：{ cat, dog, … }，字符串是由 字母表（alphabet） 中的字母组成的序列。一个语言是字母表中所有字符串的子集。字母表示例：𝚺 = { a, b, c, d, …, z }
+字符串示例：cat, dog, …
+字符串操作
+连接：例如，𝑤1 = 𝑎𝑎𝑏𝑏......
   
 </div>
 
@@ -1732,5 +1806,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
