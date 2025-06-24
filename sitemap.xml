@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2025-06-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://squirrelune.github.io/cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8607/</loc>
     
     <lastmod>2025-06-19</lastmod>
@@ -220,7 +229,7 @@
 
   <url>
     <loc>https://squirrelune.github.io/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -228,35 +237,42 @@
   
   <url>
     <loc>https://squirrelune.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/tags/%E6%B8%B8%E8%AE%B0/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/tags/Web/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/tags/Ubuntu/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/tags/Hexo/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://squirrelune.github.io/tags/WSL2/</loc>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -265,28 +281,28 @@
   
   <url>
     <loc>https://squirrelune.github.io/categories/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/categories/%E5%8D%97%E5%8C%97%E6%95%A3%E8%AE%B0/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/categories/Web%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://squirrelune.github.io/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2025-06-19</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

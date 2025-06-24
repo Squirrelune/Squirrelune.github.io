@@ -6,7 +6,7 @@
   <link href="https://squirrelune.github.io/feed.xml" rel="self"/>
   
   <link href="https://squirrelune.github.io/"/>
-  <updated>2025-06-19T11:14:30.000Z</updated>
+  <updated>2025-06-24T04:56:30.000Z</updated>
   <id>https://squirrelune.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win11使用WSL2安装Ubuntu时出现error解决记录</title>
+    <link href="https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/"/>
+    <id>https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</id>
+    <published>2025-06-24T04:56:30.000Z</published>
+    <updated>2025-06-24T04:56:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="折腾日志" scheme="https://squirrelune.github.io/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://squirrelune.github.io/tags/Ubuntu/"/>
+    
+    <category term="WSL2" scheme="https://squirrelune.github.io/tags/WSL2/"/>
+    
+  </entry>
   
   <entry>
     <title>编译原理07</title>

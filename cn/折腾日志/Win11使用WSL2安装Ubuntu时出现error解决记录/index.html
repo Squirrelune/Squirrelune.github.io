@@ -137,10 +137,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/archives/2025/03/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/">
   <title>
     
-      RyoCY的后花园
+      Win11使用WSL2安装Ubuntu时出现error解决记录 - RyoCY的后花园
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
@@ -302,25 +302,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="archives/2025/03/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -373,19 +355,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: url('headbg.png');
+      --intro-header-background-image-url-page: url('/headbg.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.png');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/head_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('headbg.png'); */
       
     }
 
@@ -407,18 +389,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-
+          <div class="post-heading">
+            <div class="tags">
               
-                <h1>Hello World</h1> 
-                
-                <!-- 更改首页图片上文字 -->
+              <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+              
+              <a class="tag" href="/tags/#WSL2" title="WSL2">WSL2</a>
+              
+            </div>
+            <h1>Win11使用WSL2安装Ubuntu时出现error解决记录</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by RyoCY on
+              2025-06-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">1</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">250</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
             
             
-            <!-- <h1>RyoCY的后花园</h1> -->
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
             
-            <!--<hr class="small">-->
-            <span class="subheading">O ever youthful, O ever weeping</span>
+
+
           </div>
           
         </div>
@@ -459,455 +467,232 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <p>记录出错以及解决的流程。</p>
+<p>先以管理员身份运行 PowerShell，执行命令<code>wsl --install -d Ubuntu-22.04</code>。</p>
+<p>命令行提示如下信息：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">请求的操作需要提升。</span><br><span class="line">部署映像服务和管理工具</span><br><span class="line">版本: <span class="number">10.0.22621</span>.<span class="number">2792</span></span><br><span class="line">映像版本: <span class="number">10.0.22631</span>.<span class="number">5335</span></span><br><span class="line">启用一个或多个功能</span><br><span class="line">[==========================<span class="number">100</span>.<span class="number">0</span>%==========================]</span><br><span class="line">操作成功完成。</span><br><span class="line">请求的操作成功。直到重新启动系统前更改将不会生效。</span><br></pre></td></tr></table></figure><br>重启系统后重复操作，显示没有变化，仍然失败。</p>
+<p>这时候打开Microsoft Store发现已经安装了Ubuntu-22.04，打开会显示：<br><code>error 0x80370114</code></p>
+<p>询问GPT和查找网上多种方案都未能解决，最后尝试先卸载，然后打开<code>启动或关闭windows功能</code>，<br><img src="启动或关闭windows功能界面.png" alt="启动或关闭windows功能界面" style="width: 60%;"><br>将<code>虚拟机平台</code>和<code>适用于linux的windows子系统</code>关闭后重启电脑，之后将两个功能再打开后重启。<br>这时以管理员身份运行 PowerShell，重新输入<code>wsl --install Ubuntu-22.04</code>，成功。</p>
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2025">
-          <span class="tag-text">2025</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <li>
-            06-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/" style="color: #0085a1">
-              <span>
-                Win11使用WSL2安装Ubuntu时出现error解决记录
-                
-              </span>
-            </a>
-          </li>
           
-          <li>
-            06-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理07/" style="color: #0085a1">
-              <span>
-                编译原理07
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理06/" style="color: #0085a1">
-              <span>
-                编译原理06
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理05/" style="color: #0085a1">
-              <span>
-                编译原理05
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理04/" style="color: #0085a1">
-              <span>
-                编译原理04
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理03/" style="color: #0085a1">
-              <span>
-                编译原理03
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/南北散记/南北散记-无锡篇/" style="color: #0085a1">
-              <span>
-                南北散记-无锡篇
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理02/" style="color: #0085a1">
-              <span>
-                编译原理02
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-05
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发08/" style="color: #0085a1">
-              <span>
-                Web开发08
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/折腾日志/Ubuntu下创建桌面快捷方式并添加到侧边栏/" style="color: #0085a1">
-              <span>
-                Ubuntu下创建桌面快捷方式并添加到侧边栏
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025Spring-编译原理/编译原理01/" style="color: #0085a1">
-              <span>
-                编译原理01
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发07/" style="color: #0085a1">
-              <span>
-                Web开发07
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发06/" style="color: #0085a1">
-              <span>
-                Web开发06
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/折腾日志/Hexo内嵌网页/" style="color: #0085a1">
-              <span>
-                Hexo内嵌网页
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/50-Projects-Notebook/" style="color: #0085a1">
-              <span>
-                50-Projects-Notebook
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发05/" style="color: #0085a1">
-              <span>
-                Web开发05
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发04/" style="color: #0085a1">
-              <span>
-                Web开发04
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发03/" style="color: #0085a1">
-              <span>
-                Web开发03
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发02/" style="color: #0085a1">
-              <span>
-                Web开发02
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Web开发/Web开发01/" style="color: #0085a1">
-              <span>
-                Web开发01
-                
-              </span>
-            </a>
+          <li class="next">
+            <a href="/cn/2025Spring-编译原理/编译原理07/" data-toggle="tooltip" data-placement="top" title="编译原理07">Next Post &rarr;</a>
           </li>
           
         </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
 
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<!-- <div class="tip">
+  <p>
+    
+      [object Object]
+    
+  </p>
+</div> -->
+<!-- tip end -->
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
+<div class="tip">
+  <ul class="post-copyright">
     
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#编译原理" title="编译原理" rel="7">编译原理</a>
-    
-    
-    
-    <a href="/tags/#游记" title="游记" rel="1">游记</a>
-    
-    
-    
-    <a href="/tags/#Web" title="Web" rel="9">Web</a>
-    
-    
-    
-    <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
-    
-    
-    
-    <a href="/tags/#WSL2" title="WSL2" rel="1">WSL2</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/avatorhi.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Life was like a box of chocolate ...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-      <li>
-        <a href="/feed.xml">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
+      <li class="post-copyright-author">
+        <strong>本文作者：</strong>RyoCY
       </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../../cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">
-      <li>Win11使用WSL2安装Ubuntu时出现error解决记录</li>
-    </a>
-    
-    <a href="../../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8607/">
-      <li>编译原理07</li>
-    </a>
-    
-    <a href="../../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8606/">
-      <li>编译原理06</li>
-    </a>
-    
-    <a href="../../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8605/">
-      <li>编译原理05</li>
-    </a>
-    
-    <a href="../../../cn/2025Spring-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%8604/">
-      <li>编译原理04</li>
-    </a>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong><a href="https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank" title="Win11使用WSL2安装Ubuntu时出现error解决记录">https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>许可协议： </strong>
+        除特殊声明外，本站博文均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，转载请注明出处！
+      </li>
     
   </ul>
 </div>
 
+<!-- tip end -->
 
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Win11使用WSL2安装Ubuntu时出现error解决记录&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
         <hr>
-    
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <!-- <hr> -->
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+  
+    <aside id="sidebar">
+      <div id="toc" class="toc-article">
+      <strong class="toc-title">目录</strong>
+      
+        <ol class="nav">none</ol>
+      
+      </div>
+    </aside>
+  
+
+
+
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+            
+            <a class="tag" href="/tags/#WSL2" title="WSL2">WSL2</a>
+            
+          </div>
+        </section>
+        
+
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://www.erinwithbmq.xin/" target="_blank">寻梦之旅-ErinwithBMQ</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../06/">June 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../02/">February 2025</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../01/">January 2025</a><span class="archive-list-count">5</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#2025Spring-编译原理">
-      <li>2025Spring-编译原理</li>
-    </a>
-    
-    <a href="/categories/#南北散记">
-      <li>南北散记</li>
-    </a>
-    
-    <a href="/categories/#Web开发">
-      <li>Web开发</li>
-    </a>
-    
-    <a href="/categories/#折腾日志">
-      <li>折腾日志</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- created by Ryo -->
-
-    
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://www.erinwithbmq.xin/" target="_blank">寻梦之旅-ErinwithBMQ</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
