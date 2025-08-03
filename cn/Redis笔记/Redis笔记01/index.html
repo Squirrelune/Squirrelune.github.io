@@ -355,19 +355,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('web01_headbg.png');
-      --intro-header-background-image-url-page: url('/web01_headbg.png');
+      --intro-header-background-image-url-post: url('headbg.jpg');
+      --intro-header-background-image-url-page: url('/headbg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('web01_headbg.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/web01_headbg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('web01_headbg.png'); */
+        /* background-image: url('headbg.jpg'); */
       
     }
 
@@ -407,11 +407,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">9</span> Minutes
+              Estimated Reading Time <span class="post-count">12</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">2.4k</span> In Total
+              Words <span class="post-count">2.9k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -474,6 +474,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>黑马程序员Redis课程笔记</p>
+<h1>基础篇</h1>
 <h1>NoSQL</h1>
 <h2 id="分类">分类</h2>
 <ul class="lvl-0">
@@ -1081,6 +1082,98 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="title class_">Jedis</span> jedis;</span><br><span class="line"></span><br><span class="line"><span class="meta">@BeforeEach</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">setUp</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//1. 建立连接</span></span><br><span class="line">    jedis = <span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">    <span class="comment">//2. 设置密码</span></span><br><span class="line">    jedis.<span class="title function_">auth</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="comment">//3. 选择库</span></span><br><span class="line">    jedis.<span class="title function_">select</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">testString</span>(<span class="params"></span>)&#123;</span><br><span class="line">    jedis.<span class="title function_">set</span>(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Ryo&quot;</span>);</span><br><span class="line">    <span class="title class_">String</span> name = jedis.<span class="title function_">get</span>(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(<span class="string">&quot;name = &quot;</span> + name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">testHash</span>(<span class="params"></span>)&#123;</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:1&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Ryo&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:2&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Lily&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:1&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;21&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:2&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;18&quot;</span>);</span><br><span class="line">    <span class="title class_">Map</span>&lt;<span class="title class_">String</span>, <span class="title class_">String</span>&gt; map = jedis.<span class="title function_">hgetAll</span>(<span class="string">&quot;Test:user:1&quot;</span>);</span><br><span class="line">    <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(map);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放资源</span></span><br><span class="line"><span class="meta">@AfterEach</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">tearDown</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> (jedis != <span class="literal">null</span>)&#123;</span><br><span class="line">        jedis.<span class="title function_">close</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Jedis连接池">Jedis连接池</h3>
 <p>Jedis本身是线程不安全的，并且频繁的创建和销毁连接会有性能损耗，推荐使用Jedis连接池代替直连方式。</p>
+<p>首先在main文件夹下创建一个工具类：</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisConnectionFactory</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="comment">// 配置连接池</span></span><br><span class="line">        JedisPoolConfig poolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        poolConfig.setMaxTotal(<span class="number">8</span>);</span><br><span class="line">        poolConfig.setMaxIdle(<span class="number">8</span>);</span><br><span class="line">        poolConfig.setMinIdle(<span class="number">0</span>);</span><br><span class="line">        poolConfig.setMaxWaitMillis(<span class="number">1000</span>);</span><br><span class="line">        jedisPool = <span class="keyword">new</span> JedisPool(poolConfig, <span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">6379</span>, <span class="number">1000</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function">Jedis <span class="title">getJedis</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> jedisPool.<span class="title">getResource</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>随后可以在单元测试中使用：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">jedis</span> <span class="operator">=</span> JedisConnectionFactory.getJedis()<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h3 id="SpringDataRedis">SpringDataRedis</h3>
+<p>SpringData是Spring中数据操作的模块，包含对各种数据库的集成，其中对Redis的集成模块就叫做SpringDataRedis。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>提供了对不同Redis客户端的整合（Lettuce和Jedis）</p>
+</li>
+<li class="lvl-2">
+<p>提供了RedisTemplate统一API来操作Redis</p>
+</li>
+<li class="lvl-2">
+<p>支持Redis的发布订阅模型</p>
+</li>
+<li class="lvl-2">
+<p>支持Redis哨兵和Redis集群</p>
+</li>
+<li class="lvl-2">
+<p>支持基于Lettuce的响应式编程</p>
+</li>
+<li class="lvl-2">
+<p>支持基于JDK、JSON、字符串、Spring对象的数据序列化及反序列化</p>
+</li>
+<li class="lvl-2">
+<p>支持基于Redis的JDKCollection实现</p>
+</li>
+</ul>
+<p>SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">API</th>
+<th style="text-align:center">返回值类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>redisTemplate.opsForValue()</code></td>
+<td style="text-align:center">ValueOperations</td>
+<td style="text-align:center">操作String类型数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>redisTemplate.opsForHash()</code></td>
+<td style="text-align:center">HashOperations</td>
+<td style="text-align:center">操作Hash类型数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>redisTemplate.opsForList()</code></td>
+<td style="text-align:center">ListOperations</td>
+<td style="text-align:center">操作List类型数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>redisTemplate.opsForSet()</code></td>
+<td style="text-align:center">SetOperations</td>
+<td style="text-align:center">操作Set类型数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>redisTemplate.opsForzSet()</code></td>
+<td style="text-align:center">ZSetOperations</td>
+<td style="text-align:center">操作SortedSet类型数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>redisTemplate</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">通用的命令</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li class="lvl-3">
+<p>在maven中引入依赖：</p>
+</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--common-pool--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-pool2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li class="lvl-3">
+<p>配置文件：</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">    <span class="attr">lettuce:</span></span><br><span class="line">      <span class="attr">pool:</span></span><br><span class="line">        <span class="attr">max-active:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">max-idle:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">min-idle:</span> <span class="number">0</span></span><br><span class="line">        <span class="attr">max-wait:</span> <span class="string">100ms</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li class="lvl-3">
+<p>编写测试</p>
+</li>
+</ol>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   @Autowired</span><br><span class="line">private RedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">@Test</span><br><span class="line"><span class="type">void</span> testString()&#123;</span><br><span class="line">	redisTemplate.opsForValue().<span class="keyword">set</span>(&quot;NAME&quot;, &quot;Ryoo&quot;);</span><br><span class="line">	<span class="keyword">Object</span> <span class="type">name</span> = redisTemplate.opsForValue().<span class="keyword">get</span>(&quot;NAME&quot;);</span><br><span class="line">	<span class="keyword">System</span>.<span class="keyword">out</span>.println(&quot;NAME = &quot; + <span class="type">name</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>RedisTemplate写入前会把Object序列化为字节形式，默认是采用JDK序列化，例如：</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> get <span class="string">&quot;<span class="char escape_">\x</span>ac<span class="char escape_">\x</span>ed<span class="char escape_">\x</span>00<span class="char escape_">\x</span>05t<span class="char escape_">\x</span>00<span class="char escape_">\x</span>04NAME&quot;</span></span><br><span class="line"><span class="string">&quot;<span class="char escape_">\x</span>ac<span class="char escape_">\x</span>ed<span class="char escape_">\x</span>00<span class="char escape_">\x</span>05t<span class="char escape_">\x</span>00<span class="char escape_">\x</span>04Ryoo&quot;</span></span><br></pre></td></tr></table></figure>
+<p>可以自定义RedisTemplate的序列化方式</p>
 
 
         <hr>
@@ -1195,7 +1288,7 @@
       <div id="toc" class="toc-article">
       <strong class="toc-title">目录</strong>
       
-        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">NoSQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">分类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8ESQL%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">与SQL区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Redis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">特征</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">数据结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%94%AE%E7%AE%A1%E7%90%86"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">键管理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">字符串</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Key%E7%9A%84%E5%B1%82%E7%BA%A7%E5%BD%A2%E5%BC%8F"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">Key的层级形式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">Hash类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#List%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">List类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Set%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">Set类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SortedSet%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.7.</span> <span class="toc-nav-text">SortedSet类型</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Redis%E7%9A%84Java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Redis的Java客户端</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">Jedis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">Jedis连接池</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">基础篇</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">NoSQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">分类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8ESQL%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">与SQL区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Redis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">特征</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">数据结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%94%AE%E7%AE%A1%E7%90%86"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">键管理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">字符串</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Key%E7%9A%84%E5%B1%82%E7%BA%A7%E5%BD%A2%E5%BC%8F"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">Key的层级形式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.3.4.</span> <span class="toc-nav-text">Hash类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#List%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.3.5.</span> <span class="toc-nav-text">List类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Set%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.3.6.</span> <span class="toc-nav-text">Set类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SortedSet%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.3.7.</span> <span class="toc-nav-text">SortedSet类型</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Redis%E7%9A%84Java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Redis的Java客户端</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">Jedis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-nav-number">3.4.2.</span> <span class="toc-nav-text">Jedis连接池</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SpringDataRedis"><span class="toc-nav-number">3.4.3.</span> <span class="toc-nav-text">SpringDataRedis</span></a></li></ol></li></ol></li></ol>
       
       </div>
     </aside>
