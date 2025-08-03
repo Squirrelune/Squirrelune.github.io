@@ -137,10 +137,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://squirrelune.github.io/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/">
+  <link rel="canonical" href="https://squirrelune.github.io/cn/Redis笔记/Redis笔记01/">
   <title>
     
-      Win11使用WSL2安装Ubuntu时出现error解决记录 - RyoCY的后花园
+      Redis笔记01 - RyoCY的后花园
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="feed.xml" title="RyoCY的后花园" type="application/atom+xml">
@@ -355,19 +355,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: url('headbg.png');
-      --intro-header-background-image-url-page: url('/headbg.png');
+      --intro-header-background-image-url-post: url('web01_headbg.png');
+      --intro-header-background-image-url-page: url('/web01_headbg.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/head_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('headbg.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/headbg.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('web01_headbg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/web01_headbg.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('headbg.png'); */
+        /* background-image: url('web01_headbg.png'); */
       
     }
 
@@ -392,16 +392,14 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
-              
-              <a class="tag" href="/tags/#WSL2" title="WSL2">WSL2</a>
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
               
             </div>
-            <h1>Win11使用WSL2安装Ubuntu时出现error解决记录</h1>
+            <h1>Redis笔记01</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by RyoCY on
-              2025-06-24
+              2025-08-01
             </span>
 
 
@@ -409,11 +407,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">9</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">250</span> In Total
+              Words <span class="post-count">2.4k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -475,24 +473,623 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>记录出错以及解决的流程。</p>
-<p>先以管理员身份运行 PowerShell，执行命令<code>wsl --install -d Ubuntu-22.04</code>。</p>
-<p>命令行提示如下信息：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">请求的操作需要提升。</span><br><span class="line">部署映像服务和管理工具</span><br><span class="line">版本: <span class="number">10.0.22621</span>.<span class="number">2792</span></span><br><span class="line">映像版本: <span class="number">10.0.22631</span>.<span class="number">5335</span></span><br><span class="line">启用一个或多个功能</span><br><span class="line">[==========================<span class="number">100</span>.<span class="number">0</span>%==========================]</span><br><span class="line">操作成功完成。</span><br><span class="line">请求的操作成功。直到重新启动系统前更改将不会生效。</span><br></pre></td></tr></table></figure><br>重启系统后重复操作，显示没有变化，仍然失败。</p>
-<p>这时候打开Microsoft Store发现已经安装了Ubuntu-22.04，打开会显示：<br><code>error 0x80370114</code></p>
-<p>询问GPT和查找网上多种方案都未能解决，最后尝试先卸载，然后打开<code>启动或关闭windows功能</code>，<br><img src="启动或关闭windows功能界面.png" alt="启动或关闭windows功能界面" style="width: 60%;"><br>将<code>虚拟机平台</code>和<code>适用于linux的windows子系统</code>关闭后重启电脑，之后将两个功能再打开后重启。<br>这时以管理员身份运行 PowerShell，重新输入<code>wsl --install Ubuntu-22.04</code>，成功。</p>
+        <p>黑马程序员Redis课程笔记</p>
+<h1>NoSQL</h1>
+<h2 id="分类">分类</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>键值类型（Redis）</p>
+</li>
+<li class="lvl-2">
+<p>文档类型（MongoDB）</p>
+</li>
+<li class="lvl-2">
+<p>列类型（HBase）</p>
+</li>
+<li class="lvl-2">
+<p>Graph类型（Neo4j）</p>
+</li>
+</ul>
+<h2 id="与SQL区别">与SQL区别</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">----------</th>
+<th style="text-align:center">SQL</th>
+<th style="text-align:center">NoSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数据结构</td>
+<td style="text-align:center">结构化</td>
+<td style="text-align:center">非结构化</td>
+</tr>
+<tr>
+<td style="text-align:center">数据关联</td>
+<td style="text-align:center">关联的</td>
+<td style="text-align:center">无关联</td>
+</tr>
+<tr>
+<td style="text-align:center">查询方式</td>
+<td style="text-align:center">SQL查询</td>
+<td style="text-align:center">非SQL</td>
+</tr>
+<tr>
+<td style="text-align:center">事务特性</td>
+<td style="text-align:center">ACID</td>
+<td style="text-align:center">BASE</td>
+</tr>
+<tr>
+<td style="text-align:center">存储方式</td>
+<td style="text-align:center">磁盘</td>
+<td style="text-align:center">内存</td>
+</tr>
+<tr>
+<td style="text-align:center">拓展性</td>
+<td style="text-align:center">垂直</td>
+<td style="text-align:center">水平</td>
+</tr>
+<tr>
+<td style="text-align:center">使用场景</td>
+<td style="text-align:center">数据结构固定，对数据安全性要求高</td>
+<td style="text-align:center">数据结构结构不固定，安全性要求不高，对性能有要求</td>
+</tr>
+</tbody>
+</table>
+<h1>Redis</h1>
+<p>Redis诞生于2009年全称是Remote Dictionary Server,远程词典服务器，是一个基于内存的键值型NoSQL数据库。</p>
+<h2 id="特征">特征</h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>键值(key-value)型，value支持多种不同数据结构，功能丰富</p>
+</li>
+<li class="lvl-2">
+<p>单线程，每个命令具备原子性</p>
+</li>
+<li class="lvl-2">
+<p>低延迟，速度快（基于内存、O多路复用、良好的编码）</p>
+</li>
+<li class="lvl-2">
+<p>支持数据持久化支持主从集群、分片集群</p>
+</li>
+<li class="lvl-2">
+<p>支持多语言客户端</p>
+</li>
+</ul>
+<h2 id="数据结构">数据结构</h2>
+<p>Redis是典型的key-value数据库，key一般是字符串，而value包含很多不同的数据类型。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:center">hello world</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Hash</code></td>
+<td style="text-align:center">{“name”:“Jack”,“age”:21}</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>List</code></td>
+<td style="text-align:center">[A-&gt;B-&gt;C-&gt;C]</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Set</code></td>
+<td style="text-align:center">{A,B,C}</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SortedSet</code></td>
+<td style="text-align:center">{A:1,B:2,C:3]</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>GEO</code></td>
+<td style="text-align:center">{A:(120.3,30.5)]</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>BitMap</code></td>
+<td style="text-align:center">0110110101110101011</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HyperLog</code></td>
+<td style="text-align:center">0110110101110101011</td>
+</tr>
+</tbody>
+</table>
+<h2 id="命令">命令</h2>
+<p><a target="_blank" rel="noopener" href="https://redis.io/docs/latest/commands/?group=generic">进入redis官网查看常用命令</a></p>
+<h3 id="键管理">键管理</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>DEL</code></td>
+<td style="text-align:center">DEL key1 key2</td>
+<td style="text-align:center">删除一个或多个键。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EXISTS</code></td>
+<td style="text-align:center">EXISTS key</td>
+<td style="text-align:center">检查键是否存在（返回 1 或 0）。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EXPIRE</code></td>
+<td style="text-align:center">EXPIRE key 60</td>
+<td style="text-align:center">设置键的过期时间（秒）。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TTL</code></td>
+<td style="text-align:center">TTL key</td>
+<td style="text-align:center">查看键的剩余生存时间（秒，-1 表示永久，-2 表示已过期）。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>KEYS</code></td>
+<td style="text-align:center">KEYS pattern*</td>
+<td style="text-align:center">查找匹配模式的键（生产环境慎用，可能阻塞）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字符串">字符串</h3>
+<p>value是字符串，根据字符串的格式不同分为3类:</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>string</code>：普通字符串，例如 hello world</p>
+</li>
+<li class="lvl-2">
+<p><code>int</code>：整数类型，可以做自增、自减操作，例如 10</p>
+</li>
+<li class="lvl-2">
+<p><code>float</code>：浮点类型，可以做自增、自减操作，例如 92.5</p>
+</li>
+</ul>
+<p>底层都以字节数组形式存储，最大空间不超过512m。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>SET</code></td>
+<td style="text-align:center">SET key value</td>
+<td style="text-align:center">设置键值对，可覆盖之前的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>GET</code></td>
+<td style="text-align:center">GET key</td>
+<td style="text-align:center">获取键的值。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>INCR</code></td>
+<td style="text-align:center">INCR key</td>
+<td style="text-align:center">将键的值递增 1（原子操作）。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MSET</code></td>
+<td style="text-align:center">MSET k1 v1 k2 v2</td>
+<td style="text-align:center">批量设置多个键值对。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MGET</code></td>
+<td style="text-align:center">MGET k1 k2</td>
+<td style="text-align:center">根据多个key获取多个String类型的value</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SETNX</code></td>
+<td style="text-align:center">SETNX newkey value</td>
+<td style="text-align:center">添加一个String类型的键值对，前提是这个key不存在，否则不执行</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SETEX</code></td>
+<td style="text-align:center">SETEX key seconds value</td>
+<td style="text-align:center">添加一个String类型的键值对，并指定有效期</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Key的层级形式">Key的层级形式</h3>
+<p>Redis的key允许有多个单词形成层级结构，多个单词之间用:隔开，格式如下：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>项目名:业务名:类型:id</code></p>
+</li>
+</ul>
+<p>格式也可以根据需求修改。例如如果项目名叫program，有user和product两种不同类型的数据，我们可以这样定义key：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>user相关的key：<code>program:user:1</code></p>
+</li>
+<li class="lvl-2">
+<p>product相关的key：<code>program:product:1</code></p>
+</li>
+</ul>
+<p>如果value是一个Java对象，例如一个User对象，则可以将对象序列化为JSON字符串后存储</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">KEY</th>
+<th style="text-align:center">VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">program:user:1</td>
+<td style="text-align:center">{“id”:1, “name”: “Ryo”, “age”: 21}</td>
+</tr>
+<tr>
+<td style="text-align:center">program:product:1</td>
+<td style="text-align:center">{“id”:1, “name”: “咖啡”, “price”: 19}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Hash类型">Hash类型</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>Hash类型，也叫散列，其中value是一个无序字典，类似于Java中的HashMap结构</p>
+</li>
+<li class="lvl-2">
+<p>String结构是将对象序列化为JSON字符串后存储，不方便修改对象的某个属性值</p>
+</li>
+<li class="lvl-2">
+<p>Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">KEY</th>
+<th style="text-align:center">field</th>
+<th style="text-align:center">value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">program:user:1</td>
+<td style="text-align:center">name</td>
+<td style="text-align:center">Ryo</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">age</td>
+<td style="text-align:center">21</td>
+</tr>
+<tr>
+<td style="text-align:center">program:user:2</td>
+<td style="text-align:center">name</td>
+<td style="text-align:center">Tsugu</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">age</td>
+<td style="text-align:center">18</td>
+</tr>
+</tbody>
+</table>
+<p>Hash的常见命令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>HSET</code></td>
+<td style="text-align:center">HSET key field value</td>
+<td style="text-align:center">添加或者修改hash类型key的field的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HGET</code></td>
+<td style="text-align:center">HGET key field</td>
+<td style="text-align:center">获取一个hash类型key的field的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HMSET</code></td>
+<td style="text-align:center">HMSET key field1 value1 field2 value2</td>
+<td style="text-align:center">批量添加多个hash类型key的field的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HMGET</code></td>
+<td style="text-align:center">HMGET key field1 field2</td>
+<td style="text-align:center">批量获取多个hash类型key的field的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HGETALL</code></td>
+<td style="text-align:center">HGETALL key</td>
+<td style="text-align:center">获取一个hash类型的key中的所有的field和value</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HKEYS</code></td>
+<td style="text-align:center">HKEYS key</td>
+<td style="text-align:center">获取一个hash类型的key中的所有的field</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HVALS</code></td>
+<td style="text-align:center">HVALS key</td>
+<td style="text-align:center">获取一个hash类型的key中的所有的value</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HINCRBY</code></td>
+<td style="text-align:center">HINCRBY key field increment</td>
+<td style="text-align:center">让一个hash类型key的字段值自增并指定步长</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HSETNX</code></td>
+<td style="text-align:center">HSETNX key field value</td>
+<td style="text-align:center">添加一个hash类型的key的field值，前提是这个field不存在，否则不执行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="List类型">List类型</h3>
+<p>Redis中的List类型与Java中的LinkedList类似，可以看做是一个双向链表结构。既可以支持正向检索和也可以支持反向检索。特征也与LinkedList类似：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>有序</p>
+</li>
+<li class="lvl-2">
+<p>元素可以重复</p>
+</li>
+<li class="lvl-2">
+<p>插入和删除快</p>
+</li>
+<li class="lvl-2">
+<p>查询速度一般</p>
+</li>
+</ul>
+<p>常用来存储一个有序数据，例如：朋友圈点赞列表，评论列表等。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>LPUSH</code></td>
+<td style="text-align:center">LPUSH key element1 element2</td>
+<td style="text-align:center">向列表左侧插入一个或多个元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LPOP</code></td>
+<td style="text-align:center">LPOP key</td>
+<td style="text-align:center">移除并返回列表左侧的第一个元素，没有则返回 nil</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RPUSH</code></td>
+<td style="text-align:center">RPUSH key element1 element2</td>
+<td style="text-align:center">向列表右侧插入一个或多个元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RPOP</code></td>
+<td style="text-align:center">RPOP key</td>
+<td style="text-align:center">移除并返回列表右侧的第一个元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LRANGE</code></td>
+<td style="text-align:center">LRANGE key start end</td>
+<td style="text-align:center">返回列表中指定下标范围内的所有元素（支持负数下标，如 <code>-1</code> 表示末尾）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>BLPOP</code></td>
+<td style="text-align:center">BLPOP key1 key2 timeout</td>
+<td style="text-align:center">阻塞式移除并返回列表左侧第一个元素，无元素时等待指定时间（秒）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>BRPOP</code></td>
+<td style="text-align:center">BRPOP key1 key2 timeout</td>
+<td style="text-align:center">阻塞式移除并返回列表右侧第一个元素，无元素时等待指定时间（秒）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Set类型">Set类型</h3>
+<p>Redis的Set结构与Java中的HashSet类似，可以看做是一个value为null的HashMap。因为也是一个hash表，因此具备与HashSet类似的特征：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>无序</p>
+</li>
+<li class="lvl-2">
+<p>元素不可重复</p>
+</li>
+<li class="lvl-2">
+<p>查找快</p>
+</li>
+<li class="lvl-2">
+<p>支持交集、并集、差集等功能</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>SADD</code></td>
+<td style="text-align:center">SADD key member1 member2</td>
+<td style="text-align:center">向集合中添加一个或多个元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SREM</code></td>
+<td style="text-align:center">SREM key member1 member2</td>
+<td style="text-align:center">从集合中移除一个或多个指定元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SCARD</code></td>
+<td style="text-align:center">SCARD key</td>
+<td style="text-align:center">返回集合中元素的数量（基数）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SISMEMBER</code></td>
+<td style="text-align:center">SISMEMBER key member</td>
+<td style="text-align:center">判断指定元素是否是集合的成员</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SMEMBERS</code></td>
+<td style="text-align:center">SMEMBERS key</td>
+<td style="text-align:center">获取集合中的所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SINTER</code></td>
+<td style="text-align:center">SINTER key1 key2</td>
+<td style="text-align:center">返回多个集合的交集</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SDIFF</code></td>
+<td style="text-align:center">SDIFF key1 key2</td>
+<td style="text-align:center">返回第一个集合与其他集合的差集</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SUNION</code></td>
+<td style="text-align:center">SUNION key1 key2</td>
+<td style="text-align:center">返回多个集合的并集</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SortedSet类型">SortedSet类型</h3>
+<p>Redis的SortedSet是一个可排序的set集合，与Java中的TreeSet有些类似，但底层数据结构却差别很大。SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表（SkipList）加 hash表。</p>
+<p>SortedSet具备下列特性：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>可排序</p>
+</li>
+<li class="lvl-2">
+<p>元素不重复</p>
+</li>
+<li class="lvl-2">
+<p>查询速度快</p>
+</li>
+</ul>
+<p>因为SortedSet的可排序特性，经常被用来实现排行榜这样的功能。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">语法示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>ZADD</code></td>
+<td style="text-align:center">ZADD key score1 member1 [score2 member2]</td>
+<td style="text-align:center">添加一个或多个元素到有序集合，若已存在则更新其score</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZREM</code></td>
+<td style="text-align:center">ZREM key member1 [member2]</td>
+<td style="text-align:center">删除有序集合中的一个或多个指定元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZSCORE</code></td>
+<td style="text-align:center">ZSCORE key member</td>
+<td style="text-align:center">获取有序集合中指定元素的分数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZRANK</code></td>
+<td style="text-align:center">ZRANK key member</td>
+<td style="text-align:center">获取指定元素的排名（按分数升序，从 0 开始）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZREVRANK</code></td>
+<td style="text-align:center">ZREVRANK key member</td>
+<td style="text-align:center">获取指定元素的排名（按分数降序，从 0 开始）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZCARD</code></td>
+<td style="text-align:center">ZCARD key</td>
+<td style="text-align:center">获取有序集合的元素个数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZCOUNT</code></td>
+<td style="text-align:center">ZCOUNT key min max</td>
+<td style="text-align:center">统计分数在范围内的元素数量</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZINCRBY</code></td>
+<td style="text-align:center">ZINCRBY key increment member</td>
+<td style="text-align:center">指定元素自增，步长为指定的increment值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZRANGE</code></td>
+<td style="text-align:center">ZRANGE key start stop</td>
+<td style="text-align:center">按分数升序返回排名在范围之间的元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZREVRANGE</code></td>
+<td style="text-align:center">ZREVRANGE key start stop</td>
+<td style="text-align:center">按分数降序返回排名在范围之间的元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZRANGEBYSCORE</code></td>
+<td style="text-align:center">ZRANGEBYSCORE key min max</td>
+<td style="text-align:center">返回分数在范围之间的元素（升序）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZDIFF</code></td>
+<td style="text-align:center">ZDIFF numkeys key1 key2</td>
+<td style="text-align:center">计算多个有序集合的差集</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZINTER</code></td>
+<td style="text-align:center">ZINTER numkeys key1 key2</td>
+<td style="text-align:center">计算多个有序集合的交集</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ZUNION</code></td>
+<td style="text-align:center">ZUNION numkeys key1 key2</td>
+<td style="text-align:center">计算多个有序集合的并集</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Redis的Java客户端">Redis的Java客户端</h2>
+<p>目前主流的Redis的Java客户端：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>Jedis：以Redis命令作为方法名称，学习成本低，简单实用。但是Jedis实例是线程不安全的，多线程环境下需要基于连接池来使用。</p>
+</li>
+<li class="lvl-2">
+<p>Lettuce：基于Netty实现的，支持同步、异步和响应式编程方式，并且是线程安全的。支持Redis的哨兵模式、集群模式和管道模式。</p>
+</li>
+<li class="lvl-2">
+<p>Redisson：基于Redis实现的分布式、可伸缩的Java数据结构集合。包含诸如Map、Queue、Lock、Semaphore、AtomicLong等强大功能。</p>
+</li>
+</ul>
+<h3 id="Jedis">Jedis</h3>
+<p>在maven中引入依赖：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--jedis--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.7.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--单元测试--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.jupiter<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-jupiter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.7.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>创建单元测试：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="title class_">Jedis</span> jedis;</span><br><span class="line"></span><br><span class="line"><span class="meta">@BeforeEach</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">setUp</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//1. 建立连接</span></span><br><span class="line">    jedis = <span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">    <span class="comment">//2. 设置密码</span></span><br><span class="line">    jedis.<span class="title function_">auth</span>(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    <span class="comment">//3. 选择库</span></span><br><span class="line">    jedis.<span class="title function_">select</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">testString</span>(<span class="params"></span>)&#123;</span><br><span class="line">    jedis.<span class="title function_">set</span>(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Ryo&quot;</span>);</span><br><span class="line">    <span class="title class_">String</span> name = jedis.<span class="title function_">get</span>(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(<span class="string">&quot;name = &quot;</span> + name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">testHash</span>(<span class="params"></span>)&#123;</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:1&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Ryo&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:2&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Lily&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:1&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;21&quot;</span>);</span><br><span class="line">    jedis.<span class="title function_">hset</span>(<span class="string">&quot;Test:user:2&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;18&quot;</span>);</span><br><span class="line">    <span class="title class_">Map</span>&lt;<span class="title class_">String</span>, <span class="title class_">String</span>&gt; map = jedis.<span class="title function_">hgetAll</span>(<span class="string">&quot;Test:user:1&quot;</span>);</span><br><span class="line">    <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(map);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放资源</span></span><br><span class="line"><span class="meta">@AfterEach</span></span><br><span class="line"><span class="built_in">void</span> <span class="title function_">tearDown</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> (jedis != <span class="literal">null</span>)&#123;</span><br><span class="line">        jedis.<span class="title function_">close</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Jedis连接池">Jedis连接池</h3>
+<p>Jedis本身是线程不安全的，并且频繁的创建和销毁连接会有性能损耗，推荐使用Jedis连接池代替直连方式。</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/Redis笔记/Redis笔记01/" data-toggle="tooltip" data-placement="top" title="Redis笔记01">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/2025Spring-编译原理/编译原理07/" data-toggle="tooltip" data-placement="top" title="编译原理07">Next Post &rarr;</a>
+            <a href="/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/" data-toggle="tooltip" data-placement="top" title="Win11使用WSL2安装Ubuntu时出现error解决记录">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -517,7 +1114,7 @@
         <strong>本文作者：</strong>RyoCY
       </li>
       <li class="post-copyright-link">
-        <strong>本文链接：</strong><a href="https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank" title="Win11使用WSL2安装Ubuntu时出现error解决记录">https://squirrelune.github.io/cn/%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97/Win11%E4%BD%BF%E7%94%A8WSL2%E5%AE%89%E8%A3%85Ubuntu%E6%97%B6%E5%87%BA%E7%8E%B0error%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</a>
+        <strong>本文链接：</strong><a href="https://squirrelune.github.io/cn/Redis%E7%AC%94%E8%AE%B0/Redis%E7%AC%94%E8%AE%B001/" target="_blank" title="Redis笔记01">https://squirrelune.github.io/cn/Redis%E7%AC%94%E8%AE%B0/Redis%E7%AC%94%E8%AE%B001/</a>
       </li>
       <li class="post-copyright-license">
         <strong>许可协议： </strong>
@@ -560,7 +1157,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Win11使用WSL2安装Ubuntu时出现error解决记录&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/折腾日志/Win11使用WSL2安装Ubuntu时出现error解决记录/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis笔记01&body=Hi,I found this website and thought you might like it https://squirrelune.github.io/cn/Redis笔记/Redis笔记01/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -598,7 +1195,7 @@
       <div id="toc" class="toc-article">
       <strong class="toc-title">目录</strong>
       
-        <ol class="nav">none</ol>
+        <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">NoSQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">分类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8ESQL%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">与SQL区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Redis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">特征</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">数据结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%94%AE%E7%AE%A1%E7%90%86"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">键管理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">字符串</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Key%E7%9A%84%E5%B1%82%E7%BA%A7%E5%BD%A2%E5%BC%8F"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">Key的层级形式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hash%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">Hash类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#List%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">List类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Set%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">Set类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SortedSet%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.3.7.</span> <span class="toc-nav-text">SortedSet类型</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Redis%E7%9A%84Java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Redis的Java客户端</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">Jedis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Jedis%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">Jedis连接池</span></a></li></ol></li></ol></li></ol>
       
       </div>
     </aside>
@@ -624,9 +1221,7 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
-            
-            <a class="tag" href="/tags/#WSL2" title="WSL2">WSL2</a>
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
             
           </div>
         </section>
